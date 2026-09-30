@@ -313,6 +313,18 @@
           border-color 0.3s ease,
           color 0.3s ease;
       }
+      #theme-toggle .theme-icon-sun {
+        display: inline-block !important;
+      }
+      #theme-toggle .theme-icon-moon {
+        display: none !important;
+      }
+      .dark #theme-toggle .theme-icon-sun {
+        display: none !important;
+      }
+      .dark #theme-toggle .theme-icon-moon {
+        display: inline-block !important;
+      }
     </style>
   </head>
   <body
@@ -403,10 +415,8 @@
               aria-pressed="false"
               class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
             >
-              <i class="fas fa-sun text-xs dark:hidden text-amber-500"></i>
-              <i
-                class="fas fa-moon text-xs hidden dark:inline text-slate-200"
-              ></i>
+              <i class="fas fa-sun theme-icon-sun text-xs text-amber-500"></i>
+              <i class="fas fa-moon theme-icon-moon text-xs text-slate-200"></i>
             </button>
             <a
               href="#contact"
