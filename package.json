@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch --minify",
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

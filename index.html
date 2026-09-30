@@ -8,7 +8,6 @@
       name="description"
       content="IATBD — Servo motor & drive sizing, tuning, installation and repair. Siemens, Mitsubishi, Delta, Yaskawa, Panasonic and more."
     />
-    <script src=""></script>
     <script>
       (function () {
         const saved = localStorage.getItem("iatbd-theme");
@@ -20,34 +19,6 @@
         }
       })();
     </script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: {
-                50: "#eef7ff",
-                100: "#d9ecff",
-                200: "#bcdeff",
-                300: "#8ecbff",
-                400: "#59aeff",
-                500: "#338bff",
-                600: "#1a6af5",
-                700: "#1454e1",
-                800: "#1744b6",
-                900: "#193c8f",
-              },
-              accent: { 400: "#ff9f43", 500: "#ff7a1a", 600: "#f05a00" },
-            },
-            fontFamily: {
-              sans: ["Inter", "sans-serif"],
-              display: ["Space Grotesk", "sans-serif"],
-            },
-          },
-        },
-      };
-    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
@@ -58,6 +29,272 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="dist/output.css" />
+    <style>
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f5f9;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #0f172a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #338bff;
+        border-radius: 4px;
+      }
+      .nav-link {
+        position: relative;
+        transition: color 0.2s;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #338bff, #ff7a1a);
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(8px);
+        transition: all 0.2s ease;
+      }
+      .group:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+      .servo-hero {
+        position: relative;
+        min-height: 85vh;
+      }
+      .servo-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+          opacity 0.75s ease,
+          visibility 0.75s ease;
+      }
+      .servo-slide.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1;
+      }
+      .servo-slide .bg-img {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        transition: transform 8s ease;
+      }
+      .servo-slide.active .bg-img {
+        transform: scale(1.06);
+      }
+      .servo-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.35);
+        transition: all 0.3s;
+        cursor: pointer;
+      }
+      .servo-dot.active {
+        width: 28px;
+        background: #fff;
+      }
+      .hero-nav {
+        position: absolute;
+        left: 50%;
+        bottom: 18px;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        z-index: 20;
+      }
+      .hero-arrow {
+        width: 32px;
+        height: 32px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        background: rgba(15, 23, 42, 0.25);
+        color: #fff;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      .hero-arrow:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-1px);
+      }
+      .svc-card {
+        transition:
+          transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.35s ease;
+        box-shadow:
+          0 1px 3px rgba(15, 23, 42, 0.04),
+          0 6px 18px rgba(15, 23, 42, 0.04);
+        border-left: 3px solid transparent;
+      }
+      .svc-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 36px -10px rgba(26, 106, 245, 0.14);
+        border-left-color: #338bff;
+      }
+      .dark .svc-card {
+        box-shadow: none;
+      }
+      .dark .svc-card:hover {
+        border-left-color: #59aeff;
+        box-shadow: 0 20px 40px -12px rgba(26, 106, 245, 0.2);
+      }
+      .svc-card img {
+        transition: transform 0.5s ease;
+      }
+      .svc-card:hover img {
+        transform: scale(1.05);
+      }
+      .count-box {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .count-box:hover {
+        transform: translateY(-4px);
+      }
+      .brand-chip {
+        transition: all 0.3s ease;
+      }
+      .brand-chip:hover {
+        transform: translateY(-3px) scale(1.03);
+        border-color: #59aeff;
+        background: #eff6ff;
+        color: #1a6af5;
+        box-shadow: 0 8px 18px -6px rgba(26, 106, 245, 0.2);
+      }
+      .dark .brand-chip:hover {
+        color: #8ecbff;
+        background: rgba(51, 139, 255, 0.15);
+      }
+      .process-card {
+        transition:
+          transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+          box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+      .process-card:hover {
+        transform: translateY(-6px);
+        border-color: #59aeff !important;
+        box-shadow:
+          0 16px 32px -8px rgba(26, 106, 245, 0.2),
+          0 4px 12px rgba(15, 23, 42, 0.06);
+      }
+      .dark .process-card:hover {
+        border-color: #59aeff !important;
+        box-shadow: 0 16px 36px -8px rgba(51, 139, 255, 0.25);
+      }
+      .process-card:hover .process-num {
+        transform: scale(1.08);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+      }
+      .process-num {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      a.btn-cta,
+      .btn-cta {
+        transition:
+          transform 0.25s ease,
+          background-color 0.25s ease,
+          box-shadow 0.25s ease,
+          opacity 0.25s ease;
+      }
+      a.btn-cta:hover,
+      .btn-cta:hover {
+        transform: translateY(-2px) scale(1.03);
+        box-shadow: 0 10px 24px -4px rgba(26, 106, 245, 0.35);
+      }
+      a.btn-cta-accent:hover {
+        box-shadow: 0 10px 24px -4px rgba(255, 122, 26, 0.4);
+      }
+      a.btn-cta-outline:hover {
+        background: rgba(255, 255, 255, 0.15) !important;
+        transform: translateY(-2px);
+      }
+      a.btn-cta-light:hover {
+        background: #f1f5f9 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+      }
+      .faq-item {
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+        transition:
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
+      }
+      .faq-item:hover {
+        border-color: #bfdbfe;
+        box-shadow: 0 4px 12px rgba(26, 106, 245, 0.08);
+      }
+      .dark .faq-item {
+        box-shadow: none;
+      }
+      .faq-item .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+      .faq-item.open .faq-answer {
+        max-height: 280px;
+      }
+      .faq-item.open .faq-icon {
+        transform: rotate(180deg);
+      }
+      .testimonial-track {
+        display: flex;
+        transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .testimonial-card {
+        flex: 0 0 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+      }
+      @media (min-width: 768px) {
+        .testimonial-card {
+          flex: 0 0 33.333%;
+        }
+      }
+      .t-card-inner {
+        box-shadow:
+          0 1px 3px rgba(15, 23, 42, 0.04),
+          0 6px 18px rgba(15, 23, 42, 0.04);
+      }
+      .dark .t-card-inner {
+        box-shadow: none;
+      }
+      body,
+      header,
+      section,
+      footer {
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease,
+          color 0.3s ease;
+      }
+    </style>
   </head>
   <body
     class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased"
@@ -68,7 +305,7 @@
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-[70px]">
-          <a href="iatbd-template.html" class="flex items-center gap-3">
+          <a href="#" class="flex items-center gap-3">
             <div
               class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20"
             >
@@ -88,28 +325,28 @@
           </a>
           <nav class="hidden lg:flex items-center gap-1">
             <a
-              href="iatbd-template.html"
-              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              href="#"
+              class="nav-link active px-3.5 py-2 text-sm font-medium text-primary-600 dark:text-primary-400"
               >Home</a
             >
             <a
-              href="plc-service.html"
+              href="#services"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
               >PLC</a
             >
             <a
-              href="hmi-service.html"
+              href="#services"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
               >HMI</a
             >
             <a
-              href="vfd-service.html"
+              href="#services"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
               >VFD</a
             >
             <a
-              href="servo-service.html"
-              class="nav-link active px-3.5 py-2 text-sm font-medium text-primary-600 dark:text-primary-400"
+              href="#services"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
               >Servo</a
             >
             <div class="relative group">
@@ -122,17 +359,17 @@
                 class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden z-50"
               >
                 <a
-                  href="#"
+                  href="#services"
                   class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
                   >Maintenance</a
                 >
                 <a
-                  href="#"
+                  href="#services"
                   class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
                   >Troubleshooting</a
                 >
                 <a
-                  href="#"
+                  href="#contact"
                   class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
                   >Repairing</a
                 >
@@ -142,6 +379,9 @@
           <div class="flex items-center gap-2">
             <button
               id="theme-toggle"
+              type="button"
+              aria-label="Switch to dark mode"
+              aria-pressed="false"
               class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
             >
               <i class="fas fa-moon text-xs dark:hidden"></i>
@@ -156,6 +396,10 @@
             >
             <button
               id="mobile-menu-btn"
+              type="button"
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
               class="lg:hidden w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
             >
               <i class="fas fa-bars text-slate-700 dark:text-slate-300"></i>
@@ -169,28 +413,28 @@
       >
         <div class="px-4 py-3 space-y-1">
           <a
-            href="iatbd-template.html"
-            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            href="#"
+            class="block px-3 py-2.5 rounded-lg text-sm font-medium text-primary-600 bg-primary-50 dark:bg-primary-900/20"
             >Home</a
           >
           <a
-            href="plc-service.html"
+            href="#services"
             class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
             >PLC</a
           >
           <a
-            href="hmi-service.html"
+            href="#services"
             class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
             >HMI</a
           >
           <a
-            href="vfd-service.html"
+            href="#services"
             class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
             >VFD</a
           >
           <a
-            href="servo-service.html"
-            class="block px-3 py-2.5 rounded-lg text-sm font-medium text-primary-600 bg-primary-50 dark:bg-primary-900/20"
+            href="#services"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
             >Servo</a
           >
           <a
@@ -396,12 +640,16 @@
           </div>
         </div>
       </div>
-      <div
-        class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2"
-      >
+      <div class="hero-nav">
+        <button class="hero-arrow prev" aria-label="Previous slide">
+          <i class="fas fa-chevron-left text-xs"></i>
+        </button>
         <button class="servo-dot active" data-i="0"></button>
         <button class="servo-dot" data-i="1"></button>
         <button class="servo-dot" data-i="2"></button>
+        <button class="hero-arrow next" aria-label="Next slide">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </button>
       </div>
     </section>
 
@@ -678,4 +926,1069 @@
             </div>
             <div class="p-5">
               <h3
-                class="font-
+                class="font-display font-semibold text-slate-900 dark:text-white mb-1.5"
+              >
+                Multi-Axis Sync
+              </h3>
+              <p
+                class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+              >
+                Electronic gearing, camming and coordinated motion with PLC or
+                dedicated motion controllers.
+              </p>
+            </div>
+          </article>
+          <article
+            class="svc-card bg-white dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700/80"
+          >
+            <div class="relative h-52 sm:h-56 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=700&q=80"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
+              ></div>
+              <span
+                class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-cyan-500 flex items-center justify-center text-white"
+                ><i class="fas fa-sync-alt"></i
+              ></span>
+            </div>
+            <div class="p-5">
+              <h3
+                class="font-display font-semibold text-slate-900 dark:text-white mb-1.5"
+              >
+                Retrofit & Upgrade
+              </h3>
+              <p
+                class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+              >
+                Replace aging servos with modern drives while keeping mechanics
+                and minimizing downtime.
+              </p>
+            </div>
+          </article>
+          <article
+            class="svc-card bg-white dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700/80"
+          >
+            <div class="relative h-52 sm:h-56 overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=700&q=80"
+                alt=""
+                class="w-full h-full object-cover"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
+              ></div>
+              <span
+                class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-rose-500 flex items-center justify-center text-white"
+                ><i class="fas fa-tools"></i
+              ></span>
+            </div>
+            <div class="p-5">
+              <h3
+                class="font-display font-semibold text-slate-900 dark:text-white mb-1.5"
+              >
+                Repair & Diagnostics
+              </h3>
+              <p
+                class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+              >
+                Alarm analysis, encoder/drive repair, parameter recovery and
+                preventive health checks.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section
+      class="py-14 bg-white dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/80"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p
+          class="text-center text-xs font-semibold text-slate-400 tracking-[0.2em] uppercase mb-8"
+        >
+          Motion platforms we support
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <span
+            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
+            >Siemens</span
+          >
+          <span
+            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
+            >Mitsubishi</span
+          >
+          <span
+            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
+            >Delta</span
+          >
+          <span
+            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
+            >Yaskawa</span
+          >
+          <span
+            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
+            >Panasonic</span
+          >
+          <span
+            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
+            >Omron</span
+          >
+          <span
+            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
+            >Schneider</span
+          >
+          <span
+            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
+            >Allen-Bradley</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS — bg image visible in white + dark, solid cards for text -->
+    <section class="relative py-20 sm:py-28 overflow-hidden">
+      <!-- Full background image (always visible) -->
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80&quot;);
+        "
+      ></div>
+      <!-- Light: ~55% white so image still shows | Dark: ~75% slate -->
+      <div class="absolute inset-0 bg-white/55 dark:bg-slate-950/78"></div>
+      <div
+        class="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-white/30 dark:from-slate-950/50 dark:via-transparent dark:to-slate-950/40"
+      ></div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 sm:mb-14">
+          <p
+            class="text-accent-600 dark:text-accent-400 text-xs font-semibold tracking-[0.2em] uppercase mb-3 drop-shadow-sm"
+          >
+            Process
+          </p>
+          <h2
+            class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-3 drop-shadow-sm"
+          >
+            How a servo project runs
+          </h2>
+          <p
+            class="text-[17px] text-slate-700 dark:text-slate-200 max-w-lg mx-auto font-medium"
+          >
+            Clear steps from load calculation to stable production.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div
+            class="process-card group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-lg cursor-default"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="process-num w-12 h-12 rounded-2xl bg-primary-500 text-white flex items-center justify-center text-lg shrink-0 shadow-md"
+              >
+                <i class="fas fa-calculator"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-primary-500 tracking-wide"
+                  >STEP 01</span
+                >
+                <h3
+                  class="font-semibold text-slate-900 dark:text-white mb-1.5 mt-0.5"
+                >
+                  Load & inertia study
+                </h3>
+                <p
+                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+                >
+                  Mass, friction, duty cycle and required accuracy — motor and
+                  drive selected to match.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="process-card group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-lg cursor-default"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="process-num w-12 h-12 rounded-2xl bg-accent-500 text-white flex items-center justify-center text-lg shrink-0 shadow-md"
+              >
+                <i class="fas fa-plug"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-accent-500 tracking-wide"
+                  >STEP 02</span
+                >
+                <h3
+                  class="font-semibold text-slate-900 dark:text-white mb-1.5 mt-0.5"
+                >
+                  Wire, power & safety
+                </h3>
+                <p
+                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+                >
+                  Power, encoder, STO and network cables installed to OEM and
+                  EMC best practice.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="process-card group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-lg cursor-default"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="process-num w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-lg shrink-0 shadow-md"
+              >
+                <i class="fas fa-sliders-h"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-emerald-500 tracking-wide"
+                  >STEP 03</span
+                >
+                <h3
+                  class="font-semibold text-slate-900 dark:text-white mb-1.5 mt-0.5"
+                >
+                  Tune & integrate
+                </h3>
+                <p
+                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+                >
+                  Auto-tune, filters, homing and PLC/motion link — verified
+                  under real load.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="process-card group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-lg cursor-default"
+          >
+            <div class="flex items-start gap-4">
+              <div
+                class="process-num w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-lg shrink-0 shadow-md"
+              >
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <div>
+                <span class="text-xs font-bold text-purple-500 tracking-wide"
+                  >STEP 04</span
+                >
+                <h3
+                  class="font-semibold text-slate-900 dark:text-white mb-1.5 mt-0.5"
+                >
+                  Document & support
+                </h3>
+                <p
+                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+                >
+                  Parameter backup, operator notes and ongoing fault response
+                  when you need it.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFITS — medium topic icons -->
+    <section class="py-20 sm:py-24 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-14">
+          <p
+            class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3"
+          >
+            Benefits
+          </p>
+          <h2
+            class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"
+          >
+            Why teams trust our servo work
+          </h2>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div
+            class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 dark:border-slate-800 text-center hover:border-primary-200 dark:hover:border-primary-700 transition"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 flex items-center justify-center text-2xl"
+            >
+              <i class="fas fa-crosshairs"></i>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">
+              Repeatable accuracy
+            </h3>
+            <p
+              class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+            >
+              Closed-loop control keeps position and speed consistent cycle
+              after cycle.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 dark:border-slate-800 text-center hover:border-accent-200 dark:hover:border-accent-700 transition"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-orange-100 dark:bg-orange-900/30 text-accent-500 flex items-center justify-center text-2xl"
+            >
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">
+              Faster cycles
+            </h3>
+            <p
+              class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+            >
+              High dynamic response shortens move times without sacrificing
+              stability.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 dark:border-slate-800 text-center hover:border-emerald-200 dark:hover:border-emerald-700 transition"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl"
+            >
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">
+              Safer motion
+            </h3>
+            <p
+              class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+            >
+              STO, limits and proper tuning reduce crash risk and mechanical
+              stress.
+            </p>
+          </div>
+          <div
+            class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 dark:border-slate-800 text-center hover:border-purple-200 dark:hover:border-purple-700 transition"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 flex items-center justify-center text-2xl"
+            >
+              <i class="fas fa-user-cog"></i>
+            </div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">
+              Brand-fluent team
+            </h3>
+            <p
+              class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+            >
+              Siemens, Mitsubishi, Delta, Yaskawa and more — from design to
+              repair.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-20 sm:py-24 bg-slate-50 dark:bg-slate-900/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-xl mx-auto mb-12">
+          <p
+            class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3"
+          >
+            Testimonials
+          </p>
+          <h2
+            class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-3"
+          >
+            What clients say
+          </h2>
+          <div
+            class="inline-flex items-center gap-2 mt-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 text-sm shadow-sm"
+          >
+            <span class="text-amber-400 text-xs"
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i
+            ></span>
+            <span class="font-bold text-slate-800 dark:text-white">4.9</span>
+            <span class="text-slate-400 text-xs">· Servo clients</span>
+          </div>
+        </div>
+        <div class="overflow-hidden" id="testimonial-viewport">
+          <div class="testimonial-track" id="testimonial-track">
+            <div class="testimonial-card">
+              <div
+                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
+              >
+                <div class="text-amber-400 text-xs mb-3">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p
+                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
+                >
+                  “Mitsubishi servo axes on our packing machine were retuned by
+                  IATBD. Overshoot gone, cycle time improved.”
+                </p>
+                <div
+                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80"
+                    class="w-10 h-10 rounded-full object-cover"
+                    alt=""
+                  />
+                  <div>
+                    <p
+                      class="text-sm font-semibold text-slate-900 dark:text-white"
+                    >
+                      Hasan Mahmud
+                    </p>
+                    <p class="text-xs text-primary-600 dark:text-primary-400">
+                      OEM Engineer, PackTech BD
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div
+                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
+              >
+                <div class="text-amber-400 text-xs mb-3">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p
+                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
+                >
+                  “Delta servo + PLC gearing set up cleanly. Two axes stay in
+                  sync even at higher line speed.”
+                </p>
+                <div
+                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&h=80&q=80"
+                    class="w-10 h-10 rounded-full object-cover"
+                    alt=""
+                  />
+                  <div>
+                    <p
+                      class="text-sm font-semibold text-slate-900 dark:text-white"
+                    >
+                      Imtiaz Chowdhury
+                    </p>
+                    <p class="text-xs text-accent-600 dark:text-accent-400">
+                      Production, LabelPrint Ltd.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div
+                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
+              >
+                <div class="text-amber-400 text-xs mb-3">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p
+                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
+                >
+                  “Encoder fault overnight — they diagnosed and replaced next
+                  morning. Parameter backup saved hours.”
+                </p>
+                <div
+                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&h=80&q=80"
+                    class="w-10 h-10 rounded-full object-cover"
+                    alt=""
+                  />
+                  <div>
+                    <p
+                      class="text-sm font-semibold text-slate-900 dark:text-white"
+                    >
+                      Farzana Akter
+                    </p>
+                    <p class="text-xs text-emerald-600 dark:text-emerald-400">
+                      Maintenance, Pharma Forming
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div
+                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
+              >
+                <div class="text-amber-400 text-xs mb-3">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p
+                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
+                >
+                  “Yaskawa retrofit on an old machine. Accuracy better than
+                  before and vibration is under control.”
+                </p>
+                <div
+                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80"
+                    class="w-10 h-10 rounded-full object-cover"
+                    alt=""
+                  />
+                  <div>
+                    <p
+                      class="text-sm font-semibold text-slate-900 dark:text-white"
+                    >
+                      Karim Reza
+                    </p>
+                    <p class="text-xs text-primary-600 dark:text-primary-400">
+                      Plant Head, MetalStamp BD
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div
+                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
+              >
+                <div class="text-amber-400 text-xs mb-3">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                  ><i class="fas fa-star"></i>
+                </div>
+                <p
+                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
+                >
+                  “Siemens S120 multi-axis with our PLC. Commissioning was
+                  structured and documented. Recommend.”
+                </p>
+                <div
+                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=80&h=80&q=80"
+                    class="w-10 h-10 rounded-full object-cover"
+                    alt=""
+                  />
+                  <div>
+                    <p
+                      class="text-sm font-semibold text-slate-900 dark:text-white"
+                    >
+                      Shuvo Rahman
+                    </p>
+                    <p class="text-xs text-purple-600 dark:text-purple-400">
+                      Automation Lead, AutoLine
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center gap-2 mt-8" id="testimonial-dots"></div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 sm:py-24 bg-white dark:bg-slate-950">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p
+            class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3"
+          >
+            FAQ
+          </p>
+          <h2
+            class="font-display text-3xl font-bold text-slate-900 dark:text-white"
+          >
+            Common questions
+          </h2>
+        </div>
+        <div class="space-y-3">
+          <div
+            class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
+          >
+            <button
+              class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left"
+            >
+              <span
+                class="font-medium text-[17px] text-slate-900 dark:text-white"
+                >Which servo brands do you support?</span
+              >
+              <i
+                class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"
+              ></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-[17px] text-slate-600 dark:text-slate-300 pb-4">
+                Siemens, Mitsubishi, Delta, Yaskawa, Panasonic, Omron,
+                Schneider, Allen-Bradley and other major servo platforms.
+              </p>
+            </div>
+          </div>
+          <div
+            class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
+          >
+            <button
+              class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left"
+            >
+              <span
+                class="font-medium text-[17px] text-slate-900 dark:text-white"
+                >Can you retrofit servo on an old machine?</span
+              >
+              <i
+                class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"
+              ></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-[17px] text-slate-600 dark:text-slate-300 pb-4">
+                Yes. We size for existing mechanics, adapt mounting where
+                needed, and commission with minimal process change.
+              </p>
+            </div>
+          </div>
+          <div
+            class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
+          >
+            <button
+              class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left"
+            >
+              <span
+                class="font-medium text-[17px] text-slate-900 dark:text-white"
+                >Do you handle multi-axis synchronization?</span
+              >
+              <i
+                class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"
+              ></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-[17px] text-slate-600 dark:text-slate-300 pb-4">
+                Yes — electronic gearing, camming and coordinated motion with
+                PLC or dedicated motion controllers.
+              </p>
+            </div>
+          </div>
+          <div
+            class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
+          >
+            <button
+              class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left"
+            >
+              <span
+                class="font-medium text-[17px] text-slate-900 dark:text-white"
+                >Is parameter backup included?</span
+              >
+              <i
+                class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"
+              ></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-[17px] text-slate-600 dark:text-slate-300 pb-4">
+                Always after commissioning or repair — so recovery is fast if a
+                drive is replaced later.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED -->
+    <section class="py-16 bg-slate-50 dark:bg-slate-900/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p
+          class="text-center text-xs font-semibold text-slate-400 tracking-[0.15em] uppercase mb-8"
+        >
+          Related services
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a
+            href="#services"
+            class="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary-300 transition shadow-sm"
+          >
+            <span
+              class="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 group-hover:scale-105 transition"
+              ><i class="fas fa-microchip"></i
+            ></span>
+            <div>
+              <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                PLC Service
+              </p>
+              <p class="text-xs text-slate-500">Programming & install</p>
+            </div>
+          </a>
+          <a
+            href="#services"
+            class="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary-300 transition shadow-sm"
+          >
+            <span
+              class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-500 group-hover:scale-105 transition"
+              ><i class="fas fa-desktop"></i
+            ></span>
+            <div>
+              <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                HMI Service
+              </p>
+              <p class="text-xs text-slate-500">Screen design</p>
+            </div>
+          </a>
+          <a
+            href="#services"
+            class="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary-300 transition shadow-sm"
+          >
+            <span
+              class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 group-hover:scale-105 transition"
+              ><i class="fas fa-tachometer-alt"></i
+            ></span>
+            <div>
+              <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                VFD Service
+              </p>
+              <p class="text-xs text-slate-500">Drive setup</p>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary-300 transition shadow-sm"
+          >
+            <span
+              class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center text-rose-500 group-hover:scale-105 transition"
+              ><i class="fas fa-wrench"></i
+            ></span>
+            <div>
+              <p class="text-sm font-semibold text-slate-900 dark:text-white">
+                Repairing
+              </p>
+              <p class="text-xs text-slate-500">Servo & encoder</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="relative py-20 sm:py-24 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-800 to-primary-600"
+      ></div>
+      <div
+        class="absolute inset-0 opacity-20"
+        style="
+          background-image:
+            radial-gradient(circle at 20% 50%, #ff7a1a 0%, transparent 40%),
+            radial-gradient(circle at 80% 20%, #338bff 0%, transparent 35%);
+        "
+      ></div>
+      <div class="relative z-10 max-w-3xl mx-auto px-4 text-center">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
+          Need precise motion control?
+        </h2>
+        <p class="text-[17px] text-slate-300 mb-8 max-w-md mx-auto">
+          Tell us about your axes — sizing, tuning or repair. We respond fast.
+        </p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a
+            href="tel:+8801XXXXXXXXX"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-700 font-bold rounded-full shadow-lg btn-cta btn-cta-light"
+          >
+            <i class="fas fa-phone-alt text-sm"></i> Call Now
+          </a>
+          <a
+            href="https://wa.me/8801XXXXXXXXX"
+            target="_blank"
+            class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-full btn-cta"
+          >
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+          <a
+            href="#contact"
+            class="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white font-semibold rounded-full btn-cta-outline"
+            >Message</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-slate-900 dark:bg-slate-950 text-slate-400 pt-14 pb-8 border-t border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-10 mb-10">
+          <div>
+            <div class="flex items-center gap-2.5 mb-4">
+              <div
+                class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center"
+              >
+                <i class="fas fa-microchip text-white text-xs"></i>
+              </div>
+              <span class="font-display font-bold text-white">IATBD</span>
+            </div>
+            <p class="text-[17px] leading-relaxed">
+              Industrial automation — PLC, HMI, VFD, Servo and professional
+              service.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold mb-3">Services</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#services" class="hover:text-primary-400 transition"
+                  >PLC</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-primary-400 transition"
+                  >HMI</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-primary-400 transition"
+                  >VFD</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-primary-400 transition"
+                  >Servo</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold mb-3">Support</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#" class="hover:text-primary-400 transition"
+                  >Maintenance</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary-400 transition"
+                  >Troubleshooting</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-primary-400 transition"
+                  >Repairing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold mb-3">Contact</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <i class="fas fa-phone-alt text-primary-400 mr-2"></i>+880
+                1XXX-XXXXXX
+              </li>
+              <li>
+                <i class="fas fa-envelope text-primary-400 mr-2"></i
+                >info@iatbd.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500"
+        >
+          <p>© 2026 IATBD. All rights reserved.</p>
+          <a href="#" class="hover:text-primary-400 transition">← Home</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const root = document.documentElement;
+      const updateThemeControl = () => {
+        const isDark = root.classList.contains("dark");
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+        themeToggle.setAttribute(
+          "aria-label",
+          isDark ? "Switch to light mode" : "Switch to dark mode",
+        );
+      };
+      updateThemeControl();
+      themeToggle.addEventListener("click", () => {
+        const isDark = root.classList.toggle("dark");
+        localStorage.setItem("iatbd-theme", isDark ? "dark" : "light");
+        updateThemeControl();
+      });
+      const mbtn = document.getElementById("mobile-menu-btn");
+      const mmenu = document.getElementById("mobile-menu");
+      mbtn.addEventListener("click", () => {
+        const isExpanded = mbtn.getAttribute("aria-expanded") !== "true";
+        mmenu.classList.toggle("hidden", !isExpanded);
+        mbtn.setAttribute("aria-expanded", String(isExpanded));
+        mbtn.querySelector("i").classList.toggle("fa-bars", !isExpanded);
+        mbtn.querySelector("i").classList.toggle("fa-times", isExpanded);
+      });
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        const href = link.getAttribute("href");
+        if (!href || href === "#") return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+          mmenu.classList.add("hidden");
+          mbtn.setAttribute("aria-expanded", "false");
+          mbtn.querySelector("i").classList.add("fa-bars");
+          mbtn.querySelector("i").classList.remove("fa-times");
+        });
+      });
+      document.querySelectorAll(".faq-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const item = btn.closest(".faq-item");
+          const open = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("open"));
+          if (!open) item.classList.add("open");
+        });
+      });
+
+      // Hero slider
+      (function () {
+        const slides = document.querySelectorAll(".servo-slide");
+        const dots = document.querySelectorAll(".servo-dot");
+        const prevBtn = document.querySelector(".hero-arrow.prev");
+        const nextBtn = document.querySelector(".hero-arrow.next");
+        let cur = 0,
+          t;
+        function show(i) {
+          cur = (i + slides.length) % slides.length;
+          slides.forEach((s, n) => s.classList.toggle("active", n === cur));
+          dots.forEach((d, n) => d.classList.toggle("active", n === cur));
+        }
+        function start() {
+          clearInterval(t);
+          t = setInterval(() => show(cur + 1), 5000);
+        }
+        dots.forEach((d) =>
+          d.addEventListener("click", () => {
+            show(+d.dataset.i);
+            start();
+          }),
+        );
+        if (prevBtn) {
+          prevBtn.addEventListener("click", () => {
+            show(cur - 1);
+            start();
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener("click", () => {
+            show(cur + 1);
+            start();
+          });
+        }
+        const hero = document.querySelector(".servo-hero");
+        if (hero) {
+          hero.addEventListener("mouseenter", () => clearInterval(t));
+          hero.addEventListener("mouseleave", start);
+        }
+        show(0);
+        start();
+      })();
+
+      // Countdown animation
+      (function () {
+        const counters = document.querySelectorAll(".counter");
+        let started = false;
+        function animate() {
+          if (started) return;
+          started = true;
+          counters.forEach((el) => {
+            const target = +el.dataset.target;
+            const suffix = el.dataset.suffix || "";
+            const duration = 1600;
+            const startTime = performance.now();
+            function tick(now) {
+              const p = Math.min((now - startTime) / duration, 1);
+              const eased = 1 - Math.pow(1 - p, 3);
+              el.textContent = Math.floor(eased * target) + suffix;
+              if (p < 1) requestAnimationFrame(tick);
+              else el.textContent = target + suffix;
+            }
+            requestAnimationFrame(tick);
+          });
+        }
+        const observer = new IntersectionObserver(
+          (entries) => {
+            if (entries.some((e) => e.isIntersecting)) {
+              animate();
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.3 },
+        );
+        const first = document.querySelector(".count-box");
+        if (first) observer.observe(first);
+      })();
+
+      // Testimonials
+      (function () {
+        const track = document.getElementById("testimonial-track");
+        const dotsWrap = document.getElementById("testimonial-dots");
+        if (!track) return;
+        const total = track.querySelectorAll(".testimonial-card").length;
+        let idx = 0,
+          timer;
+        const pv = () => (window.innerWidth >= 768 ? 3 : 1);
+        const max = () => Math.max(0, total - pv());
+        function dots() {
+          dotsWrap.innerHTML = "";
+          for (let i = 0; i <= max(); i++) {
+            const b = document.createElement("button");
+            b.className =
+              "h-2 rounded-full transition-all " +
+              (i === idx
+                ? "w-6 bg-primary-500"
+                : "w-2 bg-slate-300 dark:bg-slate-600");
+            b.onclick = () => {
+              idx = i;
+              go();
+              start();
+            };
+            dotsWrap.appendChild(b);
+          }
+        }
+        function go() {
+          if (idx > max()) idx = 0;
+          track.style.transform = "translateX(-" + (100 / pv()) * idx + "%)";
+          dots();
+        }
+        function start() {
+          clearInterval(timer);
+          timer = setInterval(() => {
+            idx = idx >= max() ? 0 : idx + 1;
+            go();
+          }, 2000);
+        }
+        window.addEventListener("resize", go);
+        go();
+        start();
+        const vp = document.getElementById("testimonial-viewport");
+        if (vp) {
+          vp.addEventListener("mouseenter", () => clearInterval(timer));
+          vp.addEventListener("mouseleave", start);
+        }
+      })();
+    </script>
+  </body>
+</html>
