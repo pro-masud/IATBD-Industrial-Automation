@@ -1,0 +1,1386 @@
+<!doctype html>
+<html lang="bn" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store | Industrial Automation Products | IATBD</title>
+    <meta
+      name="description"
+      content="Shop PLC, HMI, VFD, servo, industrial cables and automation accessories from IATBD. Cash on Delivery available."
+    />
+    <script src="src/custom.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+  <body
+    class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased"
+  >
+    <div data-store-shop>
+      <header
+        class="fixed top-0 inset-x-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-800"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16 lg:h-17.5">
+            <a href="index.html" class="flex items-center gap-3">
+              <span
+                class="w-9 h-9 rounded-xl bg-linear-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20"
+              >
+                <i class="fas fa-microchip text-white text-sm"></i>
+              </span>
+              <span>
+                <span
+                  class="block font-display font-bold text-lg text-slate-900 dark:text-white tracking-tight"
+                  >IATBD</span
+                >
+                <span
+                  class="block text-[9px] text-slate-400 tracking-[0.2em] uppercase -mt-0.5"
+                  >Industrial Automation</span
+                >
+              </span>
+            </a>
+            <nav
+              class="hidden lg:flex items-center gap-1"
+              aria-label="Main navigation"
+            >
+              <a
+                href="index.html"
+                class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+                >Home</a
+              >
+              <a
+                href="plc-service.html"
+                class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+                >PLC</a
+              >
+              <a
+                href="index.html#services"
+                class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+                >HMI</a
+              >
+              <a
+                href="index.html#services"
+                class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+                >VFD</a
+              >
+              <a
+                href="index.html#services"
+                class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+                >Servo</a
+              >
+              <a
+                href="store-shop.html"
+                aria-current="page"
+                class="nav-link active px-3 py-2 text-sm font-medium text-primary-600 dark:text-primary-400"
+                >Store</a
+              >
+              <div class="relative group">
+                <button
+                  type="button"
+                  class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 flex items-center gap-1.5"
+                >
+                  Service <i class="fas fa-chevron-down text-[9px]"></i>
+                </button>
+                <div
+                  class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xl overflow-hidden z-50"
+                >
+                  <a
+                    href="plc-service.html#services-list"
+                    class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                    >Maintenance</a
+                  >
+                  <a
+                    href="plc-service.html#services-list"
+                    class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                    >Troubleshooting</a
+                  >
+                  <a
+                    href="plc-service.html#services-list"
+                    class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                    >Repairing</a
+                  >
+                </div>
+              </div>
+            </nav>
+            <div class="flex items-center gap-2">
+              <button
+                id="theme-toggle"
+                type="button"
+                aria-label="Switch to dark mode"
+                aria-pressed="false"
+                class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+              >
+                <i class="fas fa-sun theme-icon-sun text-xs text-amber-500"></i>
+                <i
+                  class="fas fa-moon theme-icon-moon text-xs text-slate-200"
+                ></i>
+              </button>
+              <button
+                id="store-cart-button"
+                type="button"
+                aria-label="Open shopping cart"
+                class="relative w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/30 hover:text-primary-600 transition"
+              >
+                <i class="fas fa-shopping-bag text-sm"></i>
+                <span
+                  id="store-cart-count"
+                  class="store-cart-count absolute -top-0.5 -right-0.5 min-w-4.5 h-4.5 px-1 rounded-full bg-accent-500 text-white text-[10px] font-bold text-center leading-4.5"
+                  >0</span
+                >
+              </button>
+              <button
+                id="mobile-menu-btn"
+                type="button"
+                aria-label="Toggle navigation menu"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                class="lg:hidden w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+              >
+                <i class="fas fa-bars text-slate-700 dark:text-slate-300"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          id="mobile-menu"
+          class="lg:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900"
+        >
+          <nav class="px-4 py-3 space-y-1" aria-label="Mobile navigation">
+            <a
+              href="index.html"
+              class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+              >Home</a
+            >
+            <a
+              href="plc-service.html"
+              class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+              >PLC</a
+            >
+            <a
+              href="index.html#services"
+              class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+              >HMI</a
+            >
+            <a
+              href="index.html#services"
+              class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+              >VFD</a
+            >
+            <a
+              href="index.html#services"
+              class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+              >Servo</a
+            >
+            <a
+              href="store-shop.html"
+              aria-current="page"
+              class="block px-3 py-2.5 rounded-lg text-sm font-medium text-primary-600 bg-primary-50 dark:bg-primary-900/20"
+              >Store</a
+            >
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section
+          class="relative h-105 sm:h-117.5 lg:h-125 overflow-hidden pt-16 lg:pt-17.5"
+          aria-label="Featured products"
+        >
+          <div
+            class="store-hero-slide active"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1800&q=80&quot;);
+            "
+          >
+            <div
+              class="relative z-10 max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center"
+            >
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/25 bg-white/10 text-white text-xs font-semibold mb-4 w-fit"
+                ><i class="fas fa-microchip"></i> PLC CONTROL</span
+              >
+              <h1
+                class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 max-w-2xl leading-tight"
+              >
+                Industrial automation, ready for work.
+              </h1>
+              <p class="text-base sm:text-lg text-slate-200 max-w-xl mb-6">
+                PLCs, HMIs, drives and dependable accessories for your next
+                machine build.
+              </p>
+              <a
+                href="#store-products"
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-primary-700 font-bold text-sm hover:bg-primary-50 transition w-fit"
+                >Shop products <i class="fas fa-arrow-right text-xs"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="store-hero-slide"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1800&q=80&quot;);
+            "
+          >
+            <div
+              class="relative z-10 max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center"
+            >
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/25 bg-white/10 text-white text-xs font-semibold mb-4 w-fit"
+                ><i class="fas fa-tablet-alt"></i> HMI & CONTROL</span
+              >
+              <h2
+                class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 max-w-2xl leading-tight"
+              >
+                Clear control for every operator.
+              </h2>
+              <p class="text-base sm:text-lg text-slate-200 max-w-xl mb-6">
+                Touch panels and communication essentials to keep your systems
+                connected.
+              </p>
+              <a
+                href="#store-products"
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-primary-700 font-bold text-sm hover:bg-primary-50 transition w-fit"
+                >Explore the range <i class="fas fa-arrow-right text-xs"></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="store-hero-slide"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1800&q=80&quot;);
+            "
+          >
+            <div
+              class="relative z-10 max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex flex-col justify-center"
+            >
+              <span
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/25 bg-white/10 text-white text-xs font-semibold mb-4 w-fit"
+                ><i class="fas fa-bolt"></i> DRIVES & MOTION</span
+              >
+              <h2
+                class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 max-w-2xl leading-tight"
+              >
+                Motion components for precise machines.
+              </h2>
+              <p class="text-base sm:text-lg text-slate-200 max-w-xl mb-6">
+                Find VFDs, servo kits and the cables that bring your
+                installation together.
+              </p>
+              <a
+                href="#store-products"
+                class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-primary-700 font-bold text-sm hover:bg-primary-50 transition w-fit"
+                >Browse motion products
+                <i class="fas fa-arrow-right text-xs"></i
+              ></a>
+            </div>
+          </div>
+          <button
+            id="store-hero-prev"
+            type="button"
+            aria-label="Previous featured slide"
+            class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center text-white bg-white/15 border border-white/25 hover:bg-white/30 transition"
+          >
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button
+            id="store-hero-next"
+            type="button"
+            aria-label="Next featured slide"
+            class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full flex items-center justify-center text-white bg-white/15 border border-white/25 hover:bg-white/30 transition"
+          >
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div
+            class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2"
+            aria-label="Choose featured slide"
+          >
+            <button
+              type="button"
+              class="store-hero-dot active"
+              aria-label="Show slide 1"
+            ></button>
+            <button
+              type="button"
+              class="store-hero-dot"
+              aria-label="Show slide 2"
+            ></button>
+            <button
+              type="button"
+              class="store-hero-dot"
+              aria-label="Show slide 3"
+            ></button>
+          </div>
+        </section>
+
+        <section
+          class="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800"
+          aria-label="Store benefits"
+        >
+          <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6"
+          >
+            <div
+              class="flex items-center justify-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300"
+            >
+              <i class="fas fa-money-bill-wave text-emerald-500"></i> Cash on
+              Delivery
+            </div>
+            <div
+              class="flex items-center justify-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300"
+            >
+              <i class="fas fa-shield-alt text-primary-500"></i> Genuine
+              products
+            </div>
+            <div
+              class="flex items-center justify-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300"
+            >
+              <i class="fas fa-truck text-accent-500"></i> Nationwide delivery
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="store-products"
+          class="py-8 sm:py-12"
+          aria-label="Store products"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+              class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-6"
+            >
+              <div>
+                <p
+                  class="text-xs font-bold uppercase tracking-[0.16em] text-accent-600 mb-1"
+                >
+                  IATBD Store
+                </p>
+                <h2
+                  class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white"
+                >
+                  Shop automation products
+                </h2>
+              </div>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                Genuine components for industrial systems and machine builders.
+              </p>
+            </div>
+
+            <div
+              class="sticky top-16 lg:top-17.5 z-30 -mx-4 px-4 sm:mx-0 sm:px-0 py-4 bg-slate-50/95 dark:bg-slate-950/95 backdrop-blur-lg border-y sm:border border-slate-200 dark:border-slate-800 sm:rounded-xl"
+            >
+              <div
+                class="flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between mb-4"
+              >
+                <label class="relative flex-1 max-w-lg">
+                  <span class="sr-only">Search products</span>
+                  <i
+                    class="fas fa-search absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"
+                  ></i>
+                  <input
+                    id="store-search"
+                    type="search"
+                    placeholder="Search PLC, HMI, VFD, cable..."
+                    class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm text-slate-800 dark:text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500/40"
+                  />
+                </label>
+                <div
+                  class="flex items-center justify-between sm:justify-end gap-3 text-sm text-slate-500 dark:text-slate-400"
+                >
+                  <span id="store-result-count" aria-live="polite"
+                    >12 products</span
+                  >
+                  <label class="sr-only" for="store-sort">Sort products</label>
+                  <select
+                    id="store-sort"
+                    class="px-3 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-sm text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-primary-500/30"
+                  >
+                    <option value="default">Featured</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="name">Name A to Z</option>
+                  </select>
+                </div>
+              </div>
+              <div class="grid sm:grid-cols-[1fr_auto] gap-4 items-center mb-4">
+                <div>
+                  <div class="flex items-center justify-between gap-3 mb-2">
+                    <label
+                      for="store-price-min"
+                      class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+                      >Minimum price</label
+                    >
+                    <span
+                      id="store-min-label"
+                      class="text-xs font-semibold text-primary-700 dark:text-primary-300"
+                      >৳ 1,000</span
+                    >
+                  </div>
+                  <input
+                    id="store-price-min"
+                    class="store-range w-full"
+                    type="range"
+                    min="1000"
+                    max="200000"
+                    step="500"
+                    value="1000"
+                  />
+                </div>
+                <div>
+                  <div class="flex items-center justify-between gap-3 mb-2">
+                    <label
+                      for="store-price-max"
+                      class="text-xs font-semibold text-slate-600 dark:text-slate-300"
+                      >Maximum price</label
+                    >
+                    <span
+                      id="store-max-label"
+                      class="text-xs font-semibold text-primary-700 dark:text-primary-300"
+                      >৳ 2,00,000</span
+                    >
+                  </div>
+                  <input
+                    id="store-price-max"
+                    class="store-range w-full sm:w-48"
+                    type="range"
+                    min="1000"
+                    max="200000"
+                    step="500"
+                    value="200000"
+                  />
+                </div>
+              </div>
+              <div
+                class="flex gap-2 overflow-x-auto pb-1"
+                id="store-categories"
+                aria-label="Filter by category"
+              >
+                <button
+                  type="button"
+                  class="store-category-btn active shrink-0 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-600 text-sm font-semibold"
+                  data-category="all"
+                  aria-pressed="true"
+                >
+                  All
+                </button>
+                <button
+                  type="button"
+                  class="store-category-btn shrink-0 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-600 text-sm font-semibold text-slate-600 dark:text-slate-300"
+                  data-category="plc"
+                  aria-pressed="false"
+                >
+                  PLC
+                </button>
+                <button
+                  type="button"
+                  class="store-category-btn shrink-0 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-600 text-sm font-semibold text-slate-600 dark:text-slate-300"
+                  data-category="hmi"
+                  aria-pressed="false"
+                >
+                  HMI
+                </button>
+                <button
+                  type="button"
+                  class="store-category-btn shrink-0 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-600 text-sm font-semibold text-slate-600 dark:text-slate-300"
+                  data-category="vfd"
+                  aria-pressed="false"
+                >
+                  VFD
+                </button>
+                <button
+                  type="button"
+                  class="store-category-btn shrink-0 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-600 text-sm font-semibold text-slate-600 dark:text-slate-300"
+                  data-category="servo"
+                  aria-pressed="false"
+                >
+                  Servo
+                </button>
+                <button
+                  type="button"
+                  class="store-category-btn shrink-0 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-600 text-sm font-semibold text-slate-600 dark:text-slate-300"
+                  data-category="cable"
+                  aria-pressed="false"
+                >
+                  Cables
+                </button>
+                <button
+                  type="button"
+                  class="store-category-btn shrink-0 px-4 py-2 rounded-full border border-slate-300 dark:border-slate-600 text-sm font-semibold text-slate-600 dark:text-slate-300"
+                  data-category="accessory"
+                  aria-pressed="false"
+                >
+                  Accessories
+                </button>
+              </div>
+            </div>
+
+            <div
+              id="store-product-grid"
+              class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 mt-7"
+            >
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="plc"
+                data-brand="Siemens"
+                data-name="Siemens S7-1200 CPU 1214C"
+                data-price="28500"
+                data-order="1"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80"
+                    alt="Industrial PLC control equipment"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-primary-600 text-white text-[11px] font-bold"
+                    >PLC</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Siemens</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    S7-1200 CPU 1214C
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    Compact PLC, 14 DI / 10 DO, Ethernet. Ideal for machine
+                    control.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 28,500
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="plc-1"
+                      data-title="Siemens S7-1200 CPU 1214C"
+                      data-price="28500"
+                      data-image="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="plc"
+                data-brand="Delta"
+                data-name="Delta DVP14SS2 Slim PLC"
+                data-price="9200"
+                data-order="2"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=600&q=80"
+                    alt="PLC automation equipment"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-primary-600 text-white text-[11px] font-bold"
+                    >PLC</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Delta</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    DVP14SS2 Slim PLC
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    8 DI / 6 DO and high-speed counters for compact machines.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 9,200
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="plc-2"
+                      data-title="Delta DVP14SS2 Slim PLC"
+                      data-price="9200"
+                      data-image="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="hmi"
+                data-brand="Weintek"
+                data-name="Weintek MT8071iE 7 inch HMI"
+                data-price="18500"
+                data-order="3"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80"
+                    alt="Industrial HMI and electronics"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-orange-500 text-white text-[11px] font-bold"
+                    >HMI</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Weintek</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    MT8071iE 7-inch Touch HMI
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    7-inch TFT, Ethernet and multi-protocol connectivity.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 18,500
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="hmi-1"
+                      data-title="Weintek MT8071iE 7 inch HMI"
+                      data-price="18500"
+                      data-image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="hmi"
+                data-brand="Siemens"
+                data-name="Siemens KTP700 Basic PN HMI"
+                data-price="42000"
+                data-order="4"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                    alt="Electronic components for industrial control"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-orange-500 text-white text-[11px] font-bold"
+                    >HMI</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Siemens</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    KTP700 Basic PN
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    7-inch color touch panel with PROFINET connectivity.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 42,000
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="hmi-2"
+                      data-title="Siemens KTP700 Basic PN HMI"
+                      data-price="42000"
+                      data-image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="vfd"
+                data-brand="Danfoss"
+                data-name="Danfoss FC-51 2.2kW VFD"
+                data-price="24500"
+                data-order="5"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=600&q=80"
+                    alt="Industrial motor and drive equipment"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-emerald-700 text-white text-[11px] font-bold"
+                    >VFD</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Danfoss</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    VLT Micro Drive FC-51 2.2 kW
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    Compact drive for pumps and fans, with simple setup.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 24,500
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="vfd-1"
+                      data-title="Danfoss FC-51 2.2kW VFD"
+                      data-price="24500"
+                      data-image="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="vfd"
+                data-brand="Delta"
+                data-name="Delta VFD-EL 1.5kW VFD"
+                data-price="12800"
+                data-order="6"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=600&q=80"
+                    alt="Industrial electrical drive"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-emerald-700 text-white text-[11px] font-bold"
+                    >VFD</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Delta</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    VFD-EL 1.5 kW 230V
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    Sensorless vector drive for conveyors and small fans.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 12,800
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="vfd-2"
+                      data-title="Delta VFD-EL 1.5kW VFD"
+                      data-price="12800"
+                      data-image="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="servo"
+                data-brand="Delta"
+                data-name="Delta ASD-B2 400W Servo Kit"
+                data-price="32000"
+                data-order="7"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=600&q=80"
+                    alt="Servo and motion-control equipment"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-orange-700 text-white text-[11px] font-bold"
+                    >SERVO</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Delta</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    ASD-B2 400W Servo Kit
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    Drive, motor and encoder cable for precise positioning.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 32,000
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="servo-1"
+                      data-title="Delta ASD-B2 400W Servo Kit"
+                      data-price="32000"
+                      data-image="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="servo"
+                data-brand="Mitsubishi"
+                data-name="Mitsubishi MR-JE 750W Servo Package"
+                data-price="48000"
+                data-order="8"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=600&q=80"
+                    alt="Industrial motion control system"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-orange-700 text-white text-[11px] font-bold"
+                    >SERVO</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Mitsubishi</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    MR-JE 750W Servo Package
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    High-response motion package for packaging and positioning.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 48,000
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="servo-2"
+                      data-title="Mitsubishi MR-JE 750W Servo Package"
+                      data-price="48000"
+                      data-image="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="cable"
+                data-brand="Communication"
+                data-name="PROFIBUS DP Cable 100m"
+                data-price="8500"
+                data-order="9"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80"
+                    alt="Industrial communication cable"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-cyan-700 text-white text-[11px] font-bold"
+                    >CABLE</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Communication</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    PROFIBUS DP Cable 100 m
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    Shielded industrial fieldbus cable for reliable
+                    communication.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 8,500
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="cable-1"
+                      data-title="PROFIBUS DP Cable 100m"
+                      data-price="8500"
+                      data-image="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="cable"
+                data-brand="Communication"
+                data-name="Industrial Cat6 Ethernet Cable 50m"
+                data-price="3200"
+                data-order="10"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1544197150-b99a549f55c5?auto=format&fit=crop&w=600&q=80"
+                    alt="Ethernet networking cable"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-cyan-700 text-white text-[11px] font-bold"
+                    >CABLE</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Communication</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    Industrial Cat6 Ethernet 50 m
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    Shielded, oil-resistant jacket for machine networking.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 3,200
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="cable-2"
+                      data-title="Industrial Cat6 Ethernet 50m"
+                      data-price="3200"
+                      data-image="https://images.unsplash.com/photo-1544197150-b99a549f55c5?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="accessory"
+                data-brand="Power"
+                data-name="24V 5A DIN Rail Power Supply"
+                data-price="2800"
+                data-order="11"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=600&q=80"
+                    alt="Industrial power supply equipment"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-700 text-white text-[11px] font-bold"
+                    >ACCESSORY</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Power</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    24V 5A DIN Rail PSU
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    Industrial switching supply for PLCs, HMIs and sensors.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 2,800
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="acc-1"
+                      data-title="24V 5A DIN Rail Power Supply"
+                      data-price="2800"
+                      data-image="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article
+                class="store-product-card bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 overflow-hidden flex flex-col"
+                data-cat="accessory"
+                data-brand="Automation"
+                data-name="Industrial Photoelectric Sensor"
+                data-price="4500"
+                data-order="12"
+              >
+                <div
+                  class="relative h-48 bg-slate-100 dark:bg-slate-800 overflow-hidden"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80"
+                    alt="Electronic sensor components"
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  /><span
+                    class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-slate-700 text-white text-[11px] font-bold"
+                    >ACCESSORY</span
+                  ><span
+                    class="absolute top-3 right-3 px-2.5 py-1 rounded-md bg-emerald-600 text-white text-[11px] font-bold"
+                    >COD</span
+                  >
+                </div>
+                <div class="p-4 flex flex-col flex-1">
+                  <p class="text-xs text-slate-400 mb-1">Automation</p>
+                  <h3
+                    class="font-semibold text-slate-900 dark:text-white text-[15px] leading-snug mb-2"
+                  >
+                    Photoelectric Sensor
+                  </h3>
+                  <p
+                    class="text-[13px] text-slate-500 dark:text-slate-400 mb-4"
+                  >
+                    Compact sensing for object detection on production lines.
+                  </p>
+                  <div class="mt-auto flex items-center justify-between gap-2">
+                    <p
+                      class="font-display font-bold text-lg text-primary-600 dark:text-primary-400"
+                    >
+                      ৳ 4,500
+                    </p>
+                    <button
+                      type="button"
+                      class="store-add-cart px-3.5 py-2 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition flex items-center gap-1.5"
+                      data-id="acc-2"
+                      data-title="Industrial Photoelectric Sensor"
+                      data-price="4500"
+                      data-image="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=200&q=80"
+                    >
+                      <i class="fas fa-cart-plus text-xs"></i> Add
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div id="store-empty-state" class="hidden py-16 text-center">
+              <i
+                class="fas fa-box-open text-3xl text-slate-300 dark:text-slate-600 mb-3"
+              ></i>
+              <p class="font-semibold text-slate-800 dark:text-white">
+                No products match these filters.
+              </p>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                Try another category, search term or price range.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="bg-slate-100 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800 py-10 sm:py-12"
+        >
+          <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5"
+          >
+            <div>
+              <p
+                class="text-xs font-bold uppercase tracking-[0.16em] text-accent-600 mb-1"
+              >
+                Need help selecting?
+              </p>
+              <h2
+                class="font-display text-xl sm:text-2xl font-bold text-slate-900 dark:text-white"
+              >
+                Talk to an automation specialist.
+              </h2>
+              <p class="text-sm text-slate-600 dark:text-slate-400 mt-1">
+                Get help matching components to your machine and application.
+              </p>
+            </div>
+            <a
+              href="index.html#contact"
+              class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition w-fit"
+              ><i class="fas fa-comment-dots"></i> Contact IATBD</a
+            >
+          </div>
+        </section>
+      </main>
+
+      <footer
+        class="bg-slate-900 dark:bg-slate-950 text-slate-400 pt-12 pb-7 border-t border-slate-800"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-9">
+            <div>
+              <a href="index.html" class="flex items-center gap-2.5 mb-4"
+                ><span
+                  class="w-8 h-8 rounded-lg bg-linear-to-br from-primary-500 to-accent-500 flex items-center justify-center"
+                  ><i class="fas fa-microchip text-white text-xs"></i></span
+                ><span class="font-display font-bold text-white">IATBD</span></a
+              >
+              <p class="text-sm leading-relaxed">
+                Industrial automation products, engineering and professional
+                service.
+              </p>
+            </div>
+            <div>
+              <h2 class="text-white text-sm font-semibold mb-3">Explore</h2>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a href="index.html" class="hover:text-primary-400 transition"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="plc-service.html"
+                    class="hover:text-primary-400 transition"
+                    >PLC Service</a
+                  >
+                </li>
+                <li>
+                  <a href="store-shop.html" class="text-primary-300">Store</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-white text-sm font-semibold mb-3">Products</h2>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <a
+                    href="#store-products"
+                    class="hover:text-primary-400 transition"
+                    >PLC, HMI & VFD</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#store-products"
+                    class="hover:text-primary-400 transition"
+                    >Servo & cables</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#store-products"
+                    class="hover:text-primary-400 transition"
+                    >Accessories</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 class="text-white text-sm font-semibold mb-3">Contact</h2>
+              <ul class="space-y-2 text-sm">
+                <li>
+                  <i class="fas fa-phone-alt text-primary-400 mr-2"></i>+880
+                  1XXX-XXXXXX
+                </li>
+                <li>
+                  <i class="fas fa-envelope text-primary-400 mr-2"></i
+                  >info@iatbd.com
+                </li>
+                <li class="pt-1 text-emerald-400">
+                  <i class="fas fa-money-bill-wave mr-2"></i>Cash on Delivery
+                  available
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="border-t border-slate-800 pt-5 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500"
+          >
+            <p>© 2026 IATBD. All rights reserved.</p>
+            <a href="index.html" class="hover:text-primary-400 transition"
+              >Home</a
+            >
+          </div>
+        </div>
+      </footer>
+
+      <div
+        id="store-cart-overlay"
+        class="store-cart-overlay fixed inset-0 z-60 bg-slate-950/55"
+        aria-hidden="true"
+      ></div>
+      <aside
+        id="store-cart-drawer"
+        class="store-cart-drawer fixed right-0 top-0 z-70 h-full w-full max-w-md bg-white dark:bg-slate-900 shadow-2xl flex flex-col"
+        aria-label="Shopping cart"
+        aria-modal="true"
+      >
+        <div
+          class="flex items-center justify-between px-5 py-4 border-b border-slate-200 dark:border-slate-800"
+        >
+          <div>
+            <h2
+              class="font-display text-lg font-bold text-slate-900 dark:text-white"
+            >
+              Your cart
+            </h2>
+            <p class="text-xs text-slate-500 dark:text-slate-400">
+              Cash on Delivery available
+            </p>
+          </div>
+          <button
+            id="store-cart-close"
+            type="button"
+            aria-label="Close cart"
+            class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div id="store-cart-items" class="flex-1 overflow-y-auto px-5"></div>
+        <div class="border-t border-slate-200 dark:border-slate-800 p-5">
+          <div class="flex justify-between items-center mb-4">
+            <span
+              class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+              >Subtotal</span
+            ><span
+              id="store-cart-total"
+              class="font-display text-lg font-bold text-slate-900 dark:text-white"
+              >৳ 0</span
+            >
+          </div>
+          <a
+            id="store-checkout"
+            href="mailto:info@iatbd.com"
+            class="flex items-center justify-center gap-2 w-full rounded-lg bg-primary-600 hover:bg-primary-500 text-white font-semibold text-sm py-3 transition"
+            ><i class="fas fa-envelope"></i> Request order by email</a
+          >
+          <p
+            class="text-[11px] text-center text-slate-500 dark:text-slate-400 mt-3"
+          >
+            Your email app will open with the order details.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
