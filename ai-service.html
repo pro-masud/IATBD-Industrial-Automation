@@ -1,0 +1,767 @@
+<!doctype html>
+<html lang="bn" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industrial AI Solutions | IATBD</title>
+    <meta
+      name="description"
+      content="Industrial AI solutions from IATBD: predictive maintenance, machine vision inspection and intelligent factory analytics."
+    />
+    <script src="src/custom.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+  <body
+    class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased"
+  >
+    <header
+      class="fixed top-0 inset-x-0 z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-17.5">
+          <a href="index.html" class="flex items-center gap-3">
+            <div
+              class="w-9 h-9 rounded-xl bg-linear-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20"
+            >
+              <i class="fas fa-microchip text-white text-sm"></i>
+            </div>
+            <div>
+              <span
+                class="font-display font-bold text-lg text-slate-900 dark:text-white tracking-tight"
+                >IATBD</span
+              >
+              <p
+                class="text-[9px] text-slate-400 tracking-[0.2em] uppercase -mt-0.5"
+              >
+                Industrial Automation
+              </p>
+            </div>
+          </a>
+          <nav
+            class="hidden lg:flex items-center gap-1"
+            aria-label="Main navigation"
+          >
+            <a
+              href="index.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >Home</a
+            >
+            <a
+              href="plc-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >PLC</a
+            >
+            <a
+              href="store-shop.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >Store</a
+            >
+            <a
+              href="hmi-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >HMI</a
+            >
+            <a
+              href="vfd-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >VFD</a
+            >
+            <a
+              href="index.html#services"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >Servo</a
+            >
+            <a
+              href="ai-service.html"
+              class="nav-link active px-3.5 py-2 text-sm font-medium text-primary-600 dark:text-primary-400"
+              aria-current="page"
+              >AI</a
+            >
+            <div class="relative group">
+              <button
+                type="button"
+                class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 flex items-center gap-1.5"
+              >
+                Service <i class="fas fa-chevron-down text-[9px]"></i>
+              </button>
+              <div
+                class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden z-50"
+              >
+                <a
+                  href="index.html#services"
+                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                  >Maintenance</a
+                >
+                <a
+                  href="index.html#services"
+                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                  >Troubleshooting</a
+                >
+                <a
+                  href="index.html#contact"
+                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                  >Repairing</a
+                >
+              </div>
+            </div>
+          </nav>
+          <div class="flex items-center gap-2">
+            <button
+              id="theme-toggle"
+              type="button"
+              aria-label="Switch to dark mode"
+              aria-pressed="false"
+              class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+            >
+              <i class="fas fa-sun theme-icon-sun text-xs text-amber-500"></i>
+              <i class="fas fa-moon theme-icon-moon text-xs text-slate-200"></i>
+            </button>
+            <a
+              href="#contact"
+              class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold rounded-full shadow-lg shadow-primary-500/20 btn-cta"
+              >Contact</a
+            >
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              class="lg:hidden w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+            >
+              <i class="fas fa-bars text-slate-700 dark:text-slate-300"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900"
+      >
+        <div class="px-4 py-3 space-y-1">
+          <a
+            href="index.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >Home</a
+          >
+          <a
+            href="plc-service.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >PLC</a
+          >
+          <a
+            href="store-shop.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >Store</a
+          >
+          <a
+            href="hmi-service.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >HMI</a
+          >
+          <a
+            href="vfd-service.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >VFD</a
+          >
+          <a
+            href="index.html#services"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >Servo</a
+          >
+          <a
+            href="ai-service.html"
+            aria-current="page"
+            class="block px-3 py-2.5 rounded-lg text-sm font-medium text-primary-600 bg-primary-50 dark:bg-primary-900/20"
+            >AI</a
+          >
+          <a
+            href="#contact"
+            class="block mt-2 text-center py-2.5 bg-primary-600 text-white rounded-xl text-sm font-semibold"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="servo-hero pt-16 overflow-hidden">
+        <div class="servo-slide active" data-i="0">
+          <div
+            class="bg-img"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=85&quot;);
+            "
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-slate-900/45"
+          ></div>
+          <div
+            class="servo-slide-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          >
+            <div class="max-w-4xl mx-auto px-14 sm:px-0 text-center">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white text-sm font-medium mb-5"
+              >
+                <i class="fas fa-brain text-accent-400"></i> Industrial AI
+              </div>
+              <h1
+                class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4"
+              >
+                Smarter <span class="text-primary-300">Automation</span>, Better
+                Decisions
+              </h1>
+              <p class="text-lg text-slate-200 max-w-2xl mx-auto mb-8">
+                Turn machine data into practical insight for predictive
+                maintenance, quality inspection and more efficient production.
+              </p>
+              <div class="flex flex-wrap justify-center gap-3">
+                <a
+                  href="#solutions"
+                  class="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full shadow-lg shadow-primary-500/40 btn-cta"
+                >
+                  Explore AI <i class="fas fa-arrow-right text-sm"></i>
+                </a>
+                <a
+                  href="#contact"
+                  class="inline-flex items-center gap-2 px-7 py-3.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold rounded-full backdrop-blur btn-cta-outline"
+                  >Talk to our team</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="servo-slide" data-i="1">
+          <div
+            class="bg-img"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1920&q=85&quot;);
+            "
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-primary-900/45"
+          ></div>
+          <div
+            class="servo-slide-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          >
+            <div class="max-w-4xl mx-auto px-14 sm:px-0 text-center">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white text-sm font-medium mb-5"
+              >
+                <i class="fas fa-wave-square text-primary-300"></i> Predictive
+                Maintenance
+              </div>
+              <h2
+                class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4"
+              >
+                Detect issues <span class="text-primary-300">earlier</span>
+              </h2>
+              <p class="text-lg text-slate-200 max-w-2xl mx-auto mb-8">
+                Identify changing machine conditions and give your team more
+                time to plan maintenance before downtime occurs.
+              </p>
+              <a
+                href="#solutions"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full shadow-lg shadow-primary-500/40 btn-cta"
+              >
+                See use cases <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="servo-slide" data-i="2">
+          <div
+            class="bg-img"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1920&q=85&quot;);
+            "
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/70 to-emerald-900/40"
+          ></div>
+          <div
+            class="servo-slide-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
+          >
+            <div class="max-w-4xl mx-auto px-14 sm:px-0 text-center">
+              <div
+                class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white text-sm font-medium mb-5"
+              >
+                <i class="fas fa-eye text-emerald-300"></i> Machine Vision
+              </div>
+              <h2
+                class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4"
+              >
+                Consistent <span class="text-emerald-300">quality</span> checks
+              </h2>
+              <p class="text-lg text-slate-200 max-w-2xl mx-auto mb-8">
+                Add visual inspection to your production process to flag defects
+                and missing components with greater consistency.
+              </p>
+              <a
+                href="#contact"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-full shadow-lg btn-cta"
+              >
+                Discuss a pilot <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="hero-arrow prev absolute left-4 top-1/2 z-20 -translate-y-1/2"
+          type="button"
+          aria-label="Previous slide"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button
+          class="hero-arrow next absolute right-4 top-1/2 z-20 -translate-y-1/2"
+          type="button"
+          aria-label="Next slide"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="hero-nav" aria-label="Choose a slide">
+          <button
+            class="servo-dot active"
+            type="button"
+            data-i="0"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            class="servo-dot"
+            type="button"
+            data-i="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            class="servo-dot"
+            type="button"
+            data-i="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+      </section>
+
+      <section
+        class="relative py-12 bg-gradient-to-r from-primary-700 via-primary-600 to-primary-500 overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 opacity-10"
+          style="
+            background-image: url(&quot;data:image/svg+xml,%3Csvg width=%2760%27 height=%2760%27 viewBox=%270 0 60 60%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath fill=%27%23fff%27 d=%27M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2z%27/%3E%3C/svg%3E&quot;);
+          "
+        ></div>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+            <div class="text-white">
+              <i class="fas fa-microchip text-2xl mb-3"></i>
+              <p class="font-semibold">Machine data</p>
+              <p class="text-sm text-primary-100">PLC, HMI and drive signals</p>
+            </div>
+            <div class="text-white">
+              <i class="fas fa-wave-square text-2xl mb-3"></i>
+              <p class="font-semibold">Early alerts</p>
+              <p class="text-sm text-primary-100">Condition monitoring</p>
+            </div>
+            <div class="text-white">
+              <i class="fas fa-eye text-2xl mb-3"></i>
+              <p class="font-semibold">Visual inspection</p>
+              <p class="text-sm text-primary-100">Automated quality checks</p>
+            </div>
+            <div class="text-white">
+              <i class="fas fa-chart-line text-2xl mb-3"></i>
+              <p class="font-semibold">Production insight</p>
+              <p class="text-sm text-primary-100">Clearer process trends</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="solutions"
+        class="py-20 sm:py-24 bg-slate-50 dark:bg-slate-900/60"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-2xl mb-12">
+            <p
+              class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-2"
+            >
+              AI Applications
+            </p>
+            <h2
+              class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4"
+            >
+              Make machine data useful
+            </h2>
+            <p
+              class="text-[17px] leading-relaxed text-slate-600 dark:text-slate-300"
+            >
+              Practical AI starts with reliable signals from your equipment. We
+              help identify the right use case and connect it to your existing
+              automation systems.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6">
+            <article
+              class="svc-card group relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-900"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=900&q=85"
+                alt="Engineer checking industrial machinery"
+                class="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <span
+                  class="inline-flex w-10 h-10 items-center justify-center rounded-lg bg-primary-600 mb-3"
+                  ><i class="fas fa-wave-square"></i
+                ></span>
+                <h3 class="font-display text-xl font-bold mb-2">
+                  Predictive maintenance
+                </h3>
+                <p class="text-sm leading-relaxed text-white/80">
+                  Surface changes in equipment behavior and help teams plan
+                  maintenance with better timing.
+                </p>
+              </div>
+            </article>
+            <article
+              class="svc-card group relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-900"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85"
+                alt="Industrial operator monitoring a production process"
+                class="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <span
+                  class="inline-flex w-10 h-10 items-center justify-center rounded-lg bg-accent-500 mb-3"
+                  ><i class="fas fa-eye"></i
+                ></span>
+                <h3 class="font-display text-xl font-bold mb-2">
+                  Machine vision inspection
+                </h3>
+                <p class="text-sm leading-relaxed text-white/80">
+                  Flag visible defects and missing components with consistent,
+                  camera-based inspection.
+                </p>
+              </div>
+            </article>
+            <article
+              class="svc-card group relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-900"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=900&q=85"
+                alt="Technician working with factory control equipment"
+                class="absolute inset-0 h-full w-full object-cover"
+                loading="lazy"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <span
+                  class="inline-flex w-10 h-10 items-center justify-center rounded-lg bg-emerald-600 mb-3"
+                  ><i class="fas fa-chart-line"></i
+                ></span>
+                <h3 class="font-display text-xl font-bold mb-2">
+                  Production analytics
+                </h3>
+                <p class="text-sm leading-relaxed text-white/80">
+                  Connect PLC, HMI and drive data to make downtime, cycle and
+                  energy trends easier to see.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 sm:py-24 bg-white dark:bg-slate-950">
+        <div
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center"
+        >
+          <div>
+            <p
+              class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-2"
+            >
+              Built around your plant
+            </p>
+            <h2
+              class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-5"
+            >
+              AI that works with your automation
+            </h2>
+            <p
+              class="text-[17px] leading-relaxed text-slate-600 dark:text-slate-300 mb-7"
+            >
+              Your equipment and process come first. We assess the available
+              signals, define a useful pilot and integrate the result with your
+              PLC, HMI, VFD or existing monitoring workflow.
+            </p>
+            <ul
+              class="space-y-4 text-[17px] text-slate-700 dark:text-slate-300"
+            >
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-emerald-500 mt-1"></i
+                ><span
+                  >Start with an engineering review of your machines and
+                  data.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-emerald-500 mt-1"></i
+                ><span
+                  >Run a focused pilot against a measurable production
+                  goal.</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-check text-emerald-500 mt-1"></i
+                ><span
+                  >Keep operators and engineers in control of decisions.</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="relative min-h-80 overflow-hidden rounded-xl bg-slate-900"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1100&q=85"
+              alt="Engineer monitoring industrial automation equipment"
+              class="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+            />
+            <div
+              class="absolute inset-0 bg-linear-to-t from-slate-950/80 via-transparent to-transparent"
+            ></div>
+            <p
+              class="absolute bottom-5 left-5 right-5 text-white font-display text-xl font-semibold"
+            >
+              From sensor signals to clearer production decisions
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="relative overflow-hidden">
+        <div class="relative min-h-[420px] sm:min-h-[480px] flex items-center">
+          <img
+            src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1920&q=85"
+            alt="Industrial automation equipment in a factory"
+            class="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-blue-950/90 to-blue-900/75"
+          ></div>
+          <div
+            class="absolute inset-0 opacity-[0.07]"
+            style="
+              background-image:
+                linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+                linear-gradient(
+                  90deg,
+                  rgba(255, 255, 255, 0.15) 1px,
+                  transparent 1px
+                );
+              background-size: 40px 40px;
+            "
+          ></div>
+          <div
+            class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 sm:py-20"
+          >
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+              <div class="hidden lg:flex items-center justify-center">
+                <div
+                  class="relative w-full max-w-md overflow-hidden rounded-2xl border border-white/20 shadow-2xl"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=85"
+                    alt="Engineer reviewing industrial control equipment"
+                    class="h-72 w-full object-cover"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent"
+                  ></div>
+                  <p
+                    class="absolute bottom-4 left-4 text-sm font-semibold text-white"
+                  >
+                    PLC · HMI · VFD · AI
+                  </p>
+                </div>
+              </div>
+              <div class="text-center lg:text-left">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/20 border border-primary-400/30 text-primary-300 text-xs font-semibold uppercase mb-5"
+                >
+                  <i class="fas fa-bolt"></i> Start with one use case
+                </div>
+                <h2
+                  class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight"
+                >
+                  Bring practical AI to your production line
+                </h2>
+                <p
+                  class="text-slate-300 text-base sm:text-lg mb-8 max-w-md mx-auto lg:mx-0 leading-relaxed"
+                >
+                  Tell us about your equipment and process. Our automation team
+                  can help identify a focused first step.
+                </p>
+                <div
+                  class="flex flex-wrap justify-center lg:justify-start gap-3"
+                >
+                  <a
+                    href="mailto:info@iatbd.com?subject=Industrial%20AI%20Consultation"
+                    class="inline-flex items-center gap-2.5 px-7 py-3.5 bg-primary-500 hover:bg-primary-400 text-white font-bold rounded-full btn-cta"
+                  >
+                    <i class="fas fa-envelope"></i> Contact our team
+                  </a>
+                  <a
+                    href="#solutions"
+                    class="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white/10 hover:bg-white/15 border border-white/25 text-white font-semibold rounded-full btn-cta-outline"
+                  >
+                    <i class="fas fa-cogs"></i> AI applications
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-slate-900 dark:bg-slate-950 text-slate-400 pt-14 pb-8 border-t border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-10 mb-10">
+          <div>
+            <div class="flex items-center gap-2.5 mb-4">
+              <div
+                class="w-8 h-8 rounded-lg bg-linear-to-br from-primary-500 to-accent-500 flex items-center justify-center"
+              >
+                <i class="fas fa-microchip text-white text-xs"></i>
+              </div>
+              <span class="font-display font-bold text-white">IATBD</span>
+            </div>
+            <p class="text-[17px] leading-relaxed">
+              Industrial automation — PLC, HMI, VFD, Servo and professional
+              service.
+            </p>
+          </div>
+          <div>
+            <h2 class="text-white text-sm font-semibold mb-3">Services</h2>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="plc-service.html"
+                  class="hover:text-primary-400 transition"
+                  >PLC</a
+                >
+              </li>
+              <li>
+                <a
+                  href="store-shop.html"
+                  class="hover:text-primary-400 transition"
+                  >Store</a
+                >
+              </li>
+              <li>
+                <a
+                  href="hmi-service.html"
+                  class="hover:text-primary-400 transition"
+                  >HMI</a
+                >
+              </li>
+              <li>
+                <a
+                  href="vfd-service.html"
+                  class="hover:text-primary-400 transition"
+                  >VFD</a
+                >
+              </li>
+              <li>
+                <a
+                  href="ai-service.html"
+                  class="hover:text-primary-400 transition"
+                  >AI Solutions</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-white text-sm font-semibold mb-3">Support</h2>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a
+                  href="index.html#services"
+                  class="hover:text-primary-400 transition"
+                  >Maintenance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#services"
+                  class="hover:text-primary-400 transition"
+                  >Troubleshooting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#contact"
+                  class="hover:text-primary-400 transition"
+                  >Repairing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-white text-sm font-semibold mb-3">Contact</h2>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <i class="fas fa-phone-alt text-primary-400 mr-2"></i>+880
+                1XXX-XXXXXX
+              </li>
+              <li>
+                <i class="fas fa-envelope text-primary-400 mr-2"></i
+                ><a href="mailto:info@iatbd.com" class="hover:text-primary-400"
+                  >info@iatbd.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500"
+        >
+          <p>© 2026 IATBD. All rights reserved.</p>
+          <a href="index.html" class="hover:text-primary-400 transition"
+            >← Home</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
