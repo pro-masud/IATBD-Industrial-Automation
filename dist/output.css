@@ -2697,6 +2697,24 @@
     }
   }
 }
+#theme-toggle .theme-icon-sun {
+  display: none !important;
+}
+#theme-toggle .theme-icon-moon {
+  display: inline-block !important;
+}
+.dark #theme-toggle .theme-icon-sun {
+  display: inline-block !important;
+}
+.dark #theme-toggle .theme-icon-moon {
+  display: none !important;
+}
+html {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
 ::-webkit-scrollbar {
   width: 8px;
 }

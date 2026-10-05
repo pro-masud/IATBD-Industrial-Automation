@@ -1,13 +1,16 @@
 (() => {
   const root = document.documentElement;
-  const savedTheme = localStorage.getItem("iatbd-theme");
+  const THEME_KEY = "iatbd-theme";
 
-  if (
-    savedTheme === "dark" ||
-    (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
-    root.classList.add("dark");
+  // Default theme is DARK. Light mode only when the visitor chose it
+  // with the header toggle (saved in localStorage).
+  let savedTheme = null;
+  try {
+    savedTheme = localStorage.getItem(THEME_KEY);
+  } catch {
+    savedTheme = null;
   }
+  root.classList.toggle("dark", savedTheme !== "light");
 
   document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("theme-toggle");
@@ -24,7 +27,11 @@
       updateThemeControl();
       themeToggle.addEventListener("click", () => {
         const isDark = root.classList.toggle("dark");
-        localStorage.setItem("iatbd-theme", isDark ? "dark" : "light");
+        try {
+          localStorage.setItem(THEME_KEY, isDark ? "dark" : "light");
+        } catch {
+          /* storage unavailable: theme still switches for this visit */
+        }
         updateThemeControl();
       });
     }
