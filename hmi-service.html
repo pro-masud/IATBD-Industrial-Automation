@@ -19,77 +19,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="dist/output.css" />
-    <style>
-      .hmi-hero {
-        min-height: 650px;
-      }
-      .hmi-slide {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        visibility: hidden;
-        transition:
-          opacity 0.8s ease,
-          visibility 0.8s ease;
-      }
-      .hmi-slide.active {
-        opacity: 1;
-        visibility: visible;
-        z-index: 1;
-      }
-      .hmi-slide .slide-bg {
-        position: absolute;
-        inset: 0;
-        background-position: center;
-        background-size: cover;
-        transform: scale(1.02);
-        transition: transform 8s ease;
-      }
-      .hmi-slide.active .slide-bg {
-        transform: scale(1.08);
-      }
-      .hmi-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.45);
-        transition: all 0.3s;
-      }
-      .hmi-dot.active {
-        width: 28px;
-        background: #fff;
-      }
-      .testimonial-track {
-        display: flex;
-        transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-      }
-      .testimonial-card {
-        box-sizing: border-box;
-        flex: 0 0 100%;
-        padding: 0 10px;
-      }
-      @media (min-width: 768px) {
-        .testimonial-card {
-          flex-basis: 33.333%;
-        }
-      }
-      .hmi-float {
-        box-shadow:
-          0 10px 40px -8px rgba(15, 23, 42, 0.12),
-          0 4px 12px rgba(15, 23, 42, 0.05);
-      }
-      .dark .hmi-float {
-        box-shadow: none;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        .hmi-slide,
-        .hmi-slide .slide-bg,
-        .hmi-dot,
-        .testimonial-track {
-          transition-duration: 0.01ms;
-        }
-      }
-    </style>
   </head>
   <body
     class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased"
@@ -462,7 +391,11 @@
               >
                 12+
               </p>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">HMI Brands</p>
+              <p
+                class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1"
+              >
+                HMI Brands
+              </p>
             </div>
             <div class="p-5 sm:p-6 text-center">
               <p
@@ -470,7 +403,9 @@
               >
                 150+
               </p>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+              <p
+                class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1"
+              >
                 Projects Done
               </p>
             </div>
@@ -480,7 +415,11 @@
               >
                 24/7
               </p>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">Support</p>
+              <p
+                class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1"
+              >
+                Support
+              </p>
             </div>
             <div class="p-5 sm:p-6 text-center">
               <p
@@ -488,7 +427,9 @@
               >
                 10+
               </p>
-              <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+              <p
+                class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1"
+              >
                 Years Experience
               </p>
             </div>
@@ -575,7 +516,8 @@
                   ><span
                     class="block text-sm font-bold text-slate-900 dark:text-white"
                     >Operator-first</span
-                  ><span class="block text-xs text-slate-500 dark:text-slate-400"
+                  ><span
+                    class="block text-xs text-slate-500 dark:text-slate-400"
                     >Fewer errors. Faster action.</span
                   ></span
                 >

@@ -19,6 +19,79 @@ html.dark {
   color-scheme: dark;
 }
 
+.cf7-input {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  background-color: #fff;
+  padding: 0.75rem 0.875rem;
+  color: #0f172a;
+  font: inherit;
+  line-height: 1.5;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.cf7-input::placeholder {
+  color: #94a3b8;
+}
+.cf7-input:focus {
+  border-color: #338bff;
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px rgb(51 139 255 / 18%);
+}
+.cf7-textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+.dark .cf7-input {
+  border-color: #334155;
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+.dark .cf7-input:focus {
+  border-color: #59aeff;
+}
+.cf7-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: #1a6af5;
+  padding: 0.75rem 1.5rem;
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.cf7-submit:hover {
+  background: #338bff;
+}
+.cf7-submit:focus-visible {
+  outline: 3px solid rgb(51 139 255 / 35%);
+  outline-offset: 2px;
+}
+.wpcf7-not-valid-tip {
+  display: block;
+  margin-top: 0.375rem;
+  color: #dc2626;
+  font-size: 0.8125rem;
+}
+.dark .wpcf7-not-valid-tip {
+  color: #fca5a5;
+}
+.wpcf7-response-output {
+  margin: 1rem 0 0;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
