@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="bn" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VFD • PLC • HMI • Servo Drive Repairing | IATBD</title>
+    <meta
+      name="description"
+      content="Professional repairing of VFD, PLC, HMI and Servo drives. Power stage repair, board-level service, module replacement and testing. IATBD"
+    />
+    <script src="src/custom.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+  <body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased">
+    <!-- HEADER -->
+    <header
+      class="fixed top-0 inset-x-0 z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-[70px]">
+          <a href="index.html" class="flex items-center gap-3">
+            <div
+              class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20"
+            >
+              <i class="fas fa-microchip text-white text-sm"></i>
+            </div>
+            <div>
+              <span
+                class="font-display font-bold text-lg text-slate-900 dark:text-white tracking-tight"
+                >IATBD</span
+              >
+              <p
+                class="text-[9px] text-slate-400 tracking-[0.2em] uppercase -mt-0.5"
+              >
+                Industrial Automation
+              </p>
+            </div>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1">
+            <a
+              href="index.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >Home</a
+            >
+            <a
+              href="plc-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >PLC</a
+            >
+            <a
+              href="store-shop.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >Store</a
+            >
+            <a
+              href="hmi-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >HMI</a
+            >
+            <a
+              href="vfd-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >VFD</a
+            >
+            <a
+              href="index.html#services"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >Servo</a
+            >
+            <a
+              href="iatautomation-repairing.html"
+              aria-current="page"
+              class="nav-link active px-3.5 py-2 text-sm font-medium text-primary-600 dark:text-primary-400"
+              >Repairing</a
+            >
+            <a
+              href="ai-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              >AI</a
+            >
+            <div class="relative group">
+              <button
+                type="button"
+                class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 flex items-center gap-1.5"
+              >
+                Service <i class="fas fa-chevron-down text-[9px]"></i>
+              </button>
+              <div
+                class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden z-50"
+              >
+                <a
+                  href="index.html#services"
+                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                  >Maintenance</a
+                >
+                <a
+                  href="index.html#services"
+                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                  >Troubleshooting</a
+                >
+                <a
+                  href="iatautomation-repairing.html"
+                  class="block px-4 py-2.5 text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20"
+                  >Repairing</a
+                >
+              </div>
+            </div>
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <button
+              id="theme-toggle"
+              type="button"
+              aria-label="Switch to light mode"
+              aria-pressed="true"
+              class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+            >
+              <i class="fas fa-sun theme-icon-sun text-xs text-amber-500"></i>
+              <i class="fas fa-moon theme-icon-moon text-xs text-slate-600"></i>
+            </button>
+            <a
+              href="contact.html"
+              class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold rounded-full shadow-lg shadow-primary-500/20 btn-cta"
+            >
+              Request Repair
+            </a>
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              class="lg:hidden w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+            >
+              <i class="fas fa-bars text-slate-700 dark:text-slate-300"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900"
+      >
+        <div class="px-4 py-3 space-y-1">
+          <a
+            href="index.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >Home</a
+          >
+          <a
+            href="plc-service.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >PLC</a
+          >
+          <a
+            href="store-shop.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >Store</a
+          >
+          <a
+            href="hmi-service.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >HMI</a
+          >
+          <a
+            href="vfd-service.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >VFD</a
+          >
+          <a
+            href="index.html#services"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >Servo</a
+          >
+          <a
+            href="iatautomation-repairing.html"
+            aria-current="page"
+            class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20"
+            >Repairing</a
+          >
+          <a
+            href="ai-service.html"
+            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
+            >AI</a
+          >
+          <a
+            href="contact.html"
+            class="block mt-2 text-center py-2.5 bg-primary-600 text-white rounded-xl text-sm font-semibold"
+            >Request Repair</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="repair-hero relative min-h-[88vh] pt-16 overflow-hidden">
+      <div class="repair-slide active" data-i="0">
+        <div
+          class="bg-img"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1920&q=80');
+          "
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-slate-900/50"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24 sm:py-32">
+          <div class="max-w-2xl">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-accent-500/40 bg-accent-500/15 text-accent-400 text-xs font-semibold mb-6 tracking-wide"
+            >
+              <i class="fas fa-tools"></i> PROFESSIONAL REPAIR SERVICE
+            </div>
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.1] mb-6">
+              Expert Repairing for<br />
+              <span class="text-accent-400">VFD • PLC • HMI • Servo</span>
+            </h1>
+            <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl">
+              Board-level repair, power module replacement, capacitor &amp; fan service, and full functional testing. We restore your industrial drives and controllers instead of forcing costly replacements.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-accent-500 hover:bg-accent-400 text-white font-semibold rounded-full shadow-lg shadow-accent-500/30 btn-cta"
+              >
+                Send for Repair <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+              <a
+                href="#services"
+                class="inline-flex items-center gap-2 px-7 py-3.5 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition"
+              >
+                What We Repair
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="repair-slide" data-i="1">
+        <div
+          class="bg-img"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80');
+          "
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-primary-900/40"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24 sm:py-32">
+          <div class="max-w-2xl">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary-400/40 bg-primary-500/15 text-primary-300 text-xs font-semibold mb-6 tracking-wide"
+            >
+              <i class="fas fa-microchip"></i> COMPONENT-LEVEL SERVICE
+            </div>
+            <h1 class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.1] mb-6">
+              Repair first.<br />
+              <span class="text-primary-300">Replace only when needed.</span>
+            </h1>
+            <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl">
+              From IGBT and rectifier failures to control board faults and display issues — we diagnose, repair and load-test so your equipment returns production-ready.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-500 hover:bg-primary-400 text-white font-semibold rounded-full shadow-lg btn-cta"
+              >
+                Get Repair Quote <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        <button
+          class="repair-dot active"
+          data-i="0"
+          type="button"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          class="repair-dot"
+          data-i="1"
+          type="button"
+          aria-label="Slide 2"
+        ></button>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="py-8 bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="p-2">
+            <p class="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400">400+</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Units Successfully Repaired</p>
+          </div>
+          <div class="p-2">
+            <p class="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400">15+</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Brands We Service</p>
+          </div>
+          <div class="p-2">
+            <p class="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400">Warranty</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">On Repair Work</p>
+          </div>
+          <div class="p-2">
+            <p class="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400">Load Tested</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Before Delivery</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 sm:py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Repair Services</p>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">Industrial Equipment Repairing</h2>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">We repair the critical boards and modules that keep your plant running — often at a fraction of replacement cost.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- VFD Repair -->
+          <div class="svc-card bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+            <div class="h-48 overflow-hidden rounded-t-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+                alt="VFD Repairing"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
+                  <i class="fas fa-tachometer-alt text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">VFD Repairing</h3>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+                Power stage, control board, DC bus, cooling system and communication interface repair for industrial variable frequency drives.
+              </p>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 mb-5">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> IGBT / power module replacement</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Capacitor &amp; rectifier repair</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Control board &amp; display service</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Cooling fan &amp; thermal path fix</li>
+              </ul>
+              <a
+                href="vfd-service.html"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:gap-3 transition-all"
+              >
+                Learn more about VFD service <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- PLC Repair -->
+          <div class="svc-card bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+            <div class="h-48 overflow-hidden rounded-t-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                alt="PLC Repairing"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+                  <i class="fas fa-microchip text-orange-600 dark:text-orange-400"></i>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">PLC Repairing</h3>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+                CPU, power supply, I/O modules and communication cards — repaired and tested for reliable return to service.
+              </p>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 mb-5">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Power supply &amp; CPU board repair</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Digital &amp; analog I/O module service</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Communication card recovery</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Battery &amp; memory module support</li>
+              </ul>
+              <a
+                href="plc-service.html"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:gap-3 transition-all"
+              >
+                Learn more about PLC service <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- HMI Repair -->
+          <div class="svc-card bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+            <div class="h-48 overflow-hidden rounded-t-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80"
+                alt="HMI Repairing"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                  <i class="fas fa-desktop text-emerald-600 dark:text-emerald-400"></i>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">HMI Repairing</h3>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+                Display, touch panel, backlight, power board and communication interface repair for operator panels and HMIs.
+              </p>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 mb-5">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> LCD / touch panel replacement</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Backlight &amp; inverter repair</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Power &amp; main board service</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Communication port recovery</li>
+              </ul>
+              <a
+                href="hmi-service.html"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:gap-3 transition-all"
+              >
+                Learn more about HMI service <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Servo Repair -->
+          <div class="svc-card bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+            <div class="h-48 overflow-hidden rounded-t-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80"
+                alt="Servo Drive Repairing"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center">
+                  <i class="fas fa-cog text-rose-600 dark:text-rose-400"></i>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Servo Drive Repairing</h3>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+                Power stage, control board, encoder interface and cooling system repair for servo amplifiers and drives.
+              </p>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 mb-5">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Power module &amp; IGBT service</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Control &amp; feedback board repair</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Encoder interface recovery</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Full load &amp; position testing</li>
+              </ul>
+              <a
+                href="index.html#services"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-primary-600 dark:text-primary-400 hover:gap-3 transition-all"
+              >
+                Learn more about Servo service <i class="fas fa-arrow-right text-xs"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section id="brands" class="py-16 bg-slate-50 dark:bg-slate-900/60 overflow-hidden border-y border-slate-100 dark:border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+        <div class="text-center">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Multi-Brand Repair</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">We Repair All Major Brands</h2>
+        </div>
+      </div>
+
+      <div class="brand-marquee">
+        <div class="brand-track">
+          <div class="flex items-center gap-8 px-4">
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-primary-500"></i> Siemens
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-red-500"></i> ABB
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-blue-500"></i> Danfoss
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-emerald-500"></i> Delta
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-emerald-600"></i> Schneider
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-red-600"></i> Mitsubishi
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-blue-600"></i> Yaskawa
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-orange-500"></i> Allen-Bradley
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-cyan-500"></i> Omron
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-indigo-500"></i> Fuji Electric
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-purple-500"></i> LS Electric
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-accent-500"></i> Inovance
+            </span>
+          </div>
+          <div class="flex items-center gap-8 px-4" aria-hidden="true">
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-primary-500"></i> Siemens
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-red-500"></i> ABB
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-blue-500"></i> Danfoss
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-emerald-500"></i> Delta
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-emerald-600"></i> Schneider
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-red-600"></i> Mitsubishi
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-blue-600"></i> Yaskawa
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-orange-500"></i> Allen-Bradley
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-cyan-500"></i> Omron
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-indigo-500"></i> Fuji Electric
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-purple-500"></i> LS Electric
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-accent-500"></i> Inovance
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-20 sm:py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Repair Process</p>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">How We Repair Your Equipment</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="process-card bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 text-center">
+            <div class="process-num w-12 h-12 rounded-full bg-primary-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/30">1</div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Receive &amp; Inspect</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Unit received, photographed and initial fault assessment completed.</p>
+          </div>
+          <div class="process-card bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 text-center">
+            <div class="process-num w-12 h-12 rounded-full bg-primary-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/30">2</div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Diagnosis</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Board-level testing to identify failed components and root cause.</p>
+          </div>
+          <div class="process-card bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 text-center">
+            <div class="process-num w-12 h-12 rounded-full bg-primary-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/30">3</div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Repair</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Component replacement, soldering, cleaning and assembly.</p>
+          </div>
+          <div class="process-card bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 text-center">
+            <div class="process-num w-12 h-12 rounded-full bg-primary-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/30">4</div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Test &amp; Return</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Full functional / load test, report and secure return shipping.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY REPAIR -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-900/60 border-t border-slate-100 dark:border-slate-800/80">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Why Repair With Us</p>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">Save cost. Reduce downtime.</h2>
+            <div class="space-y-5">
+              <div class="flex gap-4">
+                <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-coins text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white">Lower than replacement</h4>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">Professional repair is often significantly cheaper than buying a new drive or PLC.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-clock text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white">Faster return to production</h4>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">Avoid long lead times for new units — especially for older or discontinued models.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-shield-alt text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white">Warranty on workmanship</h4>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">Repaired units are tested and covered for the work performed.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-recycle text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white">Legacy equipment support</h4>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">We service many older models that are hard or expensive to replace.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="rounded-3xl overflow-hidden shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80"
+                alt="Electronics repair workbench"
+                class="w-full h-80 object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-xl border border-slate-100 dark:border-slate-700">
+              <p class="text-3xl font-bold text-primary-600 dark:text-primary-400">90%+</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400">Successful repair rate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 sm:py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">FAQ</p>
+          <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">Repair Questions</h2>
+        </div>
+        <div class="space-y-3">
+          <div class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left" type="button">
+              <span class="font-medium text-slate-900 dark:text-white">How long does a typical repair take?</span>
+              <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-slate-600 dark:text-slate-300 pb-4 text-[15px]">
+                Most VFD and HMI repairs are completed within a few working days after we receive the unit. Complex power stage or rare-part jobs may take longer — we update you with a clear timeline after diagnosis.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left" type="button">
+              <span class="font-medium text-slate-900 dark:text-white">Do you repair if the unit is obsolete?</span>
+              <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-slate-600 dark:text-slate-300 pb-4 text-[15px]">
+                Yes. We frequently repair discontinued and legacy models when parts or equivalent components are available. This is often the most cost-effective option for older lines.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left" type="button">
+              <span class="font-medium text-slate-900 dark:text-white">Is there a warranty on the repair?</span>
+              <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-slate-600 dark:text-slate-300 pb-4 text-[15px]">
+                Yes. We provide a workmanship warranty on the repaired section. Terms are confirmed with your quote so you know exactly what is covered.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left" type="button">
+              <span class="font-medium text-slate-900 dark:text-white">Can you test under load before return?</span>
+              <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-slate-600 dark:text-slate-300 pb-4 text-[15px]">
+                Where applicable we perform functional and load testing so the unit leaves our bench ready for installation and production use.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="relative py-20 sm:py-28 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-800 to-primary-600"></div>
+      <div class="absolute inset-0 opacity-20" style="background-image:radial-gradient(circle at 20% 50%, #ff7a1a 0%, transparent 40%), radial-gradient(circle at 80% 20%, #338bff 0%, transparent 35%)"></div>
+      <div class="relative z-10 max-w-3xl mx-auto px-4 text-center">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Ready to Repair Instead of Replace?</h2>
+        <p class="text-slate-300 text-lg mb-8 max-w-lg mx-auto">Send the brand, model and fault description. We will advise on feasibility and next steps quickly.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a
+            href="tel:+8801XXXXXXXXX"
+            class="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-primary-700 font-bold rounded-full shadow-lg btn-cta"
+          >
+            <i class="fas fa-phone-alt text-sm"></i> Call Now
+          </a>
+          <a
+            href="https://wa.me/8801XXXXXXXXX"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-full btn-cta"
+          >
+            <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+          </a>
+          <a
+            href="contact.html"
+            class="inline-flex items-center gap-2 px-7 py-3.5 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition"
+          >
+            Send Message
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-slate-400">IATBD • Industrial Drive &amp; Control Repair</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-slate-900 dark:bg-slate-950 text-slate-400 pt-14 pb-8 border-t border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-10 mb-10">
+          <div>
+            <div class="flex items-center gap-2.5 mb-4">
+              <div
+                class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center"
+              >
+                <i class="fas fa-microchip text-white text-xs"></i>
+              </div>
+              <span class="font-display font-bold text-white">IATBD</span>
+            </div>
+            <p class="text-[15px] leading-relaxed">
+              Professional repairing of VFD, PLC, HMI and Servo systems. Component-level service and industrial automation across Bangladesh.
+            </p>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold mb-3">Repair Services</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#services" class="hover:text-primary-400 transition"
+                  >VFD Repairing</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-primary-400 transition"
+                  >PLC Repairing</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-primary-400 transition"
+                  >HMI Repairing</a
+                >
+              </li>
+              <li>
+                <a href="#services" class="hover:text-primary-400 transition"
+                  >Servo Repairing</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold mb-3">Support</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <a href="#process" class="hover:text-primary-400 transition"
+                  >Repair Process</a
+                >
+              </li>
+              <li>
+                <a href="#faq" class="hover:text-primary-400 transition"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-primary-400 transition"
+                  >Request Repair</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white text-sm font-semibold mb-3">Contact</h4>
+            <ul class="space-y-2 text-sm">
+              <li>
+                <i class="fas fa-phone-alt text-primary-400 mr-2"></i>+880
+                1XXX-XXXXXX
+              </li>
+              <li>
+                <i class="fas fa-envelope text-primary-400 mr-2"></i
+                >repair@iatbd.com
+              </li>
+              <li>
+                <i class="fas fa-globe text-primary-400 mr-2"></i
+                >iatbd.com
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-400"
+        >
+          <p>© 2026 IATBD. All rights reserved.</p>
+          <a href="index.html" class="hover:text-primary-400 transition">← Home</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

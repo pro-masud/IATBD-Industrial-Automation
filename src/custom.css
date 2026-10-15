@@ -648,3 +648,87 @@ footer,
     transition: none;
   }
 }
+
+/* Repair Page Styles */
+.repair-hero {
+  position: relative;
+  min-height: 85vh;
+}
+.repair-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+.repair-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.repair-slide .bg-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 9s ease;
+}
+.repair-slide.active .bg-img {
+  transform: scale(1.07);
+}
+.repair-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.repair-dot.active {
+  width: 28px;
+  background: #fff;
+}
+
+/* Brand Marquee */
+.brand-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+.brand-track {
+  display: inline-flex;
+  gap: 2.5rem;
+  animation: scroll-left 35s linear infinite;
+}
+.brand-track:hover {
+  animation-play-state: paused;
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.brand-logo {
+  height: 48px;
+  width: auto;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.7);
+  transition: all 0.3s ease;
+}
+.brand-logo:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.08);
+}
+.dark .brand-logo {
+  filter: grayscale(100%) opacity(0.6) brightness(1.4);
+}
+.dark .brand-logo:hover {
+  filter: grayscale(0%) opacity(1) brightness(1);
+}
+
