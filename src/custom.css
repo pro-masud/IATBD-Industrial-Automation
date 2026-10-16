@@ -649,12 +649,14 @@ footer,
   }
 }
 
-/* Repair Page Styles */
-.repair-hero {
+/* Repair & Maintenance Page Styles */
+.repair-hero,
+.maintenance-hero {
   position: relative;
   min-height: 85vh;
 }
-.repair-slide {
+.repair-slide,
+.maintenance-slide {
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -663,22 +665,26 @@ footer,
     opacity 0.8s ease,
     visibility 0.8s ease;
 }
-.repair-slide.active {
+.repair-slide.active,
+.maintenance-slide.active {
   opacity: 1;
   visibility: visible;
   z-index: 1;
 }
-.repair-slide .bg-img {
+.repair-slide .bg-img,
+.maintenance-slide .bg-img {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   transition: transform 9s ease;
 }
-.repair-slide.active .bg-img {
+.repair-slide.active .bg-img,
+.maintenance-slide.active .bg-img {
   transform: scale(1.07);
 }
-.repair-dot {
+.repair-dot,
+.maintenance-dot {
   width: 8px;
   height: 8px;
   border-radius: 999px;
@@ -686,7 +692,8 @@ footer,
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.repair-dot.active {
+.repair-dot.active,
+.maintenance-dot.active {
   width: 28px;
   background: #fff;
 }

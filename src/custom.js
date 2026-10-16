@@ -103,6 +103,13 @@
       dataKey: "i",
       interval: 5500,
     });
+    initHeroSlider({
+      containerSelector: ".maintenance-hero",
+      slideSelector: ".maintenance-slide",
+      dotSelector: ".maintenance-dot",
+      dataKey: "i",
+      interval: 5500,
+    });
     initCounters();
     initTestimonials();
     initStoreShop();
