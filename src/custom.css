@@ -739,3 +739,129 @@ footer,
   filter: grayscale(0%) opacity(1) brightness(1);
 }
 
+
+/* VFD Hero Slider */
+.vfd-hero {
+  position: relative;
+  min-height: 85vh;
+}
+.vfd-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.75s ease,
+    visibility 0.75s ease;
+}
+.vfd-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.vfd-slide .bg-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 8s ease;
+}
+.vfd-slide.active .bg-img {
+  transform: scale(1.06);
+}
+.vfd-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.vfd-dot.active {
+  width: 28px;
+  background: #fff;
+}
+
+/* HMI Hero Slider */
+.hmi-hero {
+  position: relative;
+  min-height: 85vh;
+}
+.hmi-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.75s ease,
+    visibility 0.75s ease;
+}
+.hmi-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.hmi-slide .slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 8s ease;
+}
+.hmi-slide.active .slide-bg {
+  transform: scale(1.06);
+}
+.hmi-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.hmi-dot.active {
+  width: 28px;
+  background: #fff;
+}
+
+/* Troubleshooting Hero Slider */
+.troubleshoot-hero {
+  position: relative;
+  min-height: 88vh;
+}
+.troubleshoot-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease;
+}
+.troubleshoot-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.troubleshoot-slide .bg-img {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 8s ease;
+}
+.troubleshoot-slide.active .bg-img {
+  transform: scale(1.06);
+}
+.troubleshoot-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.troubleshoot-dot.active {
+  width: 28px;
+  background: #fff;
+}

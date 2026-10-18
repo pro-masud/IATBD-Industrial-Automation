@@ -123,9 +123,26 @@
       dataKey: "i",
       interval: 5500,
     });
+    initHeroSlider({
+      containerSelector: ".vfd-hero",
+      slideSelector: ".vfd-slide",
+      dotSelector: ".vfd-dot",
+      dataKey: "i",
+      interval: 5000,
+    });
+    initHeroSlider({
+      containerSelector: ".hmi-hero",
+      slideSelector: ".hmi-slide",
+      dotSelector: ".hmi-dot",
+      dataKey: "slideTo",
+      interval: 5000,
+    });
     initCounters();
     initTestimonials();
     initStoreShop();
+    initBlogPagination();
+    initContactForm();
+    initBlogSingle();
   });
 
   function initStoreShop() {
@@ -383,10 +400,14 @@
     const show = (index) => {
       currentIndex = (index + slides.length) % slides.length;
       slides.forEach((slide, slideIndex) => {
-        slide.classList.toggle("active", slideIndex === currentIndex);
+        const active = slideIndex === currentIndex;
+        slide.classList.toggle("active", active);
+        slide.setAttribute("aria-hidden", String(!active));
       });
       dots.forEach((dot, dotIndex) => {
-        dot.classList.toggle("active", dotIndex === currentIndex);
+        const active = dotIndex === currentIndex;
+        dot.classList.toggle("active", active);
+        dot.setAttribute("aria-pressed", String(active));
       });
     };
     const stop = () => clearInterval(timer);
@@ -397,7 +418,12 @@
 
     dots.forEach((dot) => {
       dot.addEventListener("click", () => {
-        const index = Number(dot.dataset[dataKey]);
+        const raw =
+          dot.dataset[dataKey] ??
+          dot.dataset.slideTo ??
+          dot.dataset.i ??
+          dot.dataset.index;
+        const index = Number(raw);
         show(Number.isNaN(index) ? 0 : index);
         start();
       });
@@ -419,6 +445,8 @@
     });
     container.addEventListener("mouseenter", stop);
     container.addEventListener("mouseleave", start);
+    container.addEventListener("focusin", stop);
+    container.addEventListener("focusout", start);
     show(0);
     start();
   }
