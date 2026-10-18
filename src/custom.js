@@ -116,6 +116,13 @@
       dataKey: "i",
       interval: 5500,
     });
+    initHeroSlider({
+      containerSelector: ".troubleshoot-hero",
+      slideSelector: ".troubleshoot-slide",
+      dotSelector: ".troubleshoot-dot",
+      dataKey: "i",
+      interval: 5500,
+    });
     initCounters();
     initTestimonials();
     initStoreShop();

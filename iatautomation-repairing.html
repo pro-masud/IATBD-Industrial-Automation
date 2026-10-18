@@ -23,13 +23,13 @@
   <body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased">
     <!-- HEADER -->
     <header
-      class="fixed top-0 inset-x-0 z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-800"
+      class="fixed top-0 inset-x-0 z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-800 transition-colors duration-300"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-[70px]">
-          <a href="index.html" class="flex items-center gap-3">
+          <a href="index.html" class="flex items-center gap-3 group">
             <div
-              class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20"
+              class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20 group-hover:scale-105 transition-transform"
             >
               <i class="fas fa-microchip text-white text-sm"></i>
             </div>
@@ -46,76 +46,90 @@
             </div>
           </a>
 
-          <nav class="hidden lg:flex items-center gap-1">
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
             <a
               href="index.html"
-              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
               >Home</a
             >
             <a
               href="plc-service.html"
-              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
               >PLC</a
             >
             <a
               href="store-shop.html"
-              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
               >Store</a
             >
             <a
               href="hmi-service.html"
-              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
               >HMI</a
             >
             <a
               href="vfd-service.html"
-              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
               >VFD</a
             >
             <a
-              href="index.html#services"
-              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              href="servo-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
               >Servo</a
             >
             <a
               href="iatautomation-repairing.html"
+              class="nav-link active px-3.5 py-2 text-sm font-semibold text-primary-600 dark:text-primary-400"
               aria-current="page"
-              class="nav-link active px-3.5 py-2 text-sm font-medium text-primary-600 dark:text-primary-400"
               >Repairing</a
             >
             <a
               href="iatautomation-maintenance.html"
-              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
               >Maintenance</a
             >
             <a
               href="ai-service.html"
-              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
               >AI</a
+            >
+            <a
+              href="blog.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >Blog</a
             >
             <div class="relative group">
               <button
                 type="button"
-                class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 flex items-center gap-1.5"
+                class="nav-link text-primary-600 dark:text-primary-400 font-semibold px-3 py-2 text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 flex items-center gap-1.5"
               >
                 Service <i class="fas fa-chevron-down text-[9px]"></i>
               </button>
               <div
-                class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden z-50"
+                class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden z-50 transition-all duration-200"
               >
                 <a
                   href="iatautomation-maintenance.html"
-                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
                   >Maintenance</a
                 >
                 <a
-                  href="index.html#services"
-                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-900/20"
+                  href="iatautomation-troubleshooting.html"
+                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
                   >Troubleshooting</a
                 >
                 <a
                   href="iatautomation-repairing.html"
-                  class="block px-4 py-2.5 text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20"
+                  class="block px-4 py-2.5 text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/40"
                   >Repairing</a
                 >
               </div>
@@ -135,9 +149,9 @@
             </button>
             <a
               href="contact.html"
-              class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold rounded-full shadow-lg shadow-primary-500/20 btn-cta"
+              class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold rounded-full shadow-lg shadow-primary-500/20 btn-cta transition-transform"
             >
-              Request Repair
+              Contact
             </a>
             <button
               id="mobile-menu-btn"
@@ -158,57 +172,18 @@
         class="lg:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900"
       >
         <div class="px-4 py-3 space-y-1">
-          <a
-            href="index.html"
-            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
-            >Home</a
-          >
-          <a
-            href="plc-service.html"
-            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
-            >PLC</a
-          >
-          <a
-            href="store-shop.html"
-            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
-            >Store</a
-          >
-          <a
-            href="hmi-service.html"
-            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
-            >HMI</a
-          >
-          <a
-            href="vfd-service.html"
-            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
-            >VFD</a
-          >
-          <a
-            href="index.html#services"
-            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
-            >Servo</a
-          >
-          <a
-            href="iatautomation-repairing.html"
-            aria-current="page"
-            class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-900/20"
-            >Repairing</a
-          >
-          <a
-            href="iatautomation-maintenance.html"
-            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
-            >Maintenance</a
-          >
-          <a
-            href="ai-service.html"
-            class="block px-3 py-2.5 rounded-lg text-sm text-slate-600 dark:text-slate-300"
-            >AI</a
-          >
-          <a
-            href="contact.html"
-            class="block mt-2 text-center py-2.5 bg-primary-600 text-white rounded-xl text-sm font-semibold"
-            >Request Repair</a
-          >
+          <a href="index.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Home</a>
+          <a href="plc-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">PLC</a>
+          <a href="store-shop.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Store</a>
+          <a href="hmi-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">HMI</a>
+          <a href="vfd-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">VFD</a>
+          <a href="servo-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Servo</a>
+          <a href="iatautomation-repairing.html" class="block px-3 py-2 rounded-lg text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/40">Repairing</a>
+          <a href="iatautomation-maintenance.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Maintenance</a>
+          <a href="iatautomation-troubleshooting.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Troubleshooting</a>
+          <a href="ai-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">AI</a>
+          <a href="blog.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Blog</a>
+          <a href="contact.html" class="block mt-2 text-center py-2.5 bg-primary-600 text-white rounded-xl text-sm font-semibold">Contact</a>
         </div>
       </div>
     </header>
@@ -768,84 +743,64 @@
           <div>
             <div class="flex items-center gap-2.5 mb-4">
               <div
-                class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center"
+                class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20"
               >
                 <i class="fas fa-microchip text-white text-xs"></i>
               </div>
-              <span class="font-display font-bold text-white">IATBD</span>
+              <span class="font-display font-bold text-white text-lg">IATBD</span>
             </div>
-            <p class="text-[15px] leading-relaxed">
-              Professional repairing of VFD, PLC, HMI and Servo systems. Component-level service and industrial automation across Bangladesh.
+            <p class="text-sm leading-relaxed text-slate-400">
+              Industrial automation — PLC, HMI, VFD, Servo, AI solutions and professional engineering support across Bangladesh.
             </p>
+            <div class="flex gap-3 mt-4">
+              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-youtube"></i></a>
+            </div>
           </div>
+
           <div>
-            <h4 class="text-white text-sm font-semibold mb-3">Repair Services</h4>
+            <h4 class="text-white text-sm font-semibold mb-4 tracking-wider uppercase text-xs">Services</h4>
             <ul class="space-y-2 text-sm">
-              <li>
-                <a href="#services" class="hover:text-primary-400 transition"
-                  >VFD Repairing</a
-                >
-              </li>
-              <li>
-                <a href="#services" class="hover:text-primary-400 transition"
-                  >PLC Repairing</a
-                >
-              </li>
-              <li>
-                <a href="#services" class="hover:text-primary-400 transition"
-                  >HMI Repairing</a
-                >
-              </li>
-              <li>
-                <a href="#services" class="hover:text-primary-400 transition"
-                  >Servo Repairing</a
-                >
-              </li>
+              <li><a href="plc-service.html" class="hover:text-primary-400 transition">PLC Service</a></li>
+              <li><a href="vfd-service.html" class="hover:text-primary-400 transition">VFD Service</a></li>
+              <li><a href="hmi-service.html" class="hover:text-primary-400 transition">HMI Service</a></li>
+              <li><a href="servo-service.html" class="hover:text-primary-400 transition">Servo Drive</a></li>
+              <li><a href="ai-service.html" class="hover:text-primary-400 transition">AI Solution</a></li>
             </ul>
           </div>
+
           <div>
-            <h4 class="text-white text-sm font-semibold mb-3">Support</h4>
+            <h4 class="text-white text-sm font-semibold mb-4 tracking-wider uppercase text-xs">Support</h4>
             <ul class="space-y-2 text-sm">
-              <li>
-                <a href="#process" class="hover:text-primary-400 transition"
-                  >Repair Process</a
-                >
-              </li>
-              <li>
-                <a href="#faq" class="hover:text-primary-400 transition"
-                  >FAQ</a
-                >
-              </li>
-              <li>
-                <a href="contact.html" class="hover:text-primary-400 transition"
-                  >Request Repair</a
-                >
-              </li>
+              <li><a href="iatautomation-maintenance.html" class="hover:text-primary-400 transition">Maintenance</a></li>
+              <li><a href="iatautomation-troubleshooting.html" class="hover:text-primary-400 transition">Troubleshooting</a></li>
+              <li><a href="iatautomation-repairing.html" class="hover:text-primary-400 transition">Repairing</a></li>
+              <li><a href="store-shop.html" class="hover:text-primary-400 transition">Store Shop</a></li>
+              <li><a href="blog.html" class="hover:text-primary-400 transition">Our All Blog</a></li>
             </ul>
           </div>
+
           <div>
-            <h4 class="text-white text-sm font-semibold mb-3">Contact</h4>
-            <ul class="space-y-2 text-sm">
-              <li>
-                <i class="fas fa-phone-alt text-primary-400 mr-2"></i>+880
-                1XXX-XXXXXX
-              </li>
-              <li>
-                <i class="fas fa-envelope text-primary-400 mr-2"></i
-                >repair@iatbd.com
-              </li>
-              <li>
-                <i class="fas fa-globe text-primary-400 mr-2"></i
-                >iatbd.com
-              </li>
+            <h4 class="text-white text-sm font-semibold mb-4 tracking-wider uppercase text-xs">Contact</h4>
+            <ul class="space-y-2.5 text-sm">
+              <li class="flex items-center gap-2"><i class="fas fa-phone-alt text-primary-400 mr-1 text-xs"></i>+880 1XXX-XXXXXX</li>
+              <li class="flex items-center gap-2"><i class="fas fa-envelope text-primary-400 mr-1 text-xs"></i>info@iatbd.com</li>
+              <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-primary-400 mr-1 text-xs"></i>Dhaka, Bangladesh</li>
             </ul>
           </div>
         </div>
+
         <div
-          class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-400"
+          class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500"
         >
           <p>© 2026 IATBD. All rights reserved.</p>
-          <a href="index.html" class="hover:text-primary-400 transition">← Home</a>
+          <div class="flex items-center gap-4">
+            <a href="index.html" class="hover:text-primary-400 transition">← Home</a>
+            <a href="blog.html" class="hover:text-primary-400 transition">Blog</a>
+            <a href="contact.html" class="hover:text-primary-400 transition">Contact</a>
+          </div>
         </div>
       </div>
     </footer>

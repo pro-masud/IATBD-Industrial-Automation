@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="bn" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industrial Automation Troubleshooting | VFD • PLC • HMI • Servo | IATBD</title>
+    <meta
+      name="description"
+      content="Expert troubleshooting for VFD, PLC, HMI and Servo drives. Fast diagnosis, on-site support and multi-brand repair across Bangladesh. IATBD"
+    />
+    <script src="src/custom.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="dist/output.css" />
+  </head>
+  <body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased">
+    <!-- HEADER -->
+    <header
+      class="fixed top-0 inset-x-0 z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-800 transition-colors duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 lg:h-[70px]">
+          <a href="index.html" class="flex items-center gap-3 group">
+            <div
+              class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20 group-hover:scale-105 transition-transform"
+            >
+              <i class="fas fa-microchip text-white text-sm"></i>
+            </div>
+            <div>
+              <span
+                class="font-display font-bold text-lg text-slate-900 dark:text-white tracking-tight"
+                >IATBD</span
+              >
+              <p
+                class="text-[9px] text-slate-400 tracking-[0.2em] uppercase -mt-0.5"
+              >
+                Industrial Automation
+              </p>
+            </div>
+          </a>
+
+          <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+            <a
+              href="index.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >Home</a
+            >
+            <a
+              href="plc-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >PLC</a
+            >
+            <a
+              href="store-shop.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >Store</a
+            >
+            <a
+              href="hmi-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >HMI</a
+            >
+            <a
+              href="vfd-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >VFD</a
+            >
+            <a
+              href="servo-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >Servo</a
+            >
+            <a
+              href="iatautomation-repairing.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >Repairing</a
+            >
+            <a
+              href="iatautomation-maintenance.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >Maintenance</a
+            >
+            <a
+              href="ai-service.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >AI</a
+            >
+            <a
+              href="blog.html"
+              class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
+              
+              >Blog</a
+            >
+            <div class="relative group">
+              <button
+                type="button"
+                class="nav-link text-primary-600 dark:text-primary-400 font-semibold px-3 py-2 text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 flex items-center gap-1.5"
+              >
+                Service <i class="fas fa-chevron-down text-[9px]"></i>
+              </button>
+              <div
+                class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden z-50 transition-all duration-200"
+              >
+                <a
+                  href="iatautomation-maintenance.html"
+                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
+                  >Maintenance</a
+                >
+                <a
+                  href="iatautomation-troubleshooting.html"
+                  class="block px-4 py-2.5 text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/40"
+                  >Troubleshooting</a
+                >
+                <a
+                  href="iatautomation-repairing.html"
+                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
+                  >Repairing</a
+                >
+              </div>
+            </div>
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <button
+              id="theme-toggle"
+              type="button"
+              aria-label="Switch to light mode"
+              aria-pressed="true"
+              class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+            >
+              <i class="fas fa-sun theme-icon-sun text-xs text-amber-500"></i>
+              <i class="fas fa-moon theme-icon-moon text-xs text-slate-600"></i>
+            </button>
+            <a
+              href="contact.html"
+              class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold rounded-full shadow-lg shadow-primary-500/20 btn-cta transition-transform"
+            >
+              Contact
+            </a>
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              aria-label="Toggle navigation menu"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+              class="lg:hidden w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+            >
+              <i class="fas fa-bars text-slate-700 dark:text-slate-300"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="lg:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900"
+      >
+        <div class="px-4 py-3 space-y-1">
+          <a href="index.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Home</a>
+          <a href="plc-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">PLC</a>
+          <a href="store-shop.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Store</a>
+          <a href="hmi-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">HMI</a>
+          <a href="vfd-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">VFD</a>
+          <a href="servo-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Servo</a>
+          <a href="iatautomation-repairing.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Repairing</a>
+          <a href="iatautomation-maintenance.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Maintenance</a>
+          <a href="iatautomation-troubleshooting.html" class="block px-3 py-2 rounded-lg text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/40">Troubleshooting</a>
+          <a href="ai-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">AI</a>
+          <a href="blog.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Blog</a>
+          <a href="contact.html" class="block mt-2 text-center py-2.5 bg-primary-600 text-white rounded-xl text-sm font-semibold">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="troubleshoot-hero relative min-h-[88vh] pt-16 overflow-hidden">
+      <!-- Slide 1 -->
+      <div class="troubleshoot-slide active" data-i="0">
+        <div
+          class="bg-img"
+          style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80')"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-slate-900/50"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24 sm:py-32">
+          <div class="max-w-2xl">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-accent-500/40 bg-accent-500/15 text-accent-400 text-xs font-semibold mb-6 tracking-wide"
+            >
+              <i class="fas fa-bolt"></i> 24/7 INDUSTRIAL SUPPORT
+            </div>
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-bold text-white leading-[1.1] mb-6">
+              Fast Troubleshooting for<br />
+              <span class="text-accent-400">VFD • PLC • HMI • Servo</span>
+            </h1>
+            <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl">
+              Production stopped? Fault codes flashing? Our engineers diagnose and fix industrial automation issues on-site or remote — same day when possible.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-accent-500 hover:bg-accent-400 text-white font-semibold rounded-full shadow-lg shadow-accent-500/30 btn-cta"
+              >
+                Call for Emergency Support <i class="fas fa-phone-alt text-sm"></i>
+              </a>
+              <a
+                href="#services"
+                class="inline-flex items-center gap-2 px-7 py-3.5 border border-white/30 text-white font-medium rounded-full hover:bg-white/10 transition"
+              >
+                See What We Fix
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="troubleshoot-slide" data-i="1">
+        <div
+          class="bg-img"
+          style="background-image: url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1920&q=80')"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/85 to-primary-900/40"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24 sm:py-32">
+          <div class="max-w-2xl">
+            <div
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-primary-400/40 bg-primary-500/15 text-primary-300 text-xs font-semibold mb-6 tracking-wide"
+            >
+              <i class="fas fa-search"></i> ROOT CAUSE DIAGNOSIS
+            </div>
+            <h1 class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.1] mb-6">
+              We find the real problem.<br />
+              <span class="text-primary-300">Not just the symptom.</span>
+            </h1>
+            <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-xl">
+              From parameter errors to power stage failures, communication drops to encoder faults — systematic troubleshooting that gets your line running again.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-500 hover:bg-primary-400 text-white font-semibold rounded-full shadow-lg btn-cta"
+              >
+                Book Diagnosis <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slider Dots -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        <button
+          class="troubleshoot-dot active w-7 h-2 rounded-full bg-white transition-all"
+          data-i="0"
+          type="button"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          class="troubleshoot-dot w-2 h-2 rounded-full bg-white/40 transition-all"
+          data-i="1"
+          type="button"
+          aria-label="Slide 2"
+        ></button>
+      </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <section class="py-8 bg-slate-50 dark:bg-slate-900 border-y border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="p-2">
+            <p class="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400">500+</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Drives &amp; PLCs Fixed</p>
+          </div>
+          <div class="p-2">
+            <p class="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400">15+</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Brands Supported</p>
+          </div>
+          <div class="p-2">
+            <p class="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400">Same Day</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Emergency Response</p>
+          </div>
+          <div class="p-2">
+            <p class="text-2xl md:text-3xl font-bold text-primary-600 dark:text-primary-400">24/7</p>
+            <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Phone Support</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-20 sm:py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">What We Troubleshoot</p>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-4">Complete Industrial Automation Support</h2>
+          <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">From fault codes to complete system recovery — we handle the critical equipment that keeps your production running.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- VFD -->
+          <div class="svc-card bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+            <div class="h-48 overflow-hidden rounded-t-2xl">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="VFD Troubleshooting" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center">
+                  <i class="fas fa-tachometer-alt text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">VFD Troubleshooting</h3>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">Overcurrent, overvoltage, ground fault, overheating, communication loss, parameter corruption and power stage failures.</p>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Fault code diagnosis &amp; reset</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Parameter backup &amp; restore</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Power module &amp; capacitor repair</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Cooling fan &amp; IGBT service</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- PLC -->
+          <div class="svc-card bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+            <div class="h-48 overflow-hidden rounded-t-2xl">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="PLC Troubleshooting" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center">
+                  <i class="fas fa-microchip text-orange-600 dark:text-orange-400"></i>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">PLC Troubleshooting</h3>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">Program errors, I/O module failures, communication drops, battery faults, scan time issues and unexpected stops.</p>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Logic &amp; program analysis</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> I/O module testing &amp; replace</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Network &amp; bus diagnostics</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Online monitoring &amp; force</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- HMI -->
+          <div class="svc-card bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+            <div class="h-48 overflow-hidden rounded-t-2xl">
+              <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="HMI Troubleshooting" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center">
+                  <i class="fas fa-desktop text-emerald-600 dark:text-emerald-400"></i>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">HMI Troubleshooting</h3>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">Blank screens, touch failure, communication loss with PLC, tag errors, project corruption and firmware issues.</p>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Screen &amp; touch calibration</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Project backup &amp; download</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Driver &amp; protocol fix</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Panel replacement support</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Servo -->
+          <div class="svc-card bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800">
+            <div class="h-48 overflow-hidden rounded-t-2xl">
+              <img src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80" alt="Servo Drive Troubleshooting" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center">
+                  <i class="fas fa-cog text-rose-600 dark:text-rose-400"></i>
+                </div>
+                <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">Servo Drive Troubleshooting</h3>
+              </div>
+              <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">Position errors, encoder faults, overcurrent, tuning instability, following error and mechanical load issues.</p>
+              <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Encoder &amp; feedback check</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Auto-tuning &amp; gain adjust</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Wiring &amp; shielding review</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-500 text-xs"></i> Drive &amp; motor matching</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section id="brands" class="py-16 bg-slate-50 dark:bg-slate-900/60 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+        <div class="text-center">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Multi-Brand Expertise</p>
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">We Support All Major Brands</h2>
+        </div>
+      </div>
+
+      <div class="brand-marquee">
+        <div class="brand-track">
+          <div class="flex items-center gap-8 px-4">
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-primary-500"></i> Siemens
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-red-500"></i> ABB
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-blue-500"></i> Danfoss
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-emerald-500"></i> Delta
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-emerald-600"></i> Schneider
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-red-600"></i> Mitsubishi
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-blue-600"></i> Yaskawa
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-orange-500"></i> Allen-Bradley
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-cyan-500"></i> Omron
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-indigo-500"></i> Fuji Electric
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-purple-500"></i> LS Electric
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-accent-500"></i> Inovance
+            </span>
+          </div>
+          <div class="flex items-center gap-8 px-4" aria-hidden="true">
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-primary-500"></i> Siemens
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-red-500"></i> ABB
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-blue-500"></i> Danfoss
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-emerald-500"></i> Delta
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-emerald-600"></i> Schneider
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-red-600"></i> Mitsubishi
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-blue-600"></i> Yaskawa
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-orange-500"></i> Allen-Bradley
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-cyan-500"></i> Omron
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-indigo-500"></i> Fuji Electric
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-purple-500"></i> LS Electric
+            </span>
+            <span class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-700 dark:text-slate-200 shadow-sm inline-flex items-center gap-2.5">
+              <i class="fas fa-bolt text-accent-500"></i> Inovance
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section id="process" class="py-20 sm:py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">How We Work</p>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white">Clear Process. Fast Results.</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="process-card bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 text-center">
+            <div class="w-12 h-12 rounded-full bg-primary-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/30">1</div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Call / WhatsApp</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Describe the fault, brand and machine. We guide first checks over phone.</p>
+          </div>
+          <div class="process-card bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 text-center">
+            <div class="w-12 h-12 rounded-full bg-primary-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/30">2</div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Diagnosis</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">On-site or remote analysis. We identify root cause, not just the alarm.</p>
+          </div>
+          <div class="process-card bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 text-center">
+            <div class="w-12 h-12 rounded-full bg-primary-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/30">3</div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Repair / Fix</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Parameter fix, module replace, wiring correction or full drive service.</p>
+          </div>
+          <div class="process-card bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 text-center">
+            <div class="w-12 h-12 rounded-full bg-primary-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-4 shadow-lg shadow-primary-500/30">4</div>
+            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">Test &amp; Handover</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Full load test, parameter backup and clear report for your team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY US -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-900/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">Why IATBD</p>
+            <h2 class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-6">We keep your production running</h2>
+            <div class="space-y-5">
+              <div class="flex gap-4">
+                <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-clock text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white">Rapid Response</h4>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">Emergency support when a critical drive or PLC stops your line.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-search text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white">Root-Cause Focus</h4>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">We fix the real problem so the same fault does not return next week.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-tools text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white">Multi-Brand Capability</h4>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">One team for Siemens, ABB, Delta, Schneider, Mitsubishi and more.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-11 h-11 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center flex-shrink-0">
+                  <i class="fas fa-file-alt text-primary-600 dark:text-primary-400"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-slate-900 dark:text-white">Clear Documentation</h4>
+                  <p class="text-slate-600 dark:text-slate-400 text-sm">Parameter backups and service reports so your team stays in control.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="rounded-3xl overflow-hidden shadow-2xl">
+              <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=900&q=80" alt="Industrial automation technician" class="w-full h-80 object-cover" loading="lazy" />
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 rounded-2xl p-5 shadow-xl border border-slate-100 dark:border-slate-700">
+              <p class="text-3xl font-bold text-primary-600 dark:text-primary-400">98%</p>
+              <p class="text-sm text-slate-500 dark:text-slate-400">First-visit resolution rate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 sm:py-28 bg-white dark:bg-slate-950">
+      <div class="max-w-2xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <p class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3">FAQ</p>
+          <h2 class="font-display text-3xl font-bold text-slate-900 dark:text-white">Common Questions</h2>
+        </div>
+        <div class="space-y-3">
+          <div class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left" type="button">
+              <span class="font-medium text-slate-900 dark:text-white">How fast can you respond to a breakdown?</span>
+              <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-slate-600 dark:text-slate-300 pb-4 text-[15px]">
+                For critical production stops we aim for same-day or next-morning on-site support in major industrial areas across Bangladesh. Phone and remote guidance starts immediately.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left" type="button">
+              <span class="font-medium text-slate-900 dark:text-white">Do you support older VFD and PLC models?</span>
+              <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-slate-600 dark:text-slate-300 pb-4 text-[15px]">
+                Yes. We work on both current and legacy models from major brands, including older Siemens, ABB, Delta, Schneider and Allen-Bradley units still running in many plants.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left" type="button">
+              <span class="font-medium text-slate-900 dark:text-white">Can you help remotely?</span>
+              <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-slate-600 dark:text-slate-300 pb-4 text-[15px]">
+                Many parameter, communication and tag issues can be guided over phone or remote desktop. For power stage, wiring or hardware faults we recommend on-site service.
+              </p>
+            </div>
+          </div>
+          <div class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+            <button class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left" type="button">
+              <span class="font-medium text-slate-900 dark:text-white">Do you provide parameter backup?</span>
+              <i class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"></i>
+            </button>
+            <div class="faq-answer px-5">
+              <p class="text-slate-600 dark:text-slate-300 pb-4 text-[15px]">
+                Yes. Whenever possible we save parameter sets and document critical settings so recovery is fast if a drive is replaced later.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="relative py-20 sm:py-28 overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-800 to-primary-600"></div>
+      <div
+        class="absolute inset-0 opacity-20"
+        style="
+          background-image: radial-gradient(circle at 20% 50%, #ff7a1a 0%, transparent 40%),
+            radial-gradient(circle at 80% 20%, #338bff 0%, transparent 35%);
+        "
+      ></div>
+      <div class="relative z-10 max-w-3xl mx-auto px-4 text-center">
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">Machine Down? Let’s Get It Running.</h2>
+        <p class="text-slate-300 text-lg mb-8 max-w-lg mx-auto">Tell us the brand, model and fault code. We respond quickly with clear next steps.</p>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="tel:+8801XXXXXXXXX" class="inline-flex items-center gap-2 px-7 py-3.5 bg-white text-primary-700 font-bold rounded-full shadow-lg btn-cta">
+            <i class="fas fa-phone-alt text-sm"></i> Call Now
+          </a>
+          <a href="https://wa.me/8801XXXXXXXXX" target="_blank" class="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-full btn-cta">
+            <i class="fab fa-whatsapp text-lg"></i> WhatsApp
+          </a>
+        </div>
+        <p class="mt-6 text-sm text-slate-400">IATBD.com • Industrial Automation Troubleshooting &amp; Support</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer
+      class="bg-slate-900 dark:bg-slate-950 text-slate-400 pt-14 pb-8 border-t border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-10 mb-10">
+          <div>
+            <div class="flex items-center gap-2.5 mb-4">
+              <div
+                class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20"
+              >
+                <i class="fas fa-microchip text-white text-xs"></i>
+              </div>
+              <span class="font-display font-bold text-white text-lg">IATBD</span>
+            </div>
+            <p class="text-sm leading-relaxed text-slate-400">
+              Industrial automation — PLC, HMI, VFD, Servo, AI solutions and professional engineering support across Bangladesh.
+            </p>
+            <div class="flex gap-3 mt-4">
+              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="LinkedIn" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-white text-sm font-semibold mb-4 tracking-wider uppercase text-xs">Services</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="plc-service.html" class="hover:text-primary-400 transition">PLC Service</a></li>
+              <li><a href="vfd-service.html" class="hover:text-primary-400 transition">VFD Service</a></li>
+              <li><a href="hmi-service.html" class="hover:text-primary-400 transition">HMI Service</a></li>
+              <li><a href="servo-service.html" class="hover:text-primary-400 transition">Servo Drive</a></li>
+              <li><a href="ai-service.html" class="hover:text-primary-400 transition">AI Solution</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white text-sm font-semibold mb-4 tracking-wider uppercase text-xs">Support</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="iatautomation-maintenance.html" class="hover:text-primary-400 transition">Maintenance</a></li>
+              <li><a href="iatautomation-troubleshooting.html" class="hover:text-primary-400 transition">Troubleshooting</a></li>
+              <li><a href="iatautomation-repairing.html" class="hover:text-primary-400 transition">Repairing</a></li>
+              <li><a href="store-shop.html" class="hover:text-primary-400 transition">Store Shop</a></li>
+              <li><a href="blog.html" class="hover:text-primary-400 transition">Our All Blog</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-white text-sm font-semibold mb-4 tracking-wider uppercase text-xs">Contact</h4>
+            <ul class="space-y-2.5 text-sm">
+              <li class="flex items-center gap-2"><i class="fas fa-phone-alt text-primary-400 mr-1 text-xs"></i>+880 1XXX-XXXXXX</li>
+              <li class="flex items-center gap-2"><i class="fas fa-envelope text-primary-400 mr-1 text-xs"></i>info@iatbd.com</li>
+              <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-primary-400 mr-1 text-xs"></i>Dhaka, Bangladesh</li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500"
+        >
+          <p>© 2026 IATBD. All rights reserved.</p>
+          <div class="flex items-center gap-4">
+            <a href="index.html" class="hover:text-primary-400 transition">← Home</a>
+            <a href="blog.html" class="hover:text-primary-400 transition">Blog</a>
+            <a href="contact.html" class="hover:text-primary-400 transition">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
