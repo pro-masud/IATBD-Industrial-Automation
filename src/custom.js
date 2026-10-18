@@ -59,7 +59,12 @@
     document.querySelectorAll('a[href^="#"]').forEach((link) => {
       const href = link.getAttribute("href");
       if (!href || href === "#") return;
-      const target = document.querySelector(href);
+      let target = null;
+      try {
+        target = document.querySelector(href);
+      } catch {
+        return;
+      }
       if (!target) return;
 
       link.addEventListener("click", (event) => {
@@ -72,6 +77,7 @@
     document.querySelectorAll(".faq-btn").forEach((button) => {
       button.addEventListener("click", () => {
         const item = button.closest(".faq-item");
+        if (!item) return;
         const wasOpen = item.classList.contains("open");
         document
           .querySelectorAll(".faq-item")
