@@ -1464,46 +1464,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      (() => {
-        const hero = document.querySelector(".hmi-hero");
-        if (!hero) return;
-        const slides = [...hero.querySelectorAll(".hmi-slide")];
-        const dots = [...hero.querySelectorAll(".hmi-dot")];
-        let current = 0;
-        let timer;
-        const show = (index) => {
-          current = (index + slides.length) % slides.length;
-          slides.forEach((slide, i) => {
-            const active = i === current;
-            slide.classList.toggle("active", active);
-            slide.setAttribute("aria-hidden", String(!active));
-          });
-          dots.forEach((dot, i) => {
-            const active = i === current;
-            dot.classList.toggle("active", active);
-            dot.setAttribute("aria-pressed", String(active));
-          });
-        };
-        const start = () => {
-          window.clearInterval(timer);
-          if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-            timer = window.setInterval(() => show(current + 1), 5000);
-          }
-        };
-        dots.forEach((dot) =>
-          dot.addEventListener("click", () => {
-            show(Number(dot.dataset.slideTo));
-            start();
-          }),
-        );
-        hero.addEventListener("mouseenter", () => window.clearInterval(timer));
-        hero.addEventListener("mouseleave", start);
-        hero.addEventListener("focusin", () => window.clearInterval(timer));
-        hero.addEventListener("focusout", start);
-        show(0);
-        start();
-      })();
-    </script>
-  </body>
+    </body>
 </html>

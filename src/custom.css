@@ -344,18 +344,25 @@ a.btn-cta-light:hover {
 .faq-item.open .faq-icon {
   transform: rotate(180deg);
 }
+/* Testimonial carousel */
 .testimonial-track {
   display: flex;
-  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 .testimonial-card {
   flex: 0 0 100%;
   padding: 0 10px;
   box-sizing: border-box;
 }
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .testimonial-card {
-    flex: 0 0 33.333%;
+    flex: 0 0 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .testimonial-card {
+    flex: 0 0 33.333333%;
   }
 }
 .t-card-inner {
@@ -455,11 +462,11 @@ footer {
 /* Hero Slider */
 .plc-hero-slider {
   position: relative;
-  min-height: 520px;
+  min-height: 540px;
 }
 @media (min-width: 640px) {
   .plc-hero-slider {
-    min-height: 560px;
+    min-height: 580px;
   }
 }
 .plc-hero-slide {
@@ -503,20 +510,7 @@ footer {
   box-shadow: 0 0 10px rgba(51, 139, 255, 0.6);
 }
 
-/* Testimonial carousel */
-.testimonial-track {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.testimonial-card {
-  flex: 0 0 100%;
-  padding: 0 8px;
-}
-@media (min-width: 768px) {
-  .testimonial-card {
-    flex: 0 0 33.333%;
-  }
-}
+/* Testimonials defined above */
 
 body,
 header,
@@ -529,9 +523,7 @@ footer,
     color 0.3s ease;
 }
 
-.testimonial-card {
-  box-sizing: border-box;
-}
+
 
 .store-hero-slide {
   position: absolute;
@@ -655,6 +647,17 @@ footer,
   position: relative;
   min-height: 85vh;
 }
+@media (max-width: 640px) {
+  .repair-hero,
+  .maintenance-hero {
+    min-height: 580px;
+  }
+  .repair-slide > div.relative,
+  .maintenance-slide > div.relative {
+    padding-top: 5rem !important;
+    padding-bottom: 5.5rem !important;
+  }
+}
 .repair-slide,
 .maintenance-slide {
   position: absolute;
@@ -745,6 +748,15 @@ footer,
   position: relative;
   min-height: 85vh;
 }
+@media (max-width: 640px) {
+  .vfd-hero {
+    min-height: 580px;
+  }
+  .vfd-slide > div.relative {
+    padding-top: 5rem !important;
+    padding-bottom: 5.5rem !important;
+  }
+}
 .vfd-slide {
   position: absolute;
   inset: 0;
@@ -787,6 +799,15 @@ footer,
   position: relative;
   min-height: 85vh;
 }
+@media (max-width: 640px) {
+  .hmi-hero {
+    min-height: 580px;
+  }
+  .hmi-slide > div.relative {
+    padding-top: 5rem !important;
+    padding-bottom: 5.5rem !important;
+  }
+}
 .hmi-slide {
   position: absolute;
   inset: 0;
@@ -828,6 +849,15 @@ footer,
 .troubleshoot-hero {
   position: relative;
   min-height: 88vh;
+}
+@media (max-width: 640px) {
+  .troubleshoot-hero {
+    min-height: 580px;
+  }
+  .troubleshoot-slide > div.relative {
+    padding-top: 5rem !important;
+    padding-bottom: 5.5rem !important;
+  }
 }
 .troubleshoot-slide {
   position: absolute;

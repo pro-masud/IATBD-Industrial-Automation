@@ -354,6 +354,7 @@
     const slides = [...store.querySelectorAll(".store-hero-slide")];
     const dots = [...store.querySelectorAll(".store-hero-dot")];
     let slideIndex = 0;
+    let storeHeroTimer = null;
     const showSlide = (index) => {
       slideIndex = (index + slides.length) % slides.length;
       slides.forEach((slide, i) =>
@@ -363,17 +364,60 @@
         dot.classList.toggle("active", i === slideIndex),
       );
     };
+    const stopStoreHero = () => clearInterval(storeHeroTimer);
+    const startStoreHero = () => {
+      stopStoreHero();
+      if (slides.length > 1) {
+        storeHeroTimer = setInterval(() => showSlide(slideIndex + 1), 5500);
+      }
+    };
     dots.forEach((dot, index) =>
-      dot.addEventListener("click", () => showSlide(index)),
+      dot.addEventListener("click", () => {
+        showSlide(index);
+        startStoreHero();
+      }),
     );
     store
       .querySelector("#store-hero-prev")
-      ?.addEventListener("click", () => showSlide(slideIndex - 1));
+      ?.addEventListener("click", () => {
+        showSlide(slideIndex - 1);
+        startStoreHero();
+      });
     store
       .querySelector("#store-hero-next")
-      ?.addEventListener("click", () => showSlide(slideIndex + 1));
-    if (slides.length > 1)
-      window.setInterval(() => showSlide(slideIndex + 1), 5500);
+      ?.addEventListener("click", () => {
+        showSlide(slideIndex + 1);
+        startStoreHero();
+      });
+
+    const storeHeroSection = store.querySelector(".store-hero-slide")?.parentElement;
+    if (storeHeroSection) {
+      storeHeroSection.addEventListener("mouseenter", stopStoreHero);
+      storeHeroSection.addEventListener("mouseleave", startStoreHero);
+      let storeTouchStartX = 0;
+      storeHeroSection.addEventListener(
+        "touchstart",
+        (e) => {
+          storeTouchStartX = e.changedTouches[0].screenX;
+          stopStoreHero();
+        },
+        { passive: true },
+      );
+      storeHeroSection.addEventListener(
+        "touchend",
+        (e) => {
+          const storeTouchEndX = e.changedTouches[0].screenX;
+          const diff = storeTouchStartX - storeTouchEndX;
+          if (Math.abs(diff) > 40) {
+            if (diff > 0) showSlide(slideIndex + 1);
+            else showSlide(slideIndex - 1);
+          }
+          startStoreHero();
+        },
+        { passive: true },
+      );
+    }
+    startStoreHero();
 
     updateProducts();
     renderCart();
@@ -384,71 +428,108 @@
     slideSelector,
     dotSelector,
     dataKey,
-    interval,
+    interval = 5000,
     previousSelector,
     nextSelector,
   }) {
-    const container = document.querySelector(containerSelector);
-    if (!container) return;
+    const containers = document.querySelectorAll(containerSelector);
+    if (!containers.length) return;
 
-    const slides = [...container.querySelectorAll(slideSelector)];
-    const dots = [...container.querySelectorAll(dotSelector)];
-    if (!slides.length) return;
+    containers.forEach((container) => {
+      const slides = [...container.querySelectorAll(slideSelector)];
+      if (!slides.length) return;
 
-    let currentIndex = 0;
-    let timer;
-    const show = (index) => {
-      currentIndex = (index + slides.length) % slides.length;
-      slides.forEach((slide, slideIndex) => {
-        const active = slideIndex === currentIndex;
-        slide.classList.toggle("active", active);
-        slide.setAttribute("aria-hidden", String(!active));
+      const dots = [
+        ...(container.querySelectorAll(dotSelector).length
+          ? container.querySelectorAll(dotSelector)
+          : document.querySelectorAll(dotSelector)),
+      ];
+
+      let currentIndex = 0;
+      let timer = null;
+      const show = (index) => {
+        currentIndex = (index + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => {
+          const active = slideIndex === currentIndex;
+          slide.classList.toggle("active", active);
+          slide.setAttribute("aria-hidden", String(!active));
+        });
+        dots.forEach((dot, dotIndex) => {
+          const active = dotIndex === currentIndex;
+          dot.classList.toggle("active", active);
+          dot.setAttribute("aria-pressed", String(active));
+        });
+      };
+      const stop = () => clearInterval(timer);
+      const start = () => {
+        stop();
+        if (slides.length > 1) {
+          timer = setInterval(() => show(currentIndex + 1), interval);
+        }
+      };
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", () => {
+          const raw =
+            dot.dataset[dataKey] ??
+            dot.dataset.slideTo ??
+            dot.dataset.i ??
+            dot.dataset.index;
+          const index = Number(raw);
+          show(Number.isNaN(index) ? 0 : index);
+          start();
+        });
       });
-      dots.forEach((dot, dotIndex) => {
-        const active = dotIndex === currentIndex;
-        dot.classList.toggle("active", active);
-        dot.setAttribute("aria-pressed", String(active));
-      });
-    };
-    const stop = () => clearInterval(timer);
-    const start = () => {
-      stop();
-      timer = setInterval(() => show(currentIndex + 1), interval);
-    };
 
-    dots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        const raw =
-          dot.dataset[dataKey] ??
-          dot.dataset.slideTo ??
-          dot.dataset.i ??
-          dot.dataset.index;
-        const index = Number(raw);
-        show(Number.isNaN(index) ? 0 : index);
+      const previousButton = previousSelector
+        ? container.querySelector(previousSelector) ||
+          document.querySelector(previousSelector)
+        : null;
+      const nextButton = nextSelector
+        ? container.querySelector(nextSelector) ||
+          document.querySelector(nextSelector)
+        : null;
+
+      previousButton?.addEventListener("click", () => {
+        show(currentIndex - 1);
         start();
       });
-    });
+      nextButton?.addEventListener("click", () => {
+        show(currentIndex + 1);
+        start();
+      });
 
-    const previousButton = previousSelector
-      ? document.querySelector(previousSelector)
-      : null;
-    const nextButton = nextSelector
-      ? document.querySelector(nextSelector)
-      : null;
-    previousButton?.addEventListener("click", () => {
-      show(currentIndex - 1);
+      container.addEventListener("mouseenter", stop);
+      container.addEventListener("mouseleave", start);
+      container.addEventListener("focusin", stop);
+      container.addEventListener("focusout", start);
+
+      let touchStartX = 0;
+      container.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+          stop();
+        },
+        { passive: true },
+      );
+      container.addEventListener(
+        "touchend",
+        (e) => {
+          const touchEndX = e.changedTouches[0].screenX;
+          const diff = touchStartX - touchEndX;
+          if (Math.abs(diff) > 40) {
+            if (diff > 0) show(currentIndex + 1);
+            else show(currentIndex - 1);
+          }
+          start();
+        },
+        { passive: true },
+      );
+
+      show(0);
       start();
     });
-    nextButton?.addEventListener("click", () => {
-      show(currentIndex + 1);
-      start();
-    });
-    container.addEventListener("mouseenter", stop);
-    container.addEventListener("mouseleave", start);
-    container.addEventListener("focusin", stop);
-    container.addEventListener("focusout", start);
-    show(0);
-    start();
   }
 
   function initCounters() {
@@ -493,61 +574,132 @@
     const dotsWrap = document.getElementById("testimonial-dots");
     if (!track || !dotsWrap) return;
 
-    const total = track.querySelectorAll(".testimonial-card").length;
+    const cards = [...track.querySelectorAll(".testimonial-card")];
+    const total = cards.length;
+    if (!total) return;
+
     const isPlcPage = Boolean(document.querySelector(".plc-hero-slider"));
     let index = 0;
-    let timer;
-    const perView = () => (window.innerWidth >= 768 ? 3 : 1);
+    let timer = null;
+
+    const perView = () => {
+      if (window.innerWidth >= 1024) return 3;
+      if (window.innerWidth >= 640) return 2;
+      return 1;
+    };
     const maxIndex = () => Math.max(0, total - perView());
+
+    let currentPerView = perView();
+    let dots = [];
 
     const buildDots = () => {
       dotsWrap.innerHTML = "";
-      for (let dotIndex = 0; dotIndex <= maxIndex(); dotIndex += 1) {
+      dots = [];
+      const mIndex = maxIndex();
+      for (let dotIndex = 0; dotIndex <= mIndex; dotIndex += 1) {
         const dot = document.createElement("button");
+        dot.type = "button";
         dot.setAttribute("aria-label", `Page ${dotIndex + 1}`);
         if (isPlcPage) {
           dot.className =
-            "w-2.5 h-2.5 rounded-full transition " +
+            "w-2.5 h-2.5 rounded-full transition-all duration-300 " +
             (dotIndex === index
               ? "bg-primary-500 scale-125"
               : "bg-slate-300 dark:bg-slate-600");
         } else {
           dot.className =
-            "h-2 rounded-full transition-all " +
+            "h-2 rounded-full transition-all duration-300 " +
             (dotIndex === index
               ? "w-6 bg-primary-500"
               : "w-2 bg-slate-300 dark:bg-slate-600");
         }
         dot.addEventListener("click", () => {
           index = dotIndex;
-          update();
+          update(false);
           start();
         });
         dotsWrap.appendChild(dot);
+        dots.push(dot);
       }
     };
 
-    const update = () => {
-      if (index > maxIndex()) index = 0;
-      track.style.transform = `translateX(-${(100 / perView()) * index}%)`;
-      buildDots();
+    const updateDots = () => {
+      dots.forEach((dot, dotIndex) => {
+        const isActive = dotIndex === index;
+        if (isPlcPage) {
+          dot.classList.toggle("bg-primary-500", isActive);
+          dot.classList.toggle("scale-125", isActive);
+          dot.classList.toggle("bg-slate-300", !isActive);
+          dot.classList.toggle("dark:bg-slate-600", !isActive);
+        } else {
+          dot.classList.toggle("w-6", isActive);
+          dot.classList.toggle("bg-primary-500", isActive);
+          dot.classList.toggle("w-2", !isActive);
+          dot.classList.toggle("bg-slate-300", !isActive);
+          dot.classList.toggle("dark:bg-slate-600", !isActive);
+        }
+      });
     };
+
+    const update = (checkRebuild = true) => {
+      const pv = perView();
+      if (checkRebuild && pv !== currentPerView) {
+        currentPerView = pv;
+        buildDots();
+      }
+      if (index > maxIndex()) index = maxIndex();
+      track.style.transform = `translateX(-${(100 / pv) * index}%)`;
+      updateDots();
+    };
+
     const next = () => {
       index = index >= maxIndex() ? 0 : index + 1;
-      update();
+      update(false);
     };
+    const prev = () => {
+      index = index <= 0 ? maxIndex() : index - 1;
+      update(false);
+    };
+
     const start = () => {
       clearInterval(timer);
-      timer = setInterval(next, 2000);
+      timer = setInterval(next, 5000);
     };
 
-    window.addEventListener("resize", update);
-    update();
+    buildDots();
+    update(false);
     start();
 
+    window.addEventListener("resize", () => update(true));
+
     const viewport = document.getElementById("testimonial-viewport");
-    viewport?.addEventListener("mouseenter", () => clearInterval(timer));
-    viewport?.addEventListener("mouseleave", start);
+    if (viewport) {
+      viewport.addEventListener("mouseenter", () => clearInterval(timer));
+      viewport.addEventListener("mouseleave", start);
+
+      let touchStartX = 0;
+      viewport.addEventListener(
+        "touchstart",
+        (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+          clearInterval(timer);
+        },
+        { passive: true },
+      );
+      viewport.addEventListener(
+        "touchend",
+        (e) => {
+          const touchEndX = e.changedTouches[0].screenX;
+          const diff = touchStartX - touchEndX;
+          if (Math.abs(diff) > 40) {
+            if (diff > 0) next();
+            else prev();
+          }
+          start();
+        },
+        { passive: true },
+      );
+    }
   }
 
   function initBlogPagination() {
