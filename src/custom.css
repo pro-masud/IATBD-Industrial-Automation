@@ -123,16 +123,30 @@ html.dark {
 .nav-link.active::after {
   width: 100%;
 }
+/* Dropdown menu with hover bridge and click-open support */
+.relative.group::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  z-index: 45;
+}
 .dropdown-menu {
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
-  transition: all 0.2s ease;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
 }
-.group:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.group:hover .dropdown-menu,
+.dropdown-menu.open,
+.group.open .dropdown-menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+  pointer-events: auto !important;
 }
 .servo-hero {
   position: relative;
@@ -427,17 +441,7 @@ footer {
   width: 100%;
 }
 
-.dropdown-menu {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.25s ease;
-}
-.group:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
+/* Dropdown styles defined above */
 
 .feature-card {
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -515,8 +519,7 @@ footer {
 body,
 header,
 section,
-footer,
-.dropdown-menu {
+footer {
   transition:
     background-color 0.3s ease,
     border-color 0.3s ease,
@@ -894,4 +897,166 @@ footer,
 .troubleshoot-dot.active {
   width: 28px;
   background: #fff;
+}
+
+/* ==================== HOME PAGE HERO SLIDER ==================== */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 620px;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .hero-slider {
+    min-height: 560px;
+    height: 90vh;
+  }
+}
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+.hero-slide .slide-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 8s ease;
+}
+.hero-slide.active .slide-bg {
+  transform: scale(1.06);
+}
+.hero-slide .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15,23,42,0.75) 0%, rgba(15,23,42,0.55) 40%, rgba(30,58,138,0.45) 100%);
+}
+.dark .hero-slide .overlay {
+  background: linear-gradient(135deg, rgba(5,8,16,0.82) 0%, rgba(10,15,28,0.7) 50%, rgba(20,38,87,0.6) 100%);
+}
+.slider-nav {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  display: flex;
+  gap: 12px;
+}
+.slider-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.slider-dot.active {
+  background: #338bff;
+  transform: scale(1.3);
+  box-shadow: 0 0 12px rgba(51,139,255,0.7);
+}
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(0,0,0,0.08);
+  color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+.dark .slider-arrow {
+  background: rgba(15,23,42,0.9);
+  border-color: rgba(255,255,255,0.1);
+  color: #e2e8f0;
+}
+.slider-arrow:hover {
+  background: #1a6af5;
+  color: white;
+  border-color: #1a6af5;
+  transform: translateY(-50%) scale(1.08);
+}
+.slider-arrow.prev { left: 20px; }
+.slider-arrow.next { right: 20px; }
+@media (max-width: 768px) {
+  .slider-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .slider-arrow.prev { left: 10px; }
+  .slider-arrow.next { right: 10px; }
+}
+
+/* Home Service Cards */
+.card-overlay {
+  background: linear-gradient(to top, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.25) 55%, transparent 100%);
+}
+
+/* Home Logo Marquee */
+.logo-track {
+  display: flex;
+  gap: 24px;
+  animation: marquee 30s linear infinite;
+}
+.logo-track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.logo-item {
+  flex-shrink: 0;
+  width: 160px;
+  height: 80px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+.dark .logo-item {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.logo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+.logo-item span {
+  font-weight: 700;
+  font-size: 15px;
+  color: #334155;
+}
+.dark .logo-item span {
+  color: #e2e8f0;
+}
+.counter-value {
+  font-variant-numeric: tabular-nums;
 }

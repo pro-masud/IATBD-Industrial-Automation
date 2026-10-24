@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Servo Drive Service | Precision Motion Control | IATBD</title>
+    <title>IATBD | Industrial Automation Solutions</title>
     <meta
       name="description"
-      content="IATBD — Servo motor & drive sizing, tuning, installation and repair. Siemens, Mitsubishi, Delta, Yaskawa, Panasonic and more."
+      content="IATBD - Professional PLC, HMI, VFD, Servo Drive solutions, maintenance, troubleshooting & repairing services."
     />
     <script src="src/custom.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -23,12 +23,13 @@
   <body
     class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans antialiased"
   >
-    <!-- HEADER -->
+    <!-- ==================== HEADER ==================== -->
     <header
       class="fixed top-0 inset-x-0 z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-800 transition-colors duration-300"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-[70px]">
+          <!-- Logo -->
           <a href="index.html" class="flex items-center gap-3 group">
             <div
               class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20 group-hover:scale-105 transition-transform"
@@ -48,7 +49,11 @@
             </div>
           </a>
 
-          <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          <!-- Desktop Navigation -->
+          <nav
+            class="hidden lg:flex items-center gap-1"
+            aria-label="Main navigation"
+          >
             <a
               href="index.html"
               class="nav-link active px-3.5 py-2 text-sm font-semibold text-primary-600 dark:text-primary-400"
@@ -58,95 +63,93 @@
             <a
               href="plc-service.html"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
-              
               >PLC</a
             >
             <a
               href="store-shop.html"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
-              
               >Store</a
             >
             <a
               href="hmi-service.html"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
-              
               >HMI</a
             >
             <a
               href="vfd-service.html"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
-              
               >VFD</a
             >
             <a
               href="servo-service.html"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
-              
               >Servo</a
             >
             <a
               href="iatautomation-repairing.html"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
-              
               >Repairing</a
             >
             <a
               href="iatautomation-maintenance.html"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
-              
               >Maintenance</a
             >
             <a
               href="ai-service.html"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
-              
               >AI</a
             >
             <a
               href="blog.html"
               class="nav-link px-3.5 py-2 text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400"
-              
               >Blog</a
             >
+
+            <!-- Service Dropdown Menu -->
             <div class="relative group">
               <button
                 type="button"
                 class="nav-link text-slate-600 dark:text-slate-300 px-3 py-2 text-sm font-medium hover:text-primary-600 dark:hover:text-primary-400 flex items-center gap-1.5"
+                aria-haspopup="true"
+                aria-expanded="false"
               >
-                Service <i class="fas fa-chevron-down text-[9px]"></i>
+                Service <i class="fas fa-chevron-down text-[9px] transition-transform"></i>
               </button>
               <div
-                class="dropdown-menu absolute top-full left-0 mt-2 w-48 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden z-50 transition-all duration-200"
+                class="dropdown-menu absolute top-full left-0 mt-2 w-52 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-xl overflow-hidden z-50 transition-all duration-200"
               >
                 <a
                   href="iatautomation-maintenance.html"
-                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
-                  >Maintenance</a
+                  class="flex items-center gap-3 px-4 py-3 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
                 >
+                  <i class="fas fa-tools w-4 text-accent-500"></i> Maintenance
+                </a>
                 <a
                   href="iatautomation-troubleshooting.html"
-                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
-                  >Troubleshooting</a
+                  class="flex items-center gap-3 px-4 py-3 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
                 >
+                  <i class="fas fa-search w-4 text-accent-500"></i> Troubleshooting
+                </a>
                 <a
                   href="iatautomation-repairing.html"
-                  class="block px-4 py-2.5 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
-                  >Repairing</a
+                  class="flex items-center gap-3 px-4 py-3 text-sm text-slate-600 dark:text-slate-300 hover:bg-primary-50 dark:hover:bg-primary-950/40 hover:text-primary-600 dark:hover:text-primary-400 transition"
                 >
+                  <i class="fas fa-wrench w-4 text-accent-500"></i> Repairing
+                </a>
               </div>
             </div>
           </nav>
 
+          <!-- Right Actions -->
           <div class="flex items-center gap-2">
             <button
               id="theme-toggle"
               type="button"
-              aria-label="Switch to light mode"
-              aria-pressed="true"
-              class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
+              aria-label="Toggle theme"
+              class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition"
             >
-              <i class="fas fa-sun theme-icon-sun text-xs text-amber-500"></i>
+              <i class="fas fa-sun theme-icon-sun text-sm text-yellow-400"></i>
               <i class="fas fa-moon theme-icon-moon text-xs text-slate-600"></i>
             </button>
             <a
@@ -161,1372 +164,1452 @@
               aria-label="Toggle navigation menu"
               aria-controls="mobile-menu"
               aria-expanded="false"
-              class="lg:hidden w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center"
+              class="lg:hidden w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300"
             >
-              <i class="fas fa-bars text-slate-700 dark:text-slate-300"></i>
+              <i class="fas fa-bars"></i>
             </button>
           </div>
         </div>
       </div>
 
+      <!-- Mobile Menu -->
       <div
         id="mobile-menu"
         class="lg:hidden hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900"
       >
         <div class="px-4 py-3 space-y-1">
-          <a href="index.html" class="block px-3 py-2 rounded-lg text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/40">Home</a>
-          <a href="plc-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">PLC</a>
-          <a href="store-shop.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Store</a>
-          <a href="hmi-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">HMI</a>
-          <a href="vfd-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">VFD</a>
-          <a href="servo-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Servo</a>
-          <a href="iatautomation-repairing.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Repairing</a>
-          <a href="iatautomation-maintenance.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Maintenance</a>
-          <a href="iatautomation-troubleshooting.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Troubleshooting</a>
-          <a href="ai-service.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">AI</a>
-          <a href="blog.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition">Blog</a>
-          <a href="contact.html" class="block mt-2 text-center py-2.5 bg-primary-600 text-white rounded-xl text-sm font-semibold">Contact</a>
+          <a
+            href="index.html"
+            class="block px-3 py-2 rounded-lg text-sm font-semibold text-primary-600 dark:text-primary-400 bg-primary-50 dark:bg-primary-950/40"
+            >Home</a
+          >
+          <a
+            href="plc-service.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >PLC</a
+          >
+          <a
+            href="store-shop.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >Store</a
+          >
+          <a
+            href="hmi-service.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >HMI</a
+          >
+          <a
+            href="vfd-service.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >VFD</a
+          >
+          <a
+            href="servo-service.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >Servo</a
+          >
+          <a
+            href="iatautomation-repairing.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >Repairing</a
+          >
+          <a
+            href="iatautomation-maintenance.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >Maintenance</a
+          >
+          <a
+            href="iatautomation-troubleshooting.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >Troubleshooting</a
+          >
+          <a
+            href="ai-service.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >AI</a
+          >
+          <a
+            href="blog.html"
+            class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-primary-600 dark:hover:text-primary-400 transition"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="block mt-2 text-center py-2.5 bg-primary-600 text-white rounded-xl text-sm font-semibold"
+            >Contact</a
+          >
         </div>
       </div>
     </header>
 
-    <!-- HERO (variation: content + side accent panel look) -->
-    <section class="servo-hero pt-16 overflow-hidden">
-      <div class="servo-slide active" data-i="0">
-        <div
-          class="bg-img"
-          style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1920&q=80&quot;);
-          "
-        ></div>
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/40"
-        ></div>
-        <div class="servo-slide-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
-              <div
-                class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-accent-500/40 bg-accent-500/15 text-accent-400 text-xs font-semibold mb-6 tracking-wide"
-              >
-                <i
-                  class="fas fa-cog fa-spin"
-                  style="animation-duration: 3s"
-                ></i>
-                SERVO DRIVE
-              </div>
-              <h1
-                class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.12] mb-5"
-              >
-                Motion control<br />with
-                <span class="text-accent-400">micron precision</span>
-              </h1>
-              <p
-                class="text-slate-300 text-[17px] leading-relaxed mb-8 max-w-md"
-              >
-                Servo motor & drive sizing, auto-tuning, multi-axis sync and
-                field support — for packaging, CNC, robotics and high-speed
-                lines.
-              </p>
-              <div class="flex flex-wrap gap-3">
-                <a
-                  href="#contact"
-                  class="inline-flex items-center gap-2 px-6 py-3 bg-accent-500 hover:bg-accent-400 text-white font-semibold rounded-full shadow-lg shadow-accent-500/25 btn-cta btn-cta-accent"
-                >
-                  Get a Quote <i class="fas fa-arrow-right text-xs"></i>
-                </a>
-                <a
-                  href="#services"
-                  class="inline-flex items-center gap-2 px-6 py-3 border border-white/25 text-white font-medium rounded-full btn-cta-outline transition"
-                >
-                  Our Services
-                </a>
-              </div>
-            </div>
-            <div class="hidden lg:block">
-              <div
-                class="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-8 space-y-5"
-              >
-                <div class="flex items-center gap-4">
-                  <div
-                    class="w-12 h-12 rounded-2xl bg-primary-500/30 flex items-center justify-center"
-                  >
-                    <i class="fas fa-crosshairs text-primary-300 text-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-white font-semibold">Position accuracy</p>
-                    <p class="text-slate-400 text-[17px]">
-                      Closed-loop encoder feedback
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div
-                    class="w-12 h-12 rounded-2xl bg-accent-500/30 flex items-center justify-center"
-                  >
-                    <i class="fas fa-bolt text-accent-300 text-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-white font-semibold">Dynamic response</p>
-                    <p class="text-slate-400 text-[17px]">
-                      Fast accel, tight torque control
-                    </p>
-                  </div>
-                </div>
-                <div class="flex items-center gap-4">
-                  <div
-                    class="w-12 h-12 rounded-2xl bg-emerald-500/30 flex items-center justify-center"
-                  >
-                    <i class="fas fa-layer-group text-emerald-300 text-lg"></i>
-                  </div>
-                  <div>
-                    <p class="text-white font-semibold">Multi-axis ready</p>
-                    <p class="text-slate-400 text-[17px]">
-                      Sync, camming & electronic gearing
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="servo-slide" data-i="1">
-        <div
-          class="bg-img"
-          style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80&quot;);
-          "
-        ></div>
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-primary-900/40"
-        ></div>
-        <div class="servo-slide-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="max-w-2xl">
+    <main>
+      <!-- ==================== HERO SLIDER ==================== -->
+      <section id="home" class="relative hero-slider pt-16" aria-label="Hero carousel">
+        <!-- Slide 0: PLC -->
+        <div class="hero-slide active" data-index="0">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80');
+            "
+          ></div>
+          <div class="overlay"></div>
+          <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <div
-              class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary-400/30 bg-primary-500/15 text-primary-300 text-xs font-semibold mb-6 tracking-wide"
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white text-sm font-medium mb-5"
             >
-              <i class="fas fa-sliders-h"></i> TUNING & COMMISSIONING
+              <i class="fas fa-microchip"></i> PLC Systems
             </div>
             <h1
-              class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.12] mb-5"
+              class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg"
             >
-              Auto-tune.<br /><span class="text-primary-300"
-                >Zero vibration.</span
-              >
+              Advanced <span class="text-primary-300">PLC</span> Solutions
             </h1>
-            <p class="text-slate-300 text-[17px] leading-relaxed mb-8 max-w-lg">
-              Gain tuning, notch filters, inertia matching and load tests — so
-              your axes settle fast without overshoot or resonance.
+            <p class="text-lg text-slate-200 max-w-xl mx-auto mb-8">
+              Siemens, Allen-Bradley, Mitsubishi, Delta — সম্পূর্ণ PLC প্রোগ্রামিং, ইনস্টলেশন ও ২৪/৭ সাপোর্ট।
             </p>
-            <div class="flex flex-wrap gap-3">
+            <div class="flex flex-wrap justify-center gap-3">
               <a
-                href="#contact"
-                class="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 hover:bg-primary-400 text-white font-semibold rounded-full shadow-lg btn-cta"
+                href="plc-service.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full shadow-lg shadow-primary-500/40 transition hover:scale-105"
               >
-                Book Tuning <i class="fas fa-arrow-right text-xs"></i>
+                Explore PLC <i class="fas fa-arrow-right text-sm"></i>
               </a>
               <a
-                href="#services"
-                class="inline-flex items-center gap-2 px-6 py-3 border border-white/25 text-white font-medium rounded-full btn-cta-outline transition"
-                >Capabilities</a
+                href="contact.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold rounded-full backdrop-blur transition"
+                >Get Quote</a
               >
             </div>
           </div>
         </div>
-      </div>
-      <div class="servo-slide" data-i="2">
-        <div
-          class="bg-img"
-          style="
-            background-image: url(&quot;https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1920&q=80&quot;);
-          "
-        ></div>
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-emerald-900/35"
-        ></div>
-        <div class="servo-slide-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="max-w-2xl">
-            <div
-              class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-400/30 bg-emerald-500/15 text-emerald-300 text-xs font-semibold mb-6 tracking-wide"
-            >
-              <i class="fas fa-tools"></i> REPAIR & SUPPORT
-            </div>
-            <h1
-              class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.12] mb-5"
-            >
-              Encoder, drive, motor.<br /><span class="text-emerald-300"
-                >We fix the chain.</span
-              >
-            </h1>
-            <p class="text-slate-300 text-[17px] leading-relaxed mb-8 max-w-lg">
-              Alarm diagnosis, encoder repair, drive replacement, parameter
-              recovery and 24/7 support for critical motion axes.
-            </p>
-            <div class="flex flex-wrap gap-3">
-              <a
-                href="#contact"
-                class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-semibold rounded-full shadow-lg btn-cta"
-              >
-                Get Support <i class="fas fa-phone-alt text-xs"></i>
-              </a>
-              <a
-                href="#services"
-                class="inline-flex items-center gap-2 px-6 py-3 border border-white/25 text-white font-medium rounded-full btn-cta-outline transition"
-                >View Services</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="hero-nav">
-        <button class="hero-arrow prev" aria-label="Previous slide">
-          <i class="fas fa-chevron-left text-xs"></i>
-        </button>
-        <button class="servo-dot active" data-i="0"></button>
-        <button class="servo-dot" data-i="1"></button>
-        <button class="servo-dot" data-i="2"></button>
-        <button class="hero-arrow next" aria-label="Next slide">
-          <i class="fas fa-chevron-right text-xs"></i>
-        </button>
-      </div>
-    </section>
 
-    <!-- COUNTDOWN STATS (animated) -->
-    <section class="relative z-10 -mt-8 px-4">
-      <div class="max-w-5xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+        <!-- Slide 1: HMI -->
+        <div class="hero-slide" data-index="1">
           <div
-            class="count-box bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-5 sm:p-6 text-center shadow-lg shadow-slate-200/40 dark:shadow-none"
-          >
-            <p
-              class="font-display text-3xl sm:text-4xl font-bold text-primary-600 dark:text-primary-400"
-            >
-              <span class="counter" data-target="12" data-suffix="+">0</span>
-            </p>
-            <p class="text-[17px] text-slate-600 dark:text-slate-400 mt-1">
-              Servo Brands
-            </p>
-          </div>
-          <div
-            class="count-box bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-5 sm:p-6 text-center shadow-lg shadow-slate-200/40 dark:shadow-none"
-          >
-            <p
-              class="font-display text-3xl sm:text-4xl font-bold text-accent-500"
-            >
-              <span class="counter" data-target="120" data-suffix="+">0</span>
-            </p>
-            <p class="text-[17px] text-slate-600 dark:text-slate-400 mt-1">
-              Axes Commissioned
-            </p>
-          </div>
-          <div
-            class="count-box bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-5 sm:p-6 text-center shadow-lg shadow-slate-200/40 dark:shadow-none"
-          >
-            <p
-              class="font-display text-3xl sm:text-4xl font-bold text-emerald-500"
-            >
-              <span class="counter" data-target="24" data-suffix="/7">0</span>
-            </p>
-            <p class="text-[17px] text-slate-600 dark:text-slate-400 mt-1">
-              Support
-            </p>
-          </div>
-          <div
-            class="count-box bg-white dark:bg-slate-900 rounded-2xl border border-slate-100 dark:border-slate-800 p-5 sm:p-6 text-center shadow-lg shadow-slate-200/40 dark:shadow-none"
-          >
-            <p
-              class="font-display text-3xl sm:text-4xl font-bold text-purple-500"
-            >
-              <span class="counter" data-target="10" data-suffix="+">0</span>
-            </p>
-            <p class="text-[17px] text-slate-600 dark:text-slate-400 mt-1">
-              Years Experience
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- OVERVIEW -->
-    <section class="py-20 sm:py-24 bg-white dark:bg-slate-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div class="lg:col-span-6 order-2 lg:order-1 relative">
+            class="slide-bg"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1920&q=80');
+            "
+          ></div>
+          <div class="overlay"></div>
+          <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
             <div
-              class="rounded-3xl overflow-hidden shadow-2xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800"
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white text-sm font-medium mb-5"
             >
-              <img
-                src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1000&q=80"
-                alt="Servo Drive System"
-                class="w-full h-72 sm:h-[380px] object-cover"
-              />
+              <i class="fas fa-desktop"></i> HMI Panels
             </div>
-            <div
-              class="absolute -top-4 -right-2 sm:right-4 bg-accent-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg"
-            >
-              Closed-loop control
-            </div>
-          </div>
-          <div class="lg:col-span-6 order-1 lg:order-2">
-            <p
-              class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3"
-            >
-              Overview
-            </p>
             <h2
-              class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white leading-tight mb-5"
+              class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg"
             >
-              Precision motion<br />for modern machines
+              Smart <span class="text-orange-300">HMI</span> Interfaces
             </h2>
-            <p
-              class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed mb-6"
-            >
-              Servo systems deliver exact position, speed and torque. IATBD
-              covers motor–drive matching, wiring, auto-tuning, multi-axis
-              coordination and long-term support — so your axes stay accurate
-              under real production loads.
+            <p class="text-lg text-slate-200 max-w-xl mx-auto mb-8">
+              ইউজার-ফ্রেন্ডলি টাচ প্যানেল ডিজাইন, স্ক্রিন ডেভেলপমেন্ট ও সিস্টেম ইন্টিগ্রেশন।
             </p>
-            <ul class="space-y-3 mb-8">
-              <li
-                class="flex items-center gap-3 text-[17px] text-slate-700 dark:text-slate-300"
+            <div class="flex flex-wrap justify-center gap-3">
+              <a
+                href="hmi-service.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-orange-500 hover:bg-orange-400 text-white font-semibold rounded-full shadow-lg transition hover:scale-105"
               >
-                <span
-                  class="w-6 h-6 rounded-lg bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center shrink-0"
-                  ><i class="fas fa-check text-[10px] text-primary-600"></i
-                ></span>
-                Correct motor & drive sizing for inertia ratio
-              </li>
-              <li
-                class="flex items-center gap-3 text-[17px] text-slate-700 dark:text-slate-300"
+                Explore HMI <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold rounded-full backdrop-blur transition"
+                >Get Quote</a
               >
-                <span
-                  class="w-6 h-6 rounded-lg bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center shrink-0"
-                  ><i class="fas fa-check text-[10px] text-primary-600"></i
-                ></span>
-                Gain tuning, filters & vibration suppression
-              </li>
-              <li
-                class="flex items-center gap-3 text-[17px] text-slate-700 dark:text-slate-300"
-              >
-                <span
-                  class="w-6 h-6 rounded-lg bg-primary-100 dark:bg-primary-900/40 flex items-center justify-center shrink-0"
-                  ><i class="fas fa-check text-[10px] text-primary-600"></i
-                ></span>
-                PLC / motion controller integration
-              </li>
-            </ul>
-            <a
-              href="#contact"
-              class="inline-flex items-center gap-2 text-[17px] font-semibold text-primary-600 dark:text-primary-400 hover:gap-3 transition-all"
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: VFD -->
+        <div class="hero-slide" data-index="2">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1920&q=80');
+            "
+          ></div>
+          <div class="overlay"></div>
+          <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white text-sm font-medium mb-5"
             >
-              Discuss your axes <i class="fas fa-arrow-right text-xs"></i>
+              <i class="fas fa-tachometer-alt"></i> VFD Drives
+            </div>
+            <h2
+              class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg"
+            >
+              Efficient <span class="text-emerald-300">VFD</span> Drives
+            </h2>
+            <p class="text-lg text-slate-200 max-w-xl mx-auto mb-8">
+              Variable Frequency Drive সিলেকশন, প্যারামিটার সেটআপ ও এনার্জি সেভিং সলিউশন।
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a
+                href="vfd-service.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold rounded-full shadow-lg transition hover:scale-105"
+              >
+                Explore VFD <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold rounded-full backdrop-blur transition"
+                >Get Quote</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Servo -->
+        <div class="hero-slide" data-index="3">
+          <div
+            class="slide-bg"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1920&q=80');
+            "
+          ></div>
+          <div class="overlay"></div>
+          <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+            <div
+              class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/15 backdrop-blur border border-white/25 text-white text-sm font-medium mb-5"
+            >
+              <i class="fas fa-cogs"></i> Servo Drive
+            </div>
+            <h2
+              class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 drop-shadow-lg"
+            >
+              Precision <span class="text-purple-300">Servo</span> Systems
+            </h2>
+            <p class="text-lg text-slate-200 max-w-xl mx-auto mb-8">
+              হাই-প্রিসিশন সার্ভো মোটর ও ড্রাইভ, মোশন কন্ট্রোল ও টিউনিং সাপোর্ট।
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a
+                href="servo-service.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-full shadow-lg transition hover:scale-105"
+              >
+                Explore Servo <i class="fas fa-arrow-right text-sm"></i>
+              </a>
+              <a
+                href="contact.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-white/15 hover:bg-white/25 border border-white/30 text-white font-semibold rounded-full backdrop-blur transition"
+                >Get Quote</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation Arrows -->
+        <button
+          class="slider-arrow prev hidden sm:flex"
+          type="button"
+          aria-label="Previous slide"
+        >
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button
+          class="slider-arrow next hidden sm:flex"
+          type="button"
+          aria-label="Next slide"
+        >
+          <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <!-- Indicator Dots -->
+        <div class="slider-nav" aria-label="Slider navigation">
+          <button
+            class="slider-dot active"
+            data-index="0"
+            type="button"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            class="slider-dot"
+            data-index="1"
+            type="button"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            class="slider-dot"
+            data-index="2"
+            type="button"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            class="slider-dot"
+            data-index="3"
+            type="button"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+      </section>
+
+      <!-- ==================== STATS COUNTER ==================== -->
+      <section
+        class="relative py-16 bg-gradient-to-r from-primary-700 via-primary-600 to-primary-500 overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 opacity-10"
+          style="
+            background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+          "
+        ></div>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-4 text-center">
+            <div class="group count-box">
+              <div
+                class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 mb-4 group-hover:bg-white/25 transition"
+              >
+                <i class="fas fa-users text-2xl text-white"></i>
+              </div>
+              <p
+                class="counter-value text-4xl sm:text-5xl font-display font-bold text-white mb-1"
+                data-target="100"
+                data-suffix="+"
+              >
+                0
+              </p>
+              <p class="text-primary-100 font-medium text-sm sm:text-base">
+                Happy Clients
+              </p>
+            </div>
+            <div class="group count-box">
+              <div
+                class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 mb-4 group-hover:bg-white/25 transition"
+              >
+                <i class="fas fa-award text-2xl text-white"></i>
+              </div>
+              <p
+                class="counter-value text-4xl sm:text-5xl font-display font-bold text-white mb-1"
+                data-target="10"
+                data-suffix="+"
+              >
+                0
+              </p>
+              <p class="text-primary-100 font-medium text-sm sm:text-base">
+                Years Experience
+              </p>
+            </div>
+            <div class="group count-box">
+              <div
+                class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 mb-4 group-hover:bg-white/25 transition"
+              >
+                <i class="fas fa-project-diagram text-2xl text-white"></i>
+              </div>
+              <p
+                class="counter-value text-4xl sm:text-5xl font-display font-bold text-white mb-1"
+                data-target="250"
+                data-suffix="+"
+              >
+                0
+              </p>
+              <p class="text-primary-100 font-medium text-sm sm:text-base">
+                Projects Done
+              </p>
+            </div>
+            <div class="group count-box">
+              <div
+                class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/15 mb-4 group-hover:bg-white/25 transition"
+              >
+                <i class="fas fa-headset text-2xl text-white"></i>
+              </div>
+              <p class="text-4xl sm:text-5xl font-display font-bold text-white mb-1">
+                24/7
+              </p>
+              <p class="text-primary-100 font-medium text-sm sm:text-base">
+                Support Available
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== 6 SERVICE CARDS ==================== -->
+      <section id="services" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <span
+              class="text-accent-500 font-semibold text-sm tracking-wider uppercase"
+              >What We Offer</span
+            >
+            <h2
+              class="font-display text-3xl sm:text-4xl font-bold mt-2 mb-3 text-slate-900 dark:text-white"
+            >
+              Our Core Services
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400">
+              PLC, HMI, VFD থেকে মেইনটেন্যান্স, ট্রাবলশুটিং ও রিপেয়ারিং — সম্পূর্ণ সমাধান
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- PLC -->
+            <a
+              href="plc-service.html"
+              class="svc-card group relative rounded-2xl overflow-hidden bg-slate-900 aspect-[4/3] block"
+            >
+              <div
+                class="card-img absolute inset-0 bg-cover bg-center"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="card-overlay absolute inset-0"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <div class="flex items-center gap-3 mb-2">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-white/20 backdrop-blur flex items-center justify-center"
+                  >
+                    <i class="fas fa-microchip text-white"></i>
+                  </div>
+                  <h3 class="font-display text-xl font-bold text-white">PLC</h3>
+                </div>
+                <p class="text-sm text-white/80">
+                  Programming, Installation & Commissioning for all major brands.
+                </p>
+              </div>
+            </a>
+
+            <!-- HMI -->
+            <a
+              href="hmi-service.html"
+              class="svc-card group relative rounded-2xl overflow-hidden bg-slate-900 aspect-[4/3] block"
+            >
+              <div
+                class="card-img absolute inset-0 bg-cover bg-center"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="card-overlay absolute inset-0"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <div class="flex items-center gap-3 mb-2">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-white/20 backdrop-blur flex items-center justify-center"
+                  >
+                    <i class="fas fa-desktop text-white"></i>
+                  </div>
+                  <h3 class="font-display text-xl font-bold text-white">HMI</h3>
+                </div>
+                <p class="text-sm text-white/80">
+                  Touch panel design, screen development & system integration.
+                </p>
+              </div>
+            </a>
+
+            <!-- VFD -->
+            <a
+              href="vfd-service.html"
+              class="svc-card group relative rounded-2xl overflow-hidden bg-slate-900 aspect-[4/3] block"
+            >
+              <div
+                class="card-img absolute inset-0 bg-cover bg-center"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="card-overlay absolute inset-0"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <div class="flex items-center gap-3 mb-2">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-white/20 backdrop-blur flex items-center justify-center"
+                  >
+                    <i class="fas fa-tachometer-alt text-white"></i>
+                  </div>
+                  <h3 class="font-display text-xl font-bold text-white">VFD</h3>
+                </div>
+                <p class="text-sm text-white/80">
+                  Drive selection, parameter setup & energy saving solutions.
+                </p>
+              </div>
+            </a>
+
+            <!-- Maintenance -->
+            <a
+              href="iatautomation-maintenance.html"
+              class="svc-card group relative rounded-2xl overflow-hidden bg-slate-900 aspect-[4/3] block"
+            >
+              <div
+                class="card-img absolute inset-0 bg-cover bg-center"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="card-overlay absolute inset-0"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <div class="flex items-center gap-3 mb-2">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-white/20 backdrop-blur flex items-center justify-center"
+                  >
+                    <i class="fas fa-tools text-white"></i>
+                  </div>
+                  <h3 class="font-display text-xl font-bold text-white">
+                    Maintenance
+                  </h3>
+                </div>
+                <p class="text-sm text-white/80">
+                  Preventive & predictive maintenance with health monitoring.
+                </p>
+              </div>
+            </a>
+
+            <!-- Troubleshooting -->
+            <a
+              href="iatautomation-troubleshooting.html"
+              class="svc-card group relative rounded-2xl overflow-hidden bg-slate-900 aspect-[4/3] block"
+            >
+              <div
+                class="card-img absolute inset-0 bg-cover bg-center"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="card-overlay absolute inset-0"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <div class="flex items-center gap-3 mb-2">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-white/20 backdrop-blur flex items-center justify-center"
+                  >
+                    <i class="fas fa-search text-white"></i>
+                  </div>
+                  <h3 class="font-display text-xl font-bold text-white">
+                    Troubleshooting
+                  </h3>
+                </div>
+                <p class="text-sm text-white/80">
+                  Rapid fault diagnosis, error code analysis & network fix.
+                </p>
+              </div>
+            </a>
+
+            <!-- Repairing -->
+            <a
+              href="iatautomation-repairing.html"
+              class="svc-card group relative rounded-2xl overflow-hidden bg-slate-900 aspect-[4/3] block"
+            >
+              <div
+                class="card-img absolute inset-0 bg-cover bg-center"
+                style="
+                  background-image: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80');
+                "
+              ></div>
+              <div class="card-overlay absolute inset-0"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
+                <div class="flex items-center gap-3 mb-2">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-white/20 backdrop-blur flex items-center justify-center"
+                  >
+                    <i class="fas fa-wrench text-white"></i>
+                  </div>
+                  <h3 class="font-display text-xl font-bold text-white">
+                    Repairing
+                  </h3>
+                </div>
+                <p class="text-sm text-white/80">
+                  Board-level repair, genuine spare parts & full testing.
+                </p>
+              </div>
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- SERVICES -->
-    <section
-      id="services"
-      class="py-20 sm:py-24 bg-slate-50 dark:bg-slate-900/60"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- ==================== BRAND LOGOS ==================== -->
+      <section class="py-14 bg-slate-700 dark:bg-slate-800 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 mb-8 text-center">
+          <p
+            class="text-slate-300 text-sm font-medium tracking-wide uppercase"
+          >
+            Trusted by Leading Brands
+          </p>
+        </div>
+        <div class="relative">
+          <div class="logo-track">
+            <div class="logo-item"><span>Siemens</span></div>
+            <div class="logo-item"><span>Allen-Bradley</span></div>
+            <div class="logo-item"><span>Mitsubishi</span></div>
+            <div class="logo-item"><span>Delta</span></div>
+            <div class="logo-item"><span>Schneider</span></div>
+            <div class="logo-item"><span>Omron</span></div>
+            <div class="logo-item"><span>ABB</span></div>
+            <div class="logo-item"><span>Yaskawa</span></div>
+            <div class="logo-item"><span>Fuji Electric</span></div>
+            <div class="logo-item"><span>Panasonic</span></div>
+            <!-- Duplicate for infinite marquee loop -->
+            <div class="logo-item"><span>Siemens</span></div>
+            <div class="logo-item"><span>Allen-Bradley</span></div>
+            <div class="logo-item"><span>Mitsubishi</span></div>
+            <div class="logo-item"><span>Delta</span></div>
+            <div class="logo-item"><span>Schneider</span></div>
+            <div class="logo-item"><span>Omron</span></div>
+            <div class="logo-item"><span>ABB</span></div>
+            <div class="logo-item"><span>Yaskawa</span></div>
+            <div class="logo-item"><span>Fuji Electric</span></div>
+            <div class="logo-item"><span>Panasonic</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== STORE ==================== -->
+      <section id="store" class="py-20 bg-white dark:bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span
+                class="text-accent-500 font-semibold text-sm tracking-wider uppercase"
+                >Online Store</span
+              >
+              <h2
+                class="font-display text-3xl sm:text-4xl font-bold mt-2 mb-4 text-slate-900 dark:text-white"
+              >
+                Automation Products Store
+              </h2>
+              <p
+                class="text-slate-500 dark:text-slate-400 leading-relaxed mb-8"
+              >
+                PLC, HMI, VFD, Servo Drive, Sensors, Contactors, Cables এবং আরও অনেক অটোমেশন প্রোডাক্ট এক জায়গায়। জেনুইন পার্টস, দ্রুত ডেলিভারি।
+              </p>
+              <div class="grid grid-cols-2 gap-4 mb-8">
+                <div
+                  class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800/80 rounded-xl p-4 border border-slate-100 dark:border-slate-700"
+                >
+                  <i
+                    class="fas fa-shield-alt text-primary-600 dark:text-primary-400 text-xl"
+                  ></i>
+                  <div>
+                    <p
+                      class="font-semibold text-sm text-slate-800 dark:text-slate-200"
+                    >
+                      Genuine Parts
+                    </p>
+                    <p class="text-xs text-slate-400">100% Authentic</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-3 bg-slate-50 dark:bg-slate-800/80 rounded-xl p-4 border border-slate-100 dark:border-slate-700"
+                >
+                  <i class="fas fa-shipping-fast text-accent-500 text-xl"></i>
+                  <div>
+                    <p
+                      class="font-semibold text-sm text-slate-800 dark:text-slate-200"
+                    >
+                      Fast Delivery
+                    </p>
+                    <p class="text-xs text-slate-400">Nationwide</p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="store-shop.html"
+                class="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent-600 to-accent-500 text-white font-semibold rounded-full shadow-lg hover:scale-105 transition"
+              >
+                <i class="fas fa-shopping-cart"></i> Browse Store
+              </a>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+              <a
+                href="store-shop.html"
+                class="bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 hover:border-primary-300 dark:hover:border-primary-600 transition block"
+              >
+                <i
+                  class="fas fa-microchip text-3xl text-primary-600 dark:text-primary-400 mb-3"
+                ></i>
+                <h3
+                  class="font-semibold text-slate-800 dark:text-slate-200 mb-1"
+                >
+                  PLC Modules
+                </h3>
+                <p class="text-xs text-slate-400">CPU, I/O, Power Supply</p>
+              </a>
+              <a
+                href="store-shop.html"
+                class="bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 hover:border-orange-300 dark:hover:border-orange-600 transition block"
+              >
+                <i class="fas fa-desktop text-3xl text-orange-500 mb-3"></i>
+                <h3
+                  class="font-semibold text-slate-800 dark:text-slate-200 mb-1"
+                >
+                  HMI Screens
+                </h3>
+                <p class="text-xs text-slate-400">Touch & Keypad Panels</p>
+              </a>
+              <a
+                href="store-shop.html"
+                class="bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 hover:border-emerald-300 dark:hover:border-emerald-600 transition block"
+              >
+                <i
+                  class="fas fa-tachometer-alt text-3xl text-emerald-600 dark:text-emerald-400 mb-3"
+                ></i>
+                <h3
+                  class="font-semibold text-slate-800 dark:text-slate-200 mb-1"
+                >
+                  VFD Series
+                </h3>
+                <p class="text-xs text-slate-400">0.4kW – 500kW+</p>
+              </a>
+              <a
+                href="store-shop.html"
+                class="bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700 rounded-2xl p-6 hover:border-purple-300 dark:hover:border-purple-600 transition block"
+              >
+                <i class="fas fa-cogs text-3xl text-purple-600 dark:text-purple-400 mb-3"></i>
+                <h3
+                  class="font-semibold text-slate-800 dark:text-slate-200 mb-1"
+                >
+                  Servo Systems
+                </h3>
+                <p class="text-xs text-slate-400">Motors & Drives</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CTA BANNER ==================== -->
+      <section class="relative overflow-hidden">
+        <div class="relative min-h-[420px] sm:min-h-[480px] flex items-center">
+          <!-- Background image -->
+          <div
+            class="absolute inset-0 bg-cover bg-center"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1920&q=80');
+            "
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-blue-950/90 to-blue-900/75"
+          ></div>
+          <!-- Grid pattern overlay -->
+          <div
+            class="absolute inset-0 opacity-[0.07]"
+            style="
+              background-image: linear-gradient(
+                  rgba(255, 255, 255, 0.15) 1px,
+                  transparent 1px
+                ),
+                linear-gradient(
+                  90deg,
+                  rgba(255, 255, 255, 0.15) 1px,
+                  transparent 1px
+                );
+              background-size: 40px 40px;
+            "
+          ></div>
+
+          <div
+            class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-16 sm:py-20"
+          >
+            <div class="grid lg:grid-cols-2 gap-10 items-center">
+              <!-- Left visual -->
+              <div class="relative hidden lg:flex items-center justify-center">
+                <div class="relative">
+                  <div
+                    class="w-64 h-64 rounded-full border border-blue-400/20 flex items-center justify-center animate-pulse"
+                    style="animation-duration: 3s"
+                  >
+                    <div
+                      class="w-48 h-48 rounded-full border border-blue-400/30 flex items-center justify-center"
+                    >
+                      <div
+                        class="w-32 h-32 rounded-2xl bg-gradient-to-br from-primary-500 to-blue-600 shadow-2xl shadow-primary-500/40 flex items-center justify-center"
+                      >
+                        <i class="fas fa-industry text-5xl text-white"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute -top-3 -right-2 bg-slate-900/80 backdrop-blur border border-emerald-500/40 rounded-xl px-3.5 py-2 text-white text-xs font-medium flex items-center gap-2"
+                  >
+                    <span
+                      class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"
+                    ></span>
+                    Systems Online
+                  </div>
+                  <div
+                    class="absolute bottom-2 -left-4 bg-slate-900/80 backdrop-blur border border-primary-500/40 rounded-xl px-3.5 py-2 text-white text-xs font-medium"
+                  >
+                    <i class="fas fa-microchip text-primary-400 mr-1.5"></i> PLC · HMI
+                    · VFD · Servo
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right content -->
+              <div class="text-center lg:text-left">
+                <div
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/20 border border-primary-400/30 text-primary-300 text-xs font-semibold tracking-wider uppercase mb-5"
+                >
+                  <i class="fas fa-bolt"></i> Industry 4.0 Ready
+                </div>
+                <h2
+                  class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight"
+                >
+                  Start Automation<br />
+                  <span
+                    class="bg-gradient-to-r from-primary-300 to-cyan-300 bg-clip-text text-transparent"
+                    >Today</span
+                  >
+                </h2>
+                <p
+                  class="text-slate-300 text-base sm:text-lg mb-8 max-w-md mx-auto lg:mx-0 leading-relaxed"
+                >
+                  আপনার প্রোডাকশন লাইনকে স্মার্ট করুন। PLC, HMI, VFD ও Servo — সম্পূর্ণ ইন্ডাস্ট্রিয়াল অটোমেশন সলিউশন এক জায়গায়।
+                </p>
+                <div
+                  class="flex flex-wrap justify-center lg:justify-start gap-3"
+                >
+                  <a
+                    href="contact.html"
+                    class="inline-flex items-center gap-2.5 px-7 py-3.5 bg-primary-500 hover:bg-primary-400 text-white font-bold rounded-full transition-all hover:scale-105 shadow-lg shadow-primary-500/30"
+                  >
+                    <i class="fas fa-rocket"></i> Contact Sales
+                  </a>
+                  <a
+                    href="#services"
+                    class="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white/10 hover:bg-white/15 border border-white/25 text-white font-semibold rounded-full backdrop-blur transition"
+                  >
+                    <i class="fas fa-cogs"></i> Our Services
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CUSTOMER REVIEWS ==================== -->
+      <section
+        id="reviews"
+        class="py-20 bg-slate-50 dark:bg-slate-900 relative overflow-hidden"
+      >
         <div
-          class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12"
+          class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         >
-          <div>
-            <p
-              class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-2"
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <span
+              class="inline-flex items-center gap-1.5 text-accent-500 font-semibold text-sm tracking-wider uppercase"
             >
-              Services
-            </p>
+              <i class="fas fa-quote-left text-xs"></i> Testimonials
+            </span>
             <h2
-              class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"
+              class="font-display text-3xl sm:text-4xl font-bold mt-2 mb-3 text-slate-900 dark:text-white"
             >
-              Servo services we deliver
+              Trusted by Industry Leaders
             </h2>
-          </div>
-          <p class="text-[17px] text-slate-600 dark:text-slate-300 max-w-sm">
-            From single axis retrofit to multi-axis packaging lines.
-          </p>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          <article
-            class="svc-card bg-white dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700/80"
-          >
-            <div class="relative h-52 sm:h-56 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=700&q=80"
-                alt=""
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
-              ></div>
-              <span
-                class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-primary-500 flex items-center justify-center text-white"
-                ><i class="fas fa-calculator"></i
-              ></span>
-            </div>
-            <div class="p-5">
-              <h3
-                class="font-display font-semibold text-slate-900 dark:text-white mb-1.5"
-              >
-                Sizing & Selection
-              </h3>
-              <p
-                class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-              >
-                Torque, inertia ratio, encoder resolution and ambient conditions
-                matched to the right motor–drive pair.
-              </p>
-            </div>
-          </article>
-          <article
-            class="svc-card bg-white dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700/80"
-          >
-            <div class="relative h-52 sm:h-56 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=700&q=80"
-                alt=""
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
-              ></div>
-              <span
-                class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-accent-500 flex items-center justify-center text-white"
-                ><i class="fas fa-sliders-h"></i
-              ></span>
-            </div>
-            <div class="p-5">
-              <h3
-                class="font-display font-semibold text-slate-900 dark:text-white mb-1.5"
-              >
-                Auto-Tuning & Gains
-              </h3>
-              <p
-                class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-              >
-                Position/speed/torque loops, notch filters and damping so axes
-                settle cleanly without vibration.
-              </p>
-            </div>
-          </article>
-          <article
-            class="svc-card bg-white dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700/80"
-          >
-            <div class="relative h-52 sm:h-56 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=700&q=80"
-                alt=""
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
-              ></div>
-              <span
-                class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-emerald-500 flex items-center justify-center text-white"
-                ><i class="fas fa-cogs"></i
-              ></span>
-            </div>
-            <div class="p-5">
-              <h3
-                class="font-display font-semibold text-slate-900 dark:text-white mb-1.5"
-              >
-                Install & Commission
-              </h3>
-              <p
-                class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-              >
-                Wiring, encoder cables, STO safety, homing routines and full
-                load verification on site.
-              </p>
-            </div>
-          </article>
-          <article
-            class="svc-card bg-white dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700/80"
-          >
-            <div class="relative h-52 sm:h-56 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=700&q=80"
-                alt=""
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
-              ></div>
-              <span
-                class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-purple-500 flex items-center justify-center text-white"
-                ><i class="fas fa-project-diagram"></i
-              ></span>
-            </div>
-            <div class="p-5">
-              <h3
-                class="font-display font-semibold text-slate-900 dark:text-white mb-1.5"
-              >
-                Multi-Axis Sync
-              </h3>
-              <p
-                class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-              >
-                Electronic gearing, camming and coordinated motion with PLC or
-                dedicated motion controllers.
-              </p>
-            </div>
-          </article>
-          <article
-            class="svc-card bg-white dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700/80"
-          >
-            <div class="relative h-52 sm:h-56 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=700&q=80"
-                alt=""
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
-              ></div>
-              <span
-                class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-cyan-500 flex items-center justify-center text-white"
-                ><i class="fas fa-sync-alt"></i
-              ></span>
-            </div>
-            <div class="p-5">
-              <h3
-                class="font-display font-semibold text-slate-900 dark:text-white mb-1.5"
-              >
-                Retrofit & Upgrade
-              </h3>
-              <p
-                class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-              >
-                Replace aging servos with modern drives while keeping mechanics
-                and minimizing downtime.
-              </p>
-            </div>
-          </article>
-          <article
-            class="svc-card bg-white dark:bg-slate-800/80 rounded-2xl overflow-hidden border border-slate-100 dark:border-slate-700/80"
-          >
-            <div class="relative h-52 sm:h-56 overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=700&q=80"
-                alt=""
-                class="w-full h-full object-cover"
-              />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent"
-              ></div>
-              <span
-                class="absolute bottom-3 left-3 w-10 h-10 rounded-lg bg-rose-500 flex items-center justify-center text-white"
-                ><i class="fas fa-tools"></i
-              ></span>
-            </div>
-            <div class="p-5">
-              <h3
-                class="font-display font-semibold text-slate-900 dark:text-white mb-1.5"
-              >
-                Repair & Diagnostics
-              </h3>
-              <p
-                class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-              >
-                Alarm analysis, encoder/drive repair, parameter recovery and
-                preventive health checks.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- BRANDS -->
-    <section
-      class="py-14 bg-white dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800/80"
-    >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p
-          class="text-center text-xs font-semibold text-slate-400 tracking-[0.2em] uppercase mb-8"
-        >
-          Motion platforms we support
-        </p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <span
-            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
-            >Siemens</span
-          >
-          <span
-            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
-            >Mitsubishi</span
-          >
-          <span
-            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
-            >Delta</span
-          >
-          <span
-            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
-            >Yaskawa</span
-          >
-          <span
-            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
-            >Panasonic</span
-          >
-          <span
-            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
-            >Omron</span
-          >
-          <span
-            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
-            >Schneider</span
-          >
-          <span
-            class="brand-chip px-5 py-2.5 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm font-semibold text-slate-600 dark:text-slate-300 cursor-default shadow-sm"
-            >Allen-Bradley</span
-          >
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESS — bg image visible in white + dark, solid cards for text -->
-    <section class="relative py-20 sm:py-28 overflow-hidden">
-      <!-- Full background image (always visible) -->
-      <div
-        class="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-        style="
-          background-image: url(&quot;https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80&quot;);
-        "
-      ></div>
-      <!-- Light: ~55% white so image still shows | Dark: ~75% slate -->
-      <div class="absolute inset-0 bg-white/55 dark:bg-slate-950/78"></div>
-      <div
-        class="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-white/30 dark:from-slate-950/50 dark:via-transparent dark:to-slate-950/40"
-      ></div>
-
-      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12 sm:mb-14">
-          <p
-            class="text-accent-600 dark:text-accent-400 text-xs font-semibold tracking-[0.2em] uppercase mb-3 drop-shadow-sm"
-          >
-            Process
-          </p>
-          <h2
-            class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-3 drop-shadow-sm"
-          >
-            How a servo project runs
-          </h2>
-          <p
-            class="text-[17px] text-slate-700 dark:text-slate-200 max-w-lg mx-auto font-medium"
-          >
-            Clear steps from load calculation to stable production.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-5">
-          <div
-            class="process-card group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-lg cursor-default"
-          >
-            <div class="flex items-start gap-4">
-              <div
-                class="process-num w-12 h-12 rounded-2xl bg-primary-500 text-white flex items-center justify-center text-lg shrink-0 shadow-md"
-              >
-                <i class="fas fa-calculator"></i>
-              </div>
-              <div>
-                <span class="text-xs font-bold text-primary-500 dark:text-primary-400 tracking-wide"
-                  >STEP 01</span
-                >
-                <h3
-                  class="font-semibold text-slate-900 dark:text-white mb-1.5 mt-0.5"
-                >
-                  Load & inertia study
-                </h3>
-                <p
-                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-                >
-                  Mass, friction, duty cycle and required accuracy — motor and
-                  drive selected to match.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="process-card group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-lg cursor-default"
-          >
-            <div class="flex items-start gap-4">
-              <div
-                class="process-num w-12 h-12 rounded-2xl bg-accent-500 text-white flex items-center justify-center text-lg shrink-0 shadow-md"
-              >
-                <i class="fas fa-plug"></i>
-              </div>
-              <div>
-                <span class="text-xs font-bold text-accent-500 dark:text-accent-400 tracking-wide"
-                  >STEP 02</span
-                >
-                <h3
-                  class="font-semibold text-slate-900 dark:text-white mb-1.5 mt-0.5"
-                >
-                  Wire, power & safety
-                </h3>
-                <p
-                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-                >
-                  Power, encoder, STO and network cables installed to OEM and
-                  EMC best practice.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="process-card group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-lg cursor-default"
-          >
-            <div class="flex items-start gap-4">
-              <div
-                class="process-num w-12 h-12 rounded-2xl bg-emerald-500 text-white flex items-center justify-center text-lg shrink-0 shadow-md"
-              >
-                <i class="fas fa-sliders-h"></i>
-              </div>
-              <div>
-                <span class="text-xs font-bold text-emerald-500 dark:text-emerald-400 tracking-wide"
-                  >STEP 03</span
-                >
-                <h3
-                  class="font-semibold text-slate-900 dark:text-white mb-1.5 mt-0.5"
-                >
-                  Tune & integrate
-                </h3>
-                <p
-                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-                >
-                  Auto-tune, filters, homing and PLC/motion link — verified
-                  under real load.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div
-            class="process-card group bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 shadow-lg cursor-default"
-          >
-            <div class="flex items-start gap-4">
-              <div
-                class="process-num w-12 h-12 rounded-2xl bg-purple-500 text-white flex items-center justify-center text-lg shrink-0 shadow-md"
-              >
-                <i class="fas fa-file-alt"></i>
-              </div>
-              <div>
-                <span class="text-xs font-bold text-purple-500 dark:text-purple-400 tracking-wide"
-                  >STEP 04</span
-                >
-                <h3
-                  class="font-semibold text-slate-900 dark:text-white mb-1.5 mt-0.5"
-                >
-                  Document & support
-                </h3>
-                <p
-                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-                >
-                  Parameter backup, operator notes and ongoing fault response
-                  when you need it.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- BENEFITS — medium topic icons -->
-    <section class="py-20 sm:py-24 bg-white dark:bg-slate-950">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-xl mx-auto mb-14">
-          <p
-            class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3"
-          >
-            Benefits
-          </p>
-          <h2
-            class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"
-          >
-            Why teams trust our servo work
-          </h2>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div
-            class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 dark:border-slate-800 text-center hover:border-primary-200 dark:hover:border-primary-700 transition"
-          >
+            <p class="text-slate-500 dark:text-slate-400">
+              আমাদের সন্তুষ্ট ক্লায়েন্টদের অভিজ্ঞতা — যাঁরা IATBD-এর সাথে কাজ করেছেন
+            </p>
             <div
-              class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-primary-100 dark:bg-primary-900/40 text-primary-600 dark:text-primary-400 flex items-center justify-center text-2xl"
+              class="inline-flex items-center gap-3 mt-6 px-5 py-2.5 bg-white dark:bg-slate-800 rounded-full border border-slate-200 dark:border-slate-700 shadow-sm"
             >
-              <i class="fas fa-crosshairs"></i>
+              <div class="flex gap-0.5">
+                <i class="fas fa-star text-amber-400 text-sm"></i>
+                <i class="fas fa-star text-amber-400 text-sm"></i>
+                <i class="fas fa-star text-amber-400 text-sm"></i>
+                <i class="fas fa-star text-amber-400 text-sm"></i>
+                <i class="fas fa-star text-amber-400 text-sm"></i>
+              </div>
+              <span class="text-sm font-bold text-slate-800 dark:text-white"
+                >4.9/5</span
+              >
+              <span
+                class="text-xs text-slate-400 border-l border-slate-200 dark:border-slate-600 pl-3"
+                >100+ Reviews</span
+              >
             </div>
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">
-              Repeatable accuracy
-            </h3>
-            <p
-              class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+            <!-- Review 1 -->
+            <div class="relative group">
+              <div
+                class="relative bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm h-full flex flex-col"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div class="flex gap-0.5">
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                  </div>
+                  <i
+                    class="fas fa-quote-right text-3xl text-primary-100 dark:text-primary-900/50"
+                  ></i>
+                </div>
+                <p
+                  class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 flex-1"
+                >
+                  “IATBD আমাদের ফ্যাক্টরিতে সম্পূর্ণ PLC ও HMI সিস্টেম সেটআপ করেছে। সার্ভিস খুব প্রফেশনাল এবং সাপোর্ট ২৪/৭ পাওয়া যায়। অসাধারণ কাজ!”
+                </p>
+                <div
+                  class="flex items-center gap-3 pt-5 border-t border-slate-100 dark:border-slate-700"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80"
+                    alt="Rahim Uddin"
+                    class="w-12 h-12 rounded-full object-cover ring-2 ring-primary-100 dark:ring-primary-900 shadow"
+                  />
+                  <div>
+                    <p
+                      class="font-semibold text-slate-900 dark:text-white text-sm"
+                    >
+                      Rahim Uddin
+                    </p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">
+                      Plant Manager
+                    </p>
+                    <p
+                      class="text-xs font-medium text-primary-600 dark:text-primary-400"
+                    >
+                      Delta Textiles Ltd.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="relative group md:-mt-4">
+              <div
+                class="relative bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-md h-full flex flex-col"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div class="flex gap-0.5">
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                  </div>
+                  <span
+                    class="text-[10px] font-bold uppercase tracking-wider bg-accent-500/10 text-accent-600 dark:text-accent-400 px-2.5 py-1 rounded-full"
+                    >Featured</span
+                  >
+                </div>
+                <p
+                  class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 flex-1"
+                >
+                  “VFD ও Servo Drive ইনস্টলেশন ও টিউনিংয়ে IATBD টিম অসাধারণ। প্রোডাকশন লাইনের এফিশিয়েন্সি অনেক বেড়েছে। Highly recommended!”
+                </p>
+                <div
+                  class="flex items-center gap-3 pt-5 border-t border-slate-100 dark:border-slate-700"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&h=100&q=80"
+                    alt="Karim Hossain"
+                    class="w-12 h-12 rounded-full object-cover ring-2 ring-accent-100 dark:ring-accent-900 shadow"
+                  />
+                  <div>
+                    <p
+                      class="font-semibold text-slate-900 dark:text-white text-sm"
+                    >
+                      Karim Hossain
+                    </p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">CEO</p>
+                    <p
+                      class="text-xs font-medium text-accent-600 dark:text-accent-400"
+                    >
+                      Apex Automation BD
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="relative group">
+              <div
+                class="relative bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-700 shadow-sm h-full flex flex-col"
+              >
+                <div class="flex items-center justify-between mb-5">
+                  <div class="flex gap-0.5">
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                    <i class="fas fa-star text-amber-400"></i>
+                  </div>
+                  <i
+                    class="fas fa-quote-right text-3xl text-emerald-100 dark:text-emerald-900/40"
+                  ></i>
+                </div>
+                <p
+                  class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 flex-1"
+                >
+                  “ট্রাবলশুটিং ও রিপেয়ারে IATBD-এর দক্ষতা অবিশ্বাস্য। একদিনের মধ্যেই আমাদের পুরনো PLC সিস্টেম ঠিক করে দিয়েছে। সত্যিই বিশ্বস্ত পার্টনার।”
+                </p>
+                <div
+                  class="flex items-center gap-3 pt-5 border-t border-slate-100 dark:border-slate-700"
+                >
+                  <img
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&h=100&q=80"
+                    alt="Nusrat Jahan"
+                    class="w-12 h-12 rounded-full object-cover ring-2 ring-emerald-100 dark:ring-emerald-900 shadow"
+                  />
+                  <div>
+                    <p
+                      class="font-semibold text-slate-900 dark:text-white text-sm"
+                    >
+                      Nusrat Jahan
+                    </p>
+                    <p class="text-xs text-slate-500 dark:text-slate-400">
+                      Operations Head
+                    </p>
+                    <p
+                      class="text-xs font-medium text-emerald-600 dark:text-emerald-400"
+                    >
+                      Square Pharma Plant
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CONTACT SECTION ==================== -->
+      <section id="contact" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <span
+              class="text-accent-500 font-semibold text-sm tracking-wider uppercase"
+              >Get In Touch</span
             >
-              Closed-loop control keeps position and speed consistent cycle
-              after cycle.
+            <h2
+              class="font-display text-3xl sm:text-4xl font-bold mt-2 mb-3 text-slate-900 dark:text-white"
+            >
+              Contact IATBD
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400">
+              আমাদের সাথে যোগাযোগ করুন — ফ্রি কনসালটেশন, কোয়োটেশন বা সাপোর্টের জন্য
             </p>
           </div>
+
+          <div class="grid lg:grid-cols-5 gap-8 lg:gap-10">
+            <!-- Left: Contact Info Cards -->
+            <div class="lg:col-span-2 space-y-5">
+              <!-- Phone -->
+              <a
+                href="tel:+8801XXXXXXXXX"
+                class="flex items-start gap-4 p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-primary-300 dark:hover:border-primary-600 hover:shadow-lg transition group"
+              >
+                <div
+                  class="w-12 h-12 rounded-xl bg-primary-50 dark:bg-primary-900/40 flex items-center justify-center shrink-0 group-hover:scale-110 transition"
+                >
+                  <i
+                    class="fas fa-phone-alt text-primary-600 dark:text-primary-400 text-lg"
+                  ></i>
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1"
+                  >
+                    Call Us
+                  </p>
+                  <p
+                    class="font-semibold text-slate-900 dark:text-white text-lg"
+                  >
+                    +880 1XXX-XXXXXX
+                  </p>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+                    Sat – Thu, 9 AM – 6 PM
+                  </p>
+                </div>
+              </a>
+
+              <!-- WhatsApp -->
+              <a
+                href="https://wa.me/8801XXXXXXXXX"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-start gap-4 p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-emerald-300 dark:hover:border-emerald-600 hover:shadow-lg transition group"
+              >
+                <div
+                  class="w-12 h-12 rounded-xl bg-emerald-50 dark:bg-emerald-900/40 flex items-center justify-center shrink-0 group-hover:scale-110 transition"
+                >
+                  <i
+                    class="fab fa-whatsapp text-emerald-600 dark:text-emerald-400 text-xl"
+                  ></i>
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1"
+                  >
+                    WhatsApp
+                  </p>
+                  <p
+                    class="font-semibold text-slate-900 dark:text-white text-lg"
+                  >
+                    Chat Instantly
+                  </p>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+                    Quick reply within minutes
+                  </p>
+                </div>
+              </a>
+
+              <!-- Email -->
+              <a
+                href="mailto:info@iatbd.com"
+                class="flex items-start gap-4 p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-orange-300 dark:hover:border-orange-600 hover:shadow-lg transition group"
+              >
+                <div
+                  class="w-12 h-12 rounded-xl bg-orange-50 dark:bg-orange-900/40 flex items-center justify-center shrink-0 group-hover:scale-110 transition"
+                >
+                  <i class="fas fa-envelope text-orange-500 text-lg"></i>
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1"
+                  >
+                    Email
+                  </p>
+                  <p class="font-semibold text-slate-900 dark:text-white">
+                    info@iatbd.com
+                  </p>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-0.5">
+                    We reply within 24 hours
+                  </p>
+                </div>
+              </a>
+
+              <!-- Office Address -->
+              <div
+                class="flex items-start gap-4 p-5 bg-white dark:bg-slate-800/80 rounded-2xl border border-slate-200 dark:border-slate-700"
+              >
+                <div
+                  class="w-12 h-12 rounded-xl bg-purple-50 dark:bg-purple-900/40 flex items-center justify-center shrink-0"
+                >
+                  <i
+                    class="fas fa-map-marker-alt text-purple-600 dark:text-purple-400 text-lg"
+                  ></i>
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1"
+                  >
+                    Office
+                  </p>
+                  <p class="font-semibold text-slate-900 dark:text-white">
+                    IATBD Head Office
+                  </p>
+                  <p
+                    class="text-sm text-slate-500 dark:text-slate-400 mt-0.5 leading-relaxed"
+                  >
+                    Your Address, Dhaka,<br />Bangladesh
+                  </p>
+                </div>
+              </div>
+
+              <!-- Quick Stats -->
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div
+                  class="text-center p-4 bg-primary-50 dark:bg-primary-900/30 rounded-xl border border-primary-100 dark:border-primary-800/50"
+                >
+                  <p
+                    class="text-2xl font-display font-bold text-primary-600 dark:text-primary-400"
+                  >
+                    24/7
+                  </p>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    Support Available
+                  </p>
+                </div>
+                <div
+                  class="text-center p-4 bg-accent-500/10 dark:bg-accent-500/10 rounded-xl border border-orange-100 dark:border-orange-900/30"
+                >
+                  <p class="text-2xl font-display font-bold text-accent-500">
+                    2hr
+                  </p>
+                  <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                    Avg. Response
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Contact Form -->
+            <div class="lg:col-span-3">
+              <div
+                class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200 dark:border-slate-700 p-6 sm:p-8 shadow-sm"
+              >
+                <h3
+                  class="font-display text-xl font-bold text-slate-900 dark:text-white mb-1"
+                >
+                  Send us a message
+                </h3>
+                <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">
+                  ফর্ম পূরণ করুন — আমরা দ্রুত যোগাযোগ করব
+                </p>
+
+                <form id="contact-form" class="space-y-5">
+                  <div class="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                        >Full Name <span class="text-red-500">*</span></label
+                      >
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        placeholder="আপনার নাম"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                        >Phone <span class="text-red-500">*</span></label
+                      >
+                      <input
+                        type="tel"
+                        name="phone"
+                        required
+                        placeholder="+880 1XXX-XXXXXX"
+                        class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="you@company.com"
+                      class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                      >Service Interested In</label
+                    >
+                    <select
+                      name="service"
+                      class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
+                    >
+                      <option value="">Select a service...</option>
+                      <option value="plc">PLC Systems</option>
+                      <option value="hmi">HMI Panels</option>
+                      <option value="vfd">VFD Drives</option>
+                      <option value="servo">Servo Drive</option>
+                      <option value="maintenance">Maintenance</option>
+                      <option value="troubleshooting">Troubleshooting</option>
+                      <option value="repairing">Repairing</option>
+                      <option value="other">Other / General Inquiry</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label
+                      class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5"
+                      >Message <span class="text-red-500">*</span></label
+                    >
+                    <textarea
+                      name="message"
+                      required
+                      rows="4"
+                      placeholder="আপনার প্রয়োজন বা সমস্যা বিস্তারিত লিখুন..."
+                      class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-600 bg-slate-50 dark:bg-slate-900/50 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition resize-none"
+                    ></textarea>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-500 hover:to-primary-400 text-white font-semibold rounded-full shadow-lg shadow-primary-500/25 transition hover:scale-[1.02]"
+                  >
+                    <i class="fas fa-paper-plane"></i>
+                    Send Message
+                  </button>
+                </form>
+
+                <div
+                  id="form-success"
+                  class="hidden mt-5 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-700 text-emerald-700 dark:text-emerald-300 text-sm"
+                >
+                  <i class="fas fa-check-circle mr-2"></i>
+                  ধন্যবাদ! আপনার মেসেজ পাঠানো হয়েছে। আমরা শীঘ্রই যোগাযোগ করব।
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
           <div
-            class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 dark:border-slate-800 text-center hover:border-accent-200 dark:hover:border-accent-700 transition"
+            class="mt-12 rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-sm"
           >
             <div
-              class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-orange-100 dark:bg-orange-900/30 text-accent-500 flex items-center justify-center text-2xl"
+              class="relative h-64 sm:h-80 bg-slate-200 dark:bg-slate-800 flex items-center justify-center"
             >
-              <i class="fas fa-tachometer-alt"></i>
-            </div>
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">
-              Faster cycles
-            </h3>
-            <p
-              class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-            >
-              High dynamic response shortens move times without sacrificing
-              stability.
-            </p>
-          </div>
-          <div
-            class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 dark:border-slate-800 text-center hover:border-emerald-200 dark:hover:border-emerald-700 transition"
-          >
-            <div
-              class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-2xl"
-            >
-              <i class="fas fa-shield-alt"></i>
-            </div>
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">
-              Safer motion
-            </h3>
-            <p
-              class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-            >
-              STO, limits and proper tuning reduce crash risk and mechanical
-              stress.
-            </p>
-          </div>
-          <div
-            class="bg-slate-50 dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 dark:border-slate-800 text-center hover:border-purple-200 dark:hover:border-purple-700 transition"
-          >
-            <div
-              class="w-16 h-16 mx-auto mb-4 rounded-2xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 flex items-center justify-center text-2xl"
-            >
-              <i class="fas fa-user-cog"></i>
-            </div>
-            <h3 class="font-semibold text-slate-900 dark:text-white mb-2">
-              Brand-fluent team
-            </h3>
-            <p
-              class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed"
-            >
-              Siemens, Mitsubishi, Delta, Yaskawa and more — from design to
-              repair.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section class="py-20 sm:py-24 bg-slate-50 dark:bg-slate-900/60">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-xl mx-auto mb-12">
-          <p
-            class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3"
-          >
-            Testimonials
-          </p>
-          <h2
-            class="font-display text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white mb-3"
-          >
-            What clients say
-          </h2>
-          <div
-            class="inline-flex items-center gap-2 mt-2 px-4 py-1.5 rounded-full bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 text-sm shadow-sm"
-          >
-            <span class="text-amber-400 text-xs"
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i><i class="fas fa-star"></i
-              ><i class="fas fa-star"></i
-            ></span>
-            <span class="font-bold text-slate-800 dark:text-white">4.9</span>
-            <span class="text-slate-400 text-xs">· Servo clients</span>
-          </div>
-        </div>
-        <div class="overflow-hidden" id="testimonial-viewport">
-          <div class="testimonial-track" id="testimonial-track">
-            <div class="testimonial-card">
-              <div
-                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
+              <iframe
+                class="absolute inset-0 w-full h-full border-0 grayscale-[30%] dark:grayscale-[50%] dark:opacity-80"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=90.35%2C23.75%2C90.45%2C23.85&layer=mapnik&marker=23.80%2C90.40"
+                loading="lazy"
+                title="IATBD Office Location"
               >
-                <div class="text-amber-400 text-xs mb-3">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p
-                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
-                >
-                  “Mitsubishi servo axes on our packing machine were retuned by
-                  IATBD. Overshoot gone, cycle time improved.”
-                </p>
-                <div
-                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&h=80&q=80"
-                    class="w-10 h-10 rounded-full object-cover"
-                    alt=""
-                  />
-                  <div>
-                    <p
-                      class="text-sm font-semibold text-slate-900 dark:text-white"
-                    >
-                      Hasan Mahmud
-                    </p>
-                    <p class="text-xs text-primary-600 dark:text-primary-400">
-                      OEM Engineer, PackTech BD
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
+              </iframe>
               <div
-                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
+                class="absolute bottom-4 left-4 bg-white dark:bg-slate-900/90 backdrop-blur px-4 py-2 rounded-xl shadow text-sm font-medium text-slate-700 dark:text-slate-200 z-10"
               >
-                <div class="text-amber-400 text-xs mb-3">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p
-                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
-                >
-                  “Delta servo + PLC gearing set up cleanly. Two axes stay in
-                  sync even at higher line speed.”
-                </p>
-                <div
-                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&h=80&q=80"
-                    class="w-10 h-10 rounded-full object-cover"
-                    alt=""
-                  />
-                  <div>
-                    <p
-                      class="text-sm font-semibold text-slate-900 dark:text-white"
-                    >
-                      Imtiaz Chowdhury
-                    </p>
-                    <p class="text-xs text-accent-600 dark:text-accent-400">
-                      Production, LabelPrint Ltd.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div
-                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
-              >
-                <div class="text-amber-400 text-xs mb-3">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p
-                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
-                >
-                  “Encoder fault overnight — they diagnosed and replaced next
-                  morning. Parameter backup saved hours.”
-                </p>
-                <div
-                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&h=80&q=80"
-                    class="w-10 h-10 rounded-full object-cover"
-                    alt=""
-                  />
-                  <div>
-                    <p
-                      class="text-sm font-semibold text-slate-900 dark:text-white"
-                    >
-                      Farzana Akter
-                    </p>
-                    <p class="text-xs text-emerald-600 dark:text-emerald-400">
-                      Maintenance, Pharma Forming
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div
-                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
-              >
-                <div class="text-amber-400 text-xs mb-3">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p
-                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
-                >
-                  “Yaskawa retrofit on an old machine. Accuracy better than
-                  before and vibration is under control.”
-                </p>
-                <div
-                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&h=80&q=80"
-                    class="w-10 h-10 rounded-full object-cover"
-                    alt=""
-                  />
-                  <div>
-                    <p
-                      class="text-sm font-semibold text-slate-900 dark:text-white"
-                    >
-                      Karim Reza
-                    </p>
-                    <p class="text-xs text-primary-600 dark:text-primary-400">
-                      Plant Head, MetalStamp BD
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <div
-                class="t-card-inner h-full bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-100 dark:border-slate-800 flex flex-col"
-              >
-                <div class="text-amber-400 text-xs mb-3">
-                  <i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i><i class="fas fa-star"></i
-                  ><i class="fas fa-star"></i>
-                </div>
-                <p
-                  class="text-[17px] text-slate-600 dark:text-slate-300 leading-relaxed flex-1 mb-5"
-                >
-                  “Siemens S120 multi-axis with our PLC. Commissioning was
-                  structured and documented. Recommend.”
-                </p>
-                <div
-                  class="flex items-center gap-3 pt-4 border-t border-slate-200 dark:border-slate-700"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=80&h=80&q=80"
-                    class="w-10 h-10 rounded-full object-cover"
-                    alt=""
-                  />
-                  <div>
-                    <p
-                      class="text-sm font-semibold text-slate-900 dark:text-white"
-                    >
-                      Shuvo Rahman
-                    </p>
-                    <p class="text-xs text-purple-600 dark:text-purple-400">
-                      Automation Lead, AutoLine
-                    </p>
-                  </div>
-                </div>
+                <i class="fas fa-map-marker-alt text-primary-500 mr-2"></i>
+                IATBD — Dhaka, Bangladesh
               </div>
             </div>
           </div>
         </div>
-        <div class="flex justify-center gap-2 mt-8" id="testimonial-dots"></div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- FAQ -->
-    <section class="py-20 sm:py-24 bg-white dark:bg-slate-950">
-      <div class="max-w-2xl mx-auto px-4 sm:px-6">
-        <div class="text-center mb-12">
-          <p
-            class="text-accent-500 text-xs font-semibold tracking-[0.2em] uppercase mb-3"
-          >
-            FAQ
-          </p>
-          <h2
-            class="font-display text-3xl font-bold text-slate-900 dark:text-white"
-          >
-            Common questions
-          </h2>
-        </div>
-        <div class="space-y-3">
-          <div
-            class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
-          >
-            <button
-              class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left"
-            >
-              <span
-                class="font-medium text-[17px] text-slate-900 dark:text-white"
-                >Which servo brands do you support?</span
-              >
-              <i
-                class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"
-              ></i>
-            </button>
-            <div class="faq-answer px-5">
-              <p class="text-[17px] text-slate-600 dark:text-slate-300 pb-4">
-                Siemens, Mitsubishi, Delta, Yaskawa, Panasonic, Omron,
-                Schneider, Allen-Bradley and other major servo platforms.
-              </p>
-            </div>
-          </div>
-          <div
-            class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
-          >
-            <button
-              class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left"
-            >
-              <span
-                class="font-medium text-[17px] text-slate-900 dark:text-white"
-                >Can you retrofit servo on an old machine?</span
-              >
-              <i
-                class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"
-              ></i>
-            </button>
-            <div class="faq-answer px-5">
-              <p class="text-[17px] text-slate-600 dark:text-slate-300 pb-4">
-                Yes. We size for existing mechanics, adapt mounting where
-                needed, and commission with minimal process change.
-              </p>
-            </div>
-          </div>
-          <div
-            class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
-          >
-            <button
-              class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left"
-            >
-              <span
-                class="font-medium text-[17px] text-slate-900 dark:text-white"
-                >Do you handle multi-axis synchronization?</span
-              >
-              <i
-                class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"
-              ></i>
-            </button>
-            <div class="faq-answer px-5">
-              <p class="text-[17px] text-slate-600 dark:text-slate-300 pb-4">
-                Yes — electronic gearing, camming and coordinated motion with
-                PLC or dedicated motion controllers.
-              </p>
-            </div>
-          </div>
-          <div
-            class="faq-item bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 overflow-hidden"
-          >
-            <button
-              class="faq-btn w-full flex items-center justify-between px-5 py-4 text-left"
-            >
-              <span
-                class="font-medium text-[17px] text-slate-900 dark:text-white"
-                >Is parameter backup included?</span
-              >
-              <i
-                class="fas fa-chevron-down faq-icon text-slate-400 text-xs transition-transform"
-              ></i>
-            </button>
-            <div class="faq-answer px-5">
-              <p class="text-[17px] text-slate-600 dark:text-slate-300 pb-4">
-                Always after commissioning or repair — so recovery is fast if a
-                drive is replaced later.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RELATED -->
-    <section class="py-16 bg-slate-50 dark:bg-slate-900/60">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p
-          class="text-center text-xs font-semibold text-slate-400 tracking-[0.15em] uppercase mb-8"
-        >
-          Related services
-        </p>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <a
-            href="hmi-service.html"
-            class="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary-300 transition shadow-sm"
-          >
-            <span
-              class="w-10 h-10 rounded-xl bg-primary-100 dark:bg-primary-900/30 flex items-center justify-center text-primary-600 group-hover:scale-105 transition"
-              ><i class="fas fa-microchip"></i
-            ></span>
-            <div>
-              <p class="text-sm font-semibold text-slate-900 dark:text-white">
-                PLC Service
-              </p>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Programming & install</p>
-            </div>
-          </a>
-          <a
-            href="#services"
-            class="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary-300 transition shadow-sm"
-          >
-            <span
-              class="w-10 h-10 rounded-xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-500 group-hover:scale-105 transition"
-              ><i class="fas fa-desktop"></i
-            ></span>
-            <div>
-              <p class="text-sm font-semibold text-slate-900 dark:text-white">
-                HMI Service
-              </p>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Screen design</p>
-            </div>
-          </a>
-          <a
-            href="#services"
-            class="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary-300 transition shadow-sm"
-          >
-            <span
-              class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 group-hover:scale-105 transition"
-              ><i class="fas fa-tachometer-alt"></i
-            ></span>
-            <div>
-              <p class="text-sm font-semibold text-slate-900 dark:text-white">
-                VFD Service
-              </p>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Drive setup</p>
-            </div>
-          </a>
-          <a
-            href="#"
-            class="group flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 hover:border-primary-300 transition shadow-sm"
-          >
-            <span
-              class="w-10 h-10 rounded-xl bg-rose-100 dark:bg-rose-900/30 flex items-center justify-center text-rose-500 group-hover:scale-105 transition"
-              ><i class="fas fa-wrench"></i
-            ></span>
-            <div>
-              <p class="text-sm font-semibold text-slate-900 dark:text-white">
-                Repairing
-              </p>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Servo & encoder</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="contact" class="relative py-20 sm:py-24 overflow-hidden">
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-slate-900 via-primary-800 to-primary-600"
-      ></div>
-      <div
-        class="absolute inset-0 opacity-20"
-        style="
-          background-image:
-            radial-gradient(circle at 20% 50%, #ff7a1a 0%, transparent 40%),
-            radial-gradient(circle at 80% 20%, #338bff 0%, transparent 35%);
-        "
-      ></div>
-      <div class="relative z-10 max-w-3xl mx-auto px-4 text-center">
-        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-          Need precise motion control?
-        </h2>
-        <p class="text-[17px] text-slate-300 mb-8 max-w-md mx-auto">
-          Tell us about your axes — sizing, tuning or repair. We respond fast.
-        </p>
-        <div class="flex flex-wrap justify-center gap-3">
-          <a
-            href="tel:+8801XXXXXXXXX"
-            class="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-700 font-bold rounded-full shadow-lg btn-cta btn-cta-light"
-          >
-            <i class="fas fa-phone-alt text-sm"></i> Call Now
-          </a>
-          <a
-            href="https://wa.me/8801XXXXXXXXX"
-            target="_blank"
-            class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-bold rounded-full btn-cta"
-          >
-            <i class="fab fa-whatsapp"></i> WhatsApp
-          </a>
-          <a
-            href="#contact"
-            class="inline-flex items-center gap-2 px-6 py-3 border border-white/30 text-white font-semibold rounded-full btn-cta-outline"
-            >Message</a
-          >
-        </div>
-      </div>
-    </section>
-
+    <!-- ==================== FOOTER ==================== -->
     <footer
-      class="bg-slate-900 dark:bg-slate-950 text-slate-400 pt-14 pb-8 border-t border-slate-800"
+      class="bg-slate-900 dark:bg-slate-950 text-slate-300 pt-16 pb-8 border-t border-slate-800"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-4 gap-10 mb-10">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
-            <div class="flex items-center gap-2.5 mb-4">
+            <div class="flex items-center gap-3 mb-5">
               <div
-                class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-md shadow-primary-500/20"
+                class="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center"
               >
-                <i class="fas fa-microchip text-white text-xs"></i>
+                <i class="fas fa-microchip text-white"></i>
               </div>
-              <span class="font-display font-bold text-white text-lg">IATBD</span>
+              <span class="font-display font-bold text-xl text-white">IATBD</span>
             </div>
-            <p class="text-sm leading-relaxed text-slate-400">
-              Industrial automation — PLC, HMI, VFD, Servo, AI solutions and professional engineering support across Bangladesh.
+            <p class="text-sm text-slate-400 leading-relaxed mb-5">
+              Industrial automation এর সম্পূর্ণ সমাধান — PLC, HMI, VFD, Servo এবং প্রফেশনাল সার্ভিস।
             </p>
-            <div class="flex gap-3 mt-4">
-              <a href="#" aria-label="Facebook" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="LinkedIn" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" aria-label="Twitter" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-x-twitter"></i></a>
-              <a href="#" aria-label="YouTube" class="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center text-slate-400 hover:text-primary-400 transition text-xs"><i class="fab fa-youtube"></i></a>
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 flex items-center justify-center transition"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f text-sm"></i
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 flex items-center justify-center transition"
+                aria-label="LinkedIn"
+                ><i class="fab fa-linkedin-in text-sm"></i
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 flex items-center justify-center transition"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube text-sm"></i
+              ></a>
+              <a
+                href="#"
+                class="w-9 h-9 rounded-lg bg-slate-800 hover:bg-primary-600 flex items-center justify-center transition"
+                aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp text-sm"></i
+              ></a>
             </div>
           </div>
-
           <div>
-            <h4 class="text-white text-sm font-semibold mb-4 tracking-wider uppercase text-xs">Services</h4>
-            <ul class="space-y-2 text-sm">
-              <li><a href="plc-service.html" class="hover:text-primary-400 transition">PLC Service</a></li>
-              <li><a href="vfd-service.html" class="hover:text-primary-400 transition">VFD Service</a></li>
-              <li><a href="hmi-service.html" class="hover:text-primary-400 transition">HMI Service</a></li>
-              <li><a href="servo-service.html" class="hover:text-primary-400 transition">Servo Drive</a></li>
-              <li><a href="ai-service.html" class="hover:text-primary-400 transition">AI Solution</a></li>
+            <h4 class="font-semibold mb-5 text-white">Products</h4>
+            <ul class="space-y-3 text-sm text-slate-400">
+              <li>
+                <a href="plc-service.html" class="hover:text-primary-400 transition"
+                  >PLC Systems</a
+                >
+              </li>
+              <li>
+                <a href="hmi-service.html" class="hover:text-primary-400 transition"
+                  >HMI Panels</a
+                >
+              </li>
+              <li>
+                <a href="vfd-service.html" class="hover:text-primary-400 transition"
+                  >VFD Drives</a
+                >
+              </li>
+              <li>
+                <a href="servo-service.html" class="hover:text-primary-400 transition"
+                  >Servo Drive</a
+                >
+              </li>
+              <li>
+                <a href="store-shop.html" class="hover:text-primary-400 transition"
+                  >All Products</a
+                >
+              </li>
             </ul>
           </div>
-
           <div>
-            <h4 class="text-white text-sm font-semibold mb-4 tracking-wider uppercase text-xs">Support</h4>
-            <ul class="space-y-2 text-sm">
-              <li><a href="iatautomation-maintenance.html" class="hover:text-primary-400 transition">Maintenance</a></li>
-              <li><a href="iatautomation-troubleshooting.html" class="hover:text-primary-400 transition">Troubleshooting</a></li>
-              <li><a href="iatautomation-repairing.html" class="hover:text-primary-400 transition">Repairing</a></li>
-              <li><a href="store-shop.html" class="hover:text-primary-400 transition">Store Shop</a></li>
-              <li><a href="blog.html" class="hover:text-primary-400 transition">Our All Blog</a></li>
+            <h4 class="font-semibold mb-5 text-white">Services</h4>
+            <ul class="space-y-3 text-sm text-slate-400">
+              <li>
+                <a
+                  href="iatautomation-maintenance.html"
+                  class="hover:text-primary-400 transition"
+                  >Maintenance</a
+                >
+              </li>
+              <li>
+                <a
+                  href="iatautomation-troubleshooting.html"
+                  class="hover:text-primary-400 transition"
+                  >Troubleshooting</a
+                >
+              </li>
+              <li>
+                <a
+                  href="iatautomation-repairing.html"
+                  class="hover:text-primary-400 transition"
+                  >Repairing</a
+                >
+              </li>
+              <li>
+                <a href="ai-service.html" class="hover:text-primary-400 transition"
+                  >AI Solutions</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="hover:text-primary-400 transition"
+                  >Support & Consulting</a
+                >
+              </li>
             </ul>
           </div>
-
           <div>
-            <h4 class="text-white text-sm font-semibold mb-4 tracking-wider uppercase text-xs">Contact</h4>
-            <ul class="space-y-2.5 text-sm">
-              <li class="flex items-center gap-2"><i class="fas fa-phone-alt text-primary-400 mr-1 text-xs"></i>+880 1XXX-XXXXXX</li>
-              <li class="flex items-center gap-2"><i class="fas fa-envelope text-primary-400 mr-1 text-xs"></i>info@iatbd.com</li>
-              <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-primary-400 mr-1 text-xs"></i>Dhaka, Bangladesh</li>
+            <h4 class="font-semibold mb-5 text-white">Contact Us</h4>
+            <ul class="space-y-4 text-sm text-slate-400">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-map-marker-alt text-primary-400 mt-1"></i
+                ><span>Your Address, Dhaka, Bangladesh</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-phone-alt text-primary-400"></i
+                ><a href="tel:+8801XXXXXXXXX" class="hover:text-white transition"
+                  >+880 1XXX-XXXXXX</a
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <i class="fas fa-envelope text-primary-400"></i
+                ><a href="mailto:info@iatbd.com" class="hover:text-white transition"
+                  >info@iatbd.com</a
+                >
+              </li>
             </ul>
           </div>
         </div>
-
         <div
-          class="border-t border-slate-800 pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-slate-500"
+          class="border-t border-slate-800 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-slate-500"
         >
           <p>© 2026 IATBD. All rights reserved.</p>
-          <div class="flex items-center gap-4">
-            <a href="index.html" class="hover:text-primary-400 transition">← Home</a>
-            <a href="blog.html" class="hover:text-primary-400 transition">Blog</a>
-            <a href="contact.html" class="hover:text-primary-400 transition">Contact</a>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-slate-300 transition">Privacy Policy</a>
+            <a href="#" class="hover:text-slate-300 transition"
+              >Terms of Service</a
+            >
           </div>
         </div>
       </div>

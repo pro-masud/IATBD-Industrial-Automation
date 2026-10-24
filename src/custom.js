@@ -137,6 +137,16 @@
       dataKey: "slideTo",
       interval: 5000,
     });
+    initHeroSlider({
+      containerSelector: ".hero-slider",
+      slideSelector: ".hero-slide",
+      dotSelector: ".slider-dot",
+      dataKey: "index",
+      interval: 5000,
+      previousSelector: ".slider-arrow.prev",
+      nextSelector: ".slider-arrow.next",
+    });
+    initDesktopDropdowns();
     initCounters();
     initTestimonials();
     initStoreShop();
@@ -532,9 +542,74 @@
     });
   }
 
+  function initDesktopDropdowns() {
+    document.querySelectorAll(".relative.group").forEach((group) => {
+      const button = group.querySelector("button");
+      const menu = group.querySelector(".dropdown-menu");
+      if (!button || !menu) return;
+
+      button.setAttribute("aria-haspopup", "true");
+      button.setAttribute("aria-expanded", "false");
+
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        const isOpen = menu.classList.toggle("open");
+        group.classList.toggle("open", isOpen);
+        button.setAttribute("aria-expanded", String(isOpen));
+        const icon = button.querySelector(".fa-chevron-down");
+        if (icon) {
+          icon.style.transition = "transform 0.2s ease";
+          icon.style.transform = isOpen ? "rotate(180deg)" : "";
+        }
+      });
+
+      menu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("open");
+          group.classList.remove("open");
+          button.setAttribute("aria-expanded", "false");
+          const icon = button.querySelector(".fa-chevron-down");
+          if (icon) icon.style.transform = "";
+        });
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      document.querySelectorAll(".relative.group").forEach((group) => {
+        if (!group.contains(event.target)) {
+          const menu = group.querySelector(".dropdown-menu");
+          const button = group.querySelector("button");
+          if (menu) menu.classList.remove("open");
+          group.classList.remove("open");
+          if (button) {
+            button.setAttribute("aria-expanded", "false");
+            const icon = button.querySelector(".fa-chevron-down");
+            if (icon) icon.style.transform = "";
+          }
+        }
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        document.querySelectorAll(".relative.group").forEach((group) => {
+          const menu = group.querySelector(".dropdown-menu");
+          const button = group.querySelector("button");
+          if (menu) menu.classList.remove("open");
+          group.classList.remove("open");
+          if (button) {
+            button.setAttribute("aria-expanded", "false");
+            const icon = button.querySelector(".fa-chevron-down");
+            if (icon) icon.style.transform = "";
+          }
+        });
+      }
+    });
+  }
+
   function initCounters() {
-    const counters = [...document.querySelectorAll(".counter")];
-    const firstCounter = document.querySelector(".count-box");
+    const counters = [...document.querySelectorAll(".counter, .counter-value")];
+    const firstCounter = document.querySelector(".count-box, .counter-value, .counter");
     if (
       !counters.length ||
       !firstCounter ||
@@ -551,7 +626,8 @@
         observer.disconnect();
         counters.forEach((counter) => {
           const target = Number(counter.dataset.target);
-          const suffix = counter.dataset.suffix || "";
+          if (Number.isNaN(target)) return;
+          const suffix = counter.dataset.suffix !== undefined ? counter.dataset.suffix : "+";
           const startTime = performance.now();
           const duration = 1600;
           const tick = (now) => {
@@ -564,7 +640,7 @@
           requestAnimationFrame(tick);
         });
       },
-      { threshold: 0.3 },
+      { threshold: 0.2 },
     );
     observer.observe(firstCounter);
   }
